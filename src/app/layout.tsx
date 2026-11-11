@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { AppShell } from "@/components/AppShell";
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +21,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className="h-full antialiased">
       <body className="min-h-full font-sans">
-        <AppShell>{children}</AppShell>
+        {children}
       </body>
     </html>
   );

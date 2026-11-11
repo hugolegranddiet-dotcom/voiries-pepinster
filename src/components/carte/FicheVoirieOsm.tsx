@@ -1,6 +1,7 @@
 import { BadgePriorite } from "@/components/badges";
 import { AvertissementScore } from "@/components/blocs";
 import { BlocExcel } from "@/components/carte/BlocExcel";
+import { NoteParticularites } from "@/components/carte/NoteParticularites";
 import type { DonneesExcelCarte } from "@/lib/matching/decisions";
 import type { VoirieLogique } from "@/lib/geo/types";
 
@@ -33,9 +34,13 @@ const km = (m: number) =>
 export function FicheVoirieOsm({
   voirie,
   excel,
+  note,
+  onNoteEnregistree,
 }: {
   voirie: VoirieLogique;
   excel: DonneesExcelCarte["parVoirie"][string] | undefined;
+  note: { particularites: string | null; majLe: string } | null;
+  onNoteEnregistree: (roadId: string, particularites: string | null, majLe: string) => void;
 }) {
   const aCompleter = !excel?.validees.length;
   return (
@@ -79,6 +84,13 @@ export function FicheVoirieOsm({
           Le calcul du score arrive en phase 6, après validation des notes d&apos;état.
         </p>
       </section>
+
+      <NoteParticularites
+        roadId={voirie.id}
+        valeur={note?.particularites ?? null}
+        majLe={note?.majLe ?? null}
+        onEnregistree={onNoteEnregistree}
+      />
 
       <section aria-label="Données de l'Excel">
         <h3 className="mb-2 text-sm font-semibold text-ink">Données de l&apos;Excel</h3>

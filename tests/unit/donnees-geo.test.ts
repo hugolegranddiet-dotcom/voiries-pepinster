@@ -1,4 +1,4 @@
-// Contrôle des fichiers réellement produits (public/geo) par rapport à
+// Contrôle des fichiers réellement produits (data/geo) par rapport à
 // l'extraction OSM brute (data/osm/raw). Garantit « aucun tracé fictif ».
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -7,16 +7,16 @@ import { distancePointLigneM, type Coord } from "@/lib/geo/outils";
 import type { DonneesVoiries, SegmentProps } from "@/lib/geo/types";
 
 const racine = join(__dirname, "..", "..");
-const dispo = existsSync(join(racine, "public", "geo", "voies.geojson"));
+const dispo = existsSync(join(racine, "data", "geo", "voies.geojson"));
 
 describe.runIf(dispo)("données géographiques produites", () => {
   const lire = <T,>(...p: string[]) => JSON.parse(readFileSync(join(racine, ...p), "utf8")) as T;
   const voies = lire<{ features: Array<{ properties: SegmentProps; geometry: { coordinates: Coord[] } }> }>(
-    "public", "geo", "voies.geojson",
+    "data", "geo", "voies.geojson",
   );
-  const donnees = lire<DonneesVoiries>("public", "geo", "voiries.json");
+  const donnees = lire<DonneesVoiries>("data", "geo", "voiries.json");
   const limite = lire<{ features: Array<{ properties: { type: string }; geometry: { coordinates: Coord[][][] } }> }>(
-    "public", "geo", "limite.geojson",
+    "data", "geo", "limite.geojson",
   );
   const dossier = join("data", "osm", "raw", donnees.meta.dateExtraction);
   const brut = lire<{ elements: Array<{ id: number; geometry: Array<{ lat: number; lon: number } | null> }> }>(

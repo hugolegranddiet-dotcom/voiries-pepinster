@@ -75,7 +75,6 @@ function DonneesValidees({ f }: { f: FicheExcel }) {
         <Champ libelle="Travaux" valeur={travaux(f)} />
         <Champ libelle="Échéance" valeur={echeance(f)} />
         <Champ libelle="Sécurisation" valeur={f.mobiliteNote} />
-        <Champ libelle="Particularités" valeur={f.particularites} />
         {f.etiquettes.length > 0 && (
           <Champ libelle="Étiquettes" valeur={f.etiquettes.map((e) => e.replaceAll("_", " ")).join(", ")} />
         )}

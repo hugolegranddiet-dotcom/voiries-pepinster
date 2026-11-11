@@ -38,7 +38,7 @@ async function main() {
     : [];
   const parLigne = new Map(existantes.map((d) => [d.ligne, d]));
   const propositions: Proposition[] = JSON.parse(await readFile(join("data", "matching", "propositions.json"), "utf8"));
-  const geo: DonneesVoiries = JSON.parse(await readFile(join("public", "geo", "voiries.json"), "utf8"));
+  const geo: DonneesVoiries = JSON.parse(await readFile(join("data", "geo", "voiries.json"), "utf8"));
   const ids = new Set(geo.voiries.map((v) => v.id));
   const date = new Date().toISOString();
   const erreurs: string[] = [];

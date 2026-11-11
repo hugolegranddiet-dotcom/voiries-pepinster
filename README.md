@@ -2,7 +2,7 @@
 
 Application web privée de suivi de l'état des voiries de la commune de Pepinster.
 
-**État : phase 3 terminée — import de l'Excel (180 lignes), normalisations tracées, propositions de correspondance à valider. Les écrans Voiries et Priorités restent en données « démo » jusqu'aux phases 5 et 6.**
+**État : phase 4 terminée — base de données Supabase (sécurité par ligne, journal des modifications), connexion privée d'un seul administrateur, carte lue depuis la base. Les écrans Voiries et Priorités restent en données « démo » jusqu'aux phases 5 et 6.**
 
 | Document | Contenu |
 |---|---|
@@ -54,9 +54,9 @@ Ouvre ensuite **http://localhost:3000** dans ton navigateur. Pour arrêter : `Ct
 |---|---|---|
 | `npm run geo:extract` | extraction unique et datée d'OpenStreetMap → `data/osm/raw/AAAA-MM-JJ/` | sur le Mac (accès à OpenStreetMap) |
 | `npm run geo:spw` | consultation du réseau régional SPW → cache local non versionné | partout |
-| `npm run geo:build` | voiries logiques, découpe à la limite, `public/geo/*`, `COVERAGE_REPORT.md` | partout |
+| `npm run geo:build` | voiries logiques, découpe à la limite, `data/geo/*`, `COVERAGE_REPORT.md` | partout |
 
-L'application ne contacte **jamais** OpenStreetMap pour les données : elle lit les fichiers de `public/geo/`. Seul le fond de carte (les tuiles) vient d'OpenStreetMap, avec attribution.
+L'application ne contacte **jamais** OpenStreetMap pour les données : elles sont importées une fois dans la base protégée (`npm run db:seed`). Seul le fond de carte (les tuiles) vient d'OpenStreetMap, avec attribution.
 
 ## Import de l'Excel et correspondances
 
@@ -67,4 +67,17 @@ L'application ne contacte **jamais** OpenStreetMap pour les données : elle lit 
 | `npm run match:import -- fichier.xlsx` | enregistre les décisions saisies dans le fichier de validation (colonne DÉCISION) |
 | `npm run match:import -- --forte "Qui, quand"` | validation par lot des propositions « forte », sur demande explicite |
 
-Aucune ligne de l'Excel n'est reliée à une voirie sans décision humaine. Les données de l'Excel ne sont **pas** placées dans `public/` : elles passeront dans la base protégée par la connexion en phase 4.
+Aucune ligne de l'Excel n'est reliée à une voirie sans décision humaine. Les données (carte et Excel) ne sont **pas** dans `public/` : l'application les lit dans la base, derrière la connexion.
+
+## Base de données (Supabase)
+
+Mise en service pas à pas : **[`docs/GUIDE_SUPABASE.md`](docs/GUIDE_SUPABASE.md)**.
+
+| Commande | Rôle |
+|---|---|
+| `npx supabase@3.1.0 db push` | applique les migrations de `supabase/migrations/` au projet relié |
+| `npm run db:seed` | importe (ou ré-importe sans doublon) carte, Excel, décisions ; n'écrase jamais une évaluation |
+| `npm run db:admin -- email` | déclare l'administrateur unique |
+| `npm run db:verifier` | vérifie sur le vrai projet : refus d'accès anonyme, inscriptions fermées, données complètes |
+
+Configuration : copier `.env.example` en `.env.local` (jamais versionné). La clé `SUPABASE_SECRET_KEY` ne sert qu'aux scripts locaux.

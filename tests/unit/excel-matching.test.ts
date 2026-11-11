@@ -171,7 +171,7 @@ describe("décisions humaines", () => {
   });
 
   it("utilise des identifiants de voirie existants dans les propositions réelles", () => {
-    const geo = JSON.parse(readFileSync(join(racine, "public", "geo", "voiries.json"), "utf8")) as DonneesVoiries;
+    const geo = JSON.parse(readFileSync(join(racine, "data", "geo", "voiries.json"), "utf8")) as DonneesVoiries;
     const ids = new Set(geo.voiries.map((x) => x.id));
     const reelles = proposer(fiches, geo.voiries);
     expect(reelles).toHaveLength(180);

@@ -1,7 +1,7 @@
 // Formats des fichiers produits par `npm run geo:build` et lus par la carte.
 import type { CategorieVoie, AlerteVoirie } from "@/lib/geo/voiries";
 
-/** Propriétés d'un segment dans public/geo/voies.geojson (noms courts = fichier plus léger). */
+/** Propriétés d'un segment dans data/geo/voies.geojson (noms courts = fichier plus léger). */
 export interface SegmentProps {
   /** Identifiant du segment (way OSM, ou way-partie si coupé). */
   sid: string;

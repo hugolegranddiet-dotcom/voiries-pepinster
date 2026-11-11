@@ -6,10 +6,8 @@ import { useSearchParams } from "next/navigation";
 import { COULEUR_BANDE } from "@/components/badges";
 import { IconeFermer } from "@/components/icones";
 import { FicheVoirieOsm } from "@/components/carte/FicheVoirieOsm";
-import type { LimiteGeo, VoiesGeo } from "@/components/carte/CarteLeaflet";
 import type { CategorieVoie } from "@/lib/geo/voiries";
-import type { DonneesVoiries } from "@/lib/geo/types";
-import type { DonneesExcelCarte } from "@/lib/matching/decisions";
+import type { DonneesCarte } from "@/lib/db/carte";
 
 // Leaflet a besoin du navigateur : pas de rendu côté serveur.
 const CarteLeaflet = dynamic(() => import("@/components/carte/CarteLeaflet"), {
@@ -56,10 +54,16 @@ function Legende() {
   );
 }
 
-export function CarteVoiries({ excel }: { excel: DonneesExcelCarte }) {
+const MESSAGES_ERREUR: Record<number, string> = {
+  401: "Ta session a expiré : recharge la page pour te reconnecter.",
+  403: "Ce compte n'est pas autorisé à consulter les voiries.",
+  404: "La base de données est vide : l'import initial n'a pas encore été fait (npm run db:seed).",
+};
+
+export function CarteVoiries() {
   // Ouverture directe d'une voirie : /carte?voirie=<identifiant> (fichier de validation).
   const voirieDemandee = useSearchParams().get("voirie");
-  const [donnees, setDonnees] = useState<{ limite: LimiteGeo; voies: VoiesGeo; voiries: DonneesVoiries } | null>(null);
+  const [donnees, setDonnees] = useState<DonneesCarte | null>(null);
   const [erreur, setErreur] = useState<string | null>(null);
   const [selection, setSelection] = useState<string | null>(voirieDemandee);
   const [visibles, setVisibles] = useState<Record<CategorieVoie, boolean>>({
@@ -71,18 +75,17 @@ export function CarteVoiries({ excel }: { excel: DonneesExcelCarte }) {
 
   useEffect(() => {
     let annule = false;
-    const lire = async <T,>(url: string): Promise<T> => {
-      const r = await fetch(url);
-      if (!r.ok) throw new Error(`${url} : ${r.status}`);
-      return r.json() as Promise<T>;
-    };
-    Promise.all([
-      lire<LimiteGeo>("/geo/limite.geojson"),
-      lire<VoiesGeo>("/geo/voies.geojson"),
-      lire<DonneesVoiries>("/geo/voiries.json"),
-    ])
-      .then(([limite, voies, voiries]) => !annule && setDonnees({ limite, voies, voiries }))
-      .catch(() => !annule && setErreur("Impossible de charger les données de la carte."));
+    // Toutes les données viennent de la base, lues avec la session de l'utilisateur.
+    fetch("/api/carte", { cache: "no-store" })
+      .then(async (r) => {
+        if (annule) return;
+        if (!r.ok) {
+          setErreur(MESSAGES_ERREUR[r.status] ?? "Impossible de charger les données de la carte.");
+          return;
+        }
+        setDonnees((await r.json()) as DonneesCarte);
+      })
+      .catch(() => !annule && setErreur("Impossible de joindre le serveur."));
     return () => {
       annule = true;
     };
@@ -99,6 +102,10 @@ export function CarteVoiries({ excel }: { excel: DonneesExcelCarte }) {
   }, [donnees]);
   const selectionnee = selection ? voirieParId.get(selection) ?? null : null;
   const choisir = useCallback((id: string) => setSelection(id), []);
+  // Après un enregistrement, on met à jour la copie locale (sans tout recharger).
+  const noteEnregistree = useCallback((roadId: string, particularites: string | null, majLe: string) => {
+    setDonnees((d) => (d ? { ...d, notes: { ...d.notes, [roadId]: { particularites, majLe } } } : d));
+  }, []);
 
   return (
     <div className="relative flex h-full">
@@ -176,7 +183,13 @@ export function CarteVoiries({ excel }: { excel: DonneesExcelCarte }) {
         </div>
         <div className="overflow-y-auto p-4">
           {selectionnee ? (
-            <FicheVoirieOsm voirie={selectionnee} excel={excel.parVoirie[selectionnee.id]} />
+            <FicheVoirieOsm
+              key={selectionnee.id}
+              voirie={selectionnee}
+              excel={donnees?.excel.parVoirie[selectionnee.id]}
+              note={donnees?.notes[selectionnee.id] ?? null}
+              onNoteEnregistree={noteEnregistree}
+            />
           ) : (
             <p className="text-sm text-muted">Clique sur une voie de la carte pour afficher sa fiche.</p>
           )}

@@ -3,7 +3,7 @@
 //   2. propose des correspondances (data/matching/propositions.json)
 //   3. applique UNIQUEMENT les décisions humaines (data/matching/decisions.json)
 //   4. écrit le fichier de validation (data/matching/validation_correspondances.xlsx)
-//   5. écrit les données de la carte (data/app/excel_par_voirie.json) et MATCHING_REPORT.md
+//   5. écrit MATCHING_REPORT.md (les données vont ensuite en base : npm run db:seed)
 
 import { existsSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
@@ -37,7 +37,7 @@ async function lireJson<T>(chemin: string): Promise<T> {
 
 async function main() {
   const brut = await lireJson<ExcelBrut>(join("data", "excel", "feuil1_raw.json"));
-  const geo = await lireJson<DonneesVoiries>(join("public", "geo", "voiries.json"));
+  const geo = await lireJson<DonneesVoiries>(join("data", "geo", "voiries.json"));
   const voirieParId = new Map(geo.voiries.map((v) => [v.id, v]));
 
   // 1. Normalisation
@@ -89,8 +89,7 @@ async function main() {
       entree(p.propositionId).propositions.push({ ligne: f.ligne, nomExcel: f.nomNettoye, methode: p.methode, confiance: p.confiance });
     }
   }
-  await mkdir(join("data", "app"), { recursive: true });
-  await writeFile(join("data", "app", "excel_par_voirie.json"), JSON.stringify(carte));
+  void carte; // résumé utilisé pour le rapport ; la carte lit désormais la base
   await writeFile(join("data", "matching", "correspondances.json"), JSON.stringify(correspondances, null, 1));
   await writeFile("MATCHING_REPORT.md", rapport(fiches, propositions, correspondances, geo, decisions));
 

@@ -49,3 +49,10 @@ next-env.d.ts
 
 # Cache local des données SPW (non redistribuées)
 /data/spw/.cache/
+
+# Modèle de configuration (sans secret) : à versionner
+!.env.example
+
+# Fichiers temporaires de l'outil Supabase
+/supabase/.temp/
+/supabase/.branches/

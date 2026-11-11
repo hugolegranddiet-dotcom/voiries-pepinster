@@ -258,3 +258,15 @@ Faible → `faible` · Moyen bas → `moyen_bas` · Moyen élevé → `moyen_ele
 | `data/matching/decisions.csv` | décisions d'appariement validées (avant leur import en base) |
 
 On peut ainsi **reconstruire la base à l'identique** à partir du dépôt.
+
+---
+
+## 6. Écarts appliqués lors de la mise en œuvre (phase 4)
+
+| Point | Prévu | Appliqué | Raison |
+|---|---|---|---|
+| Identifiants de `roads` et `road_segments` | `uuid` | **texte stable** (`n:rue du biez`, `w123456`, `s:20` pour une section, `123456-2` pour un segment coupé) | identiques aux fichiers de la carte et aux décisions ; ré-import sans table de correspondance |
+| `road_segments` | `part_index`, nœuds de coupure | `coupe_limite` (booléen) ; l'identifiant porte la partie | les seules coupes actuelles sont celles de la limite communale (D6) |
+| `road_evaluations` | — | ajout `annee_realisation`, `echeance_estimee(_regle)`, `etiquettes`, statut `conflit_a_resoudre` | décisions D5, D7 et point O10 |
+| Journal | déclencheur | déclencheur sur `roads`, `road_evaluations`, `match_reviews`, `priority_settings` ; les créations faites par l'import ne sont pas journalisées (tracées par `import_batches`) | éviter des milliers de lignes inutiles |
+| Fichiers de la carte | `public/geo/` | **`data/geo/`** (non publiés) ; la carte lit la base via `/api/carte`, après connexion | une seule source de vérité, rien de public |

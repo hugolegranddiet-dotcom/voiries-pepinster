@@ -1,7 +1,7 @@
 // Construit les données de la carte à partir de l'extraction OSM la plus récente :
-//   public/geo/limite.geojson   limite communale + anciennes communes
-//   public/geo/voies.geojson    segments OSM (coupés à la limite, D6)
-//   public/geo/voiries.json     voiries logiques (une fiche, une couleur) + métadonnées
+//   data/geo/limite.geojson   limite communale + anciennes communes
+//   data/geo/voies.geojson    segments OSM (coupés à la limite, D6)
+//   data/geo/voiries.json     voiries logiques (une fiche, une couleur) + métadonnées
 //   COVERAGE_REPORT.md          audit de couverture
 //
 // Garde-fou : le script s'arrête si une coordonnée n'est ni une coordonnée OSM
@@ -245,7 +245,7 @@ async function main() {
     },
     voiries: voiries.sort((a, b) => (a.nom ?? "~").localeCompare(b.nom ?? "~", "fr") || a.id.localeCompare(b.id)),
   };
-  await mkdir(join("public", "geo"), { recursive: true });
+  await mkdir(join("data", "geo"), { recursive: true });
   const limiteGeo = {
     type: "FeatureCollection",
     features: [
@@ -262,15 +262,15 @@ async function main() {
     ],
   };
   const voiesGeo = { type: "FeatureCollection", features };
-  await writeFile(join("public", "geo", "limite.geojson"), JSON.stringify(limiteGeo));
-  await writeFile(join("public", "geo", "voies.geojson"), JSON.stringify(voiesGeo));
-  await writeFile(join("public", "geo", "voiries.json"), JSON.stringify(donnees));
+  await writeFile(join("data", "geo", "limite.geojson"), JSON.stringify(limiteGeo));
+  await writeFile(join("data", "geo", "voies.geojson"), JSON.stringify(voiesGeo));
+  await writeFile(join("data", "geo", "voiries.json"), JSON.stringify(donnees));
 
   // 7. Rapport de couverture.
   await writeFile("COVERAGE_REPORT.md", rapport({ ways, segmentsParWay, voiries, donnees, horsCommune, pointsCalcules, limite, spwDisponible: !!spw, journalD14 }));
 
   console.log(`✅ ${voiries.length} voiries logiques, ${features.length} segments.`);
-  console.log(`   Fichiers : public/geo/*.json · COVERAGE_REPORT.md`);
+  console.log(`   Fichiers : data/geo/* · COVERAGE_REPORT.md`);
   console.log(`   Empreinte voies.geojson : ${sha256(JSON.stringify(voiesGeo)).slice(0, 16)}…`);
 }
 
