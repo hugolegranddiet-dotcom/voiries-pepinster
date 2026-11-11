@@ -64,13 +64,28 @@ cp .env.example .env.local
 open -e .env.local
 ```
 
-Le fichier s'ouvre dans TextEdit. Dans Supabase, clique sur le bouton **Connect** (en haut du projet) ou va dans **Project Settings → API Keys**, puis complète les trois lignes :
+Le fichier s'ouvre dans TextEdit. Colle chaque valeur **juste après le `=`**, sans espace ni guillemets.
 
-| Ligne | Valeur à coller | Où la trouver |
+**Ligne 1 — `NEXT_PUBLIC_SUPABASE_URL=`** : l'adresse du projet, construite avec ton identifiant :
+`https://TON_PROJECT_REF.supabase.co` (ex. `https://abcdefghijklmnopqrst.supabase.co`).
+Tu la trouves aussi dans **Project Settings** (roue dentée en bas à gauche) → **Data API** → *Project URL*.
+
+**Lignes 2 et 3 — les clés** : **Project Settings** → **API Keys** (menu de gauche). Reste sur l'onglet des nouvelles clés, **pas** sur *Legacy API keys*.
+
+| Ligne | Section de la page | Comment copier |
 |---|---|---|
-| `NEXT_PUBLIC_SUPABASE_URL=` | `https://…supabase.co` | *Connect* ou *Project Settings → Data API* |
-| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=` | `sb_publishable_…` | *Project Settings → API Keys* → *Publishable key* |
-| `SUPABASE_SECRET_KEY=` | `sb_secret_…` | *Project Settings → API Keys* → *Secret keys* → *Reveal* |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=` | **Publishable key** | bouton *Copy* à droite de la clé `sb_publishable_…` |
+| `SUPABASE_SECRET_KEY=` | **Secret keys** | clique sur l'œil (*Reveal*) de la clé `sb_secret_…`, puis *Copy* |
+
+Si la page ne montre aucune clé `sb_publishable_…`, clique sur **Create new API keys**.
+
+Le fichier doit ressembler à ceci (valeurs raccourcies) :
+
+```
+NEXT_PUBLIC_SUPABASE_URL=https://abcdefghijklmnopqrst.supabase.co
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_xxxxxxxx…
+SUPABASE_SECRET_KEY=sb_secret_xxxxxxxx…
+```
 
 Enregistre (Cmd + S) et ferme TextEdit. Ce fichier reste sur ton Mac : il est exclu de GitHub.
 
