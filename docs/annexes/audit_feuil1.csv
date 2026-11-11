@@ -1,0 +1,181 @@
+﻿ligne;bloc;voirie_brute;voirie_nettoyee;ordre_osm_propose;etat_brut;couleur_etat;note_suggeree_par_couleur;type_voire_brut;couleur_type;type_habitat_brut;ampleur_brute;ampleur_normalisee;densite_brute;echeance_brute;nature_echeance;securisation_mobilite_brute;particularite_brute;alertes
+2;A-communal;A l'Assise ;A l'Assise;;RAS;#00FF00;1;Passage faible;#7CEB99;Lotissement 4 façades;;;Moyen élevé;;;;cul de sac;espaces
+3;A-communal;Al Clusâre;Al Clusâre;;RAS;#00FF00;1;Passage faible;#7CEB99;Lotissement 4 façades;;;Moyen élevé;;;;cul de sac;
+4;A-communal;Albert 1er Avenue ;Albert 1er Avenue;Avenue Albert 1er;RAS;#00FF00;1;Passage élevé;#FF3300;jointive 1 côté;;;Moyen élevé;;;;;espaces
+5;A-communal;Alfred Brabant Rue;Alfred Brabant Rue;Rue Alfred Brabant;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;;;;;
+6;A-communal;Anneuses Rue des ;Anneuses Rue des;Rue des Anneuses;RAS;#00FF00;1;Passage faible;#7CEB99;Lotissement 4 façades;;;Moyen bas;;;;;espaces
+7;A-communal;Antoine Franssen Rue ;Antoine Franssen Rue;Rue Antoine Franssen;RAS;#00FF00;1;Passage faible;#7CEB99;Lotissement;;;Faible;;;;;espaces
+8;A-communal;Armée Secrète Route de l';Armée Secrète Route de l';Route de l'Armée Secrète;;#009900;3;Passage faible;#7CEB99;négligeable;Enduisage;Enduisage;Faible;;;;;
+9;A-communal;Au Chêne;Au Chêne;;;#009900;3;Passage moyen;#009900;4 façades;Racalage/pose complet;Raclage/pose complet;Moyen élevé;;;;carrefour St Germain-Croix Maga;
+10;A-communal;Aux Cours;Aux Cours;;RAS;#00FF00;1;Transit;#975CCB;variable;;;Moyen bas;;;;;
+11;A-communal;Aux Poissons Ruelle ;Aux Poissons Ruelle;Ruelle Aux Poissons;RAS;#00FF00;1;Passage faible;#7CEB99;campagne;;;Faible;;;;;espaces
+12;A-communal;Avallon Rue d';Avallon Rue d';Rue d'Avallon;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;;;;;
+13;A-communal;Beau Site;Beau Site;;RAS;#00FF00;1;Passage faible;#7CEB99;Lotissement 4 façades;Racalage/pose complet;Raclage/pose complet;Moyen bas;5 ans;délai relatif;quelques linéaires;cul de sac;
+14;A-communal;Belle Vue;Belle Vue;;;#FF0000;4;Passage élevé;#FF3300;campapagne;;;Faible;;;;Golf du Haras Réparations ;rouge vif corrigé en 4 (D2)
+15;A-communal;Biez Rue du ;Biez Rue du;Rue du Biez;;#FF0000;4;Passage élevé;#FF3300;arrière maison;Racalage/pose complet;Raclage/pose complet;Moyen bas;;;;Ecole, trottois HS;"espaces; rouge vif corrigé en 4 (D2)"
+16;A-communal;Bois d'Olne;Bois d'Olne;;RAS;#00FF00;1;Passage faible;#7CEB99;campapagne;;;Faible;;;;tronço très court;
+17;A-communal;Bois d'Oltmont Rue du ;Bois d'Oltmont Rue du;Rue du Bois d'Oltmont;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 4 façades;;;Elevé;2023;année passée;;;espaces
+18;A-communal;Bois Herman;Bois Herman;;;#FFFF00;;Passage faible;#7CEB99;campapagne;;;Faible;;;;;couleur état hors légende
+19;A-communal;Bouhais;Bouhais;;RAS;#00FF00;1;Passage élevé;#FF3300;4 façades;;;Moyen élevé;;;;;
+20;A-communal;Bouhaye inférieure;Bouhaye inférieure;;;#FF0000;4;Transit;#975CCB;variable;Racalage/pose complet;Raclage/pose complet;;;;;;"tronçon/section probable; rouge vif corrigé en 4 (D2)"
+21;A-communal;Bouhaye supérieure;Bouhaye supérieure;;;#009900;3;Transit;#975CCB;variable;Enduisage;Enduisage;;3 ans;délai relatif;coussins dans le bas;filet d'eau épingle;tronçon/section probable
+22;A-communal;Campagne Rue ;Campagne Rue;Rue Campagne;RAS;#00FF00;1;Passage faible;#7CEB99;jointives / 4 façades;;;Moyen élevé;2024;année passée;;enduisage Proximus;espaces
+23;A-communal;Chalsèche;Chalsèche;;;#7CEB99;2;Passage faible;#7CEB99;Lotissement 4 façades;Schlammage;Schlammage;Moyen bas;5 ans;délai relatif;;circulation locale;
+24;A-communal;Charles Fraipont Rue ;Charles Fraipont Rue;Rue Charles Fraipont;;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;2026;année courante/future;;;espaces
+25;A-communal;Chemin aux Fraises;Chemin aux Fraises;;;#009900;3;Passage faible;#7CEB99;4 façades;Racalage/pose complet;Raclage/pose complet;;5 ans;délai relatif;;circulation locale;
+26;A-communal;Chemin de l'Hermitage;Chemin de l'Hermitage;;RAS;#00FF00;1;Passage faible;#7CEB99;Lotissement 4 façades;;;Faible;;;;cul de sac, accès bois;
+27;A-communal;Chemin de Thibaumont;Chemin de Thibaumont;;;#009900;3;Passage faible;#7CEB99;campapagne;Racalage/pose complet;Raclage/pose complet;Faible;;;;;
+28;A-communal;Chemin du Fond de Fiérain;Chemin du Fond de Fiérain;;RAS;#00FF00;1;Passage faible;#7CEB99;campagne;;;Faible;;;;;
+29;A-communal;Chemin du Nauzaury;Chemin du Nauzaury;;;#7CEB99;2;Passage faible;#7CEB99;campagne;;;Faible;;;;Partie tarmac OK;nom en double
+30;A-communal;Cité Mon Logis;Cité Mon Logis;;RAS;#00FF00;1;Passage faible;#7CEB99;Lotissement 3 façades;;;Faible;;;;Boucle;
+31;A-communal;Clos Badon;Clos Badon;;RAS;#00FF00;1;Passage faible;#7CEB99;Lotis. 3 façades-jointives;;;Elevé;2020;année passée;;;
+32;A-communal;Combattants Rue des ;Combattants Rue des;Rue des Combattants;;#00FF00;1;Transit;#975CCB;village;;;Elevé;2025-2026;plage d'années;OK;;espaces
+33;A-communal;Cornesse Route de ;Cornesse Route de;Route de Cornesse;;#009900;3;Transit;#975CCB;4 façades;Raclage/pose partiel;Raclage/pose partiel;Moyen bas;5 ans;délai relatif;;tronçon salle;espaces
+34;A-communal;Coulée;Coulée;;;#7CEB99;2;Passage faible;#7CEB99;jointives / 4 façades;Raclage/pose partiel*;Raclage/pose partiel;Moyen bas;5 ans;délai relatif;;* partie cimetière;
+35;A-communal;Cour Maréchal;Cour Maréchal;;;#7CEB99;2;Passage faible;#7CEB99;4 façades;Raclage/pose partiel*;Raclage/pose partiel;Moyen bas;;;;*entrée + côté gauche (cul de sac);
+36;A-communal;Courte Rue ;Courte Rue;Rue Courte;RAS;#00FF00;1;Passage faible;#7CEB99;jointives;;;Faible;;;;;espaces
+37;A-communal;Croix Maga Route de la ;Croix Maga Route de la;Route de la Croix Maga;;#7CEB99;2;Passage moyen;#7CEB99;4 façades;Enduisage;Enduisage;Moyen élevé;+ de 5 ans;délai relatif;;! Faïençage, affaissement d'un côté;"espaces; couleur type ≠ texte; alerte ""!"" dans particularité"
+38;A-communal;Cromhaise;Cromhaise;;RAS;#00FF00;1;Passage faible;#7CEB99;campagne;;;Faible;;;;partie accès Bruno;
+39;A-communal;Déportés Rue des ;Déportés Rue des;Rue des Déportés;RAS;#00FF00;1;Transit;#975CCB;4 façades ;;;Elevé;;;;limitation tonage;espaces
+40;A-communal;Doux Fonds Rue des ;Doux Fonds Rue des;Rue des Doux Fonds;RAS;#00FF00;1;Passage faible;#7CEB99;Lotissement 4 façades;;;Moyen bas;;;;Cul de sac;espaces
+41;A-communal;Douys;Douys;;RAS;#00FF00;1;Passage faible;#7CEB99;campagne;;;Faible;;;;Lafarque;
+42;A-communal;Drolenval descente Cornesse;Drolenval descente Cornesse;;;#009900;3;Passage faible;#7CEB99;campagne;Raclage/pose complet;Raclage/pose complet;Faible;;;;;tronçon/section probable
+43;A-communal;Drolenval plat;Drolenval plat;;RAS;#00FF00;1;Passage moyen;#975CCB;maisons jointives;;;Elevé;;;;;"tronçon/section probable; couleur type ≠ texte"
+44;A-communal;Duc Rue du ;Duc Rue du;Rue du Duc;;;;;;n'existe plus;;;;;;;N'existe plus;"espaces; gestionnaire/existence à vérifier"
+45;A-communal;El Fagne;El Fagne;;RAS;#00FF00;1;Passage moyen;#009900;maisons jointives;;;Moyen élevé;;;;;
+46;A-communal;Emile Fairon Rue;Emile Fairon Rue;Rue Emile Fairon;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Moyen bas;;;;;
+47;A-communal;Emile Vandervelde Rue ;Emile Vandervelde Rue;Rue Emile Vandervelde;;#975CCB;5;Transit;#975CCB;jointives / 4 façades;Raclage/pose complet;Raclage/pose complet;Moyen élevé;;;à revoir;! Fond de coffre;"espaces; alerte ""!"" dans particularité"
+48;A-communal;Eugène Pauquay Rue ;Eugène Pauquay Rue;Rue Eugène Pauquay;;#00FF00;1;Passage faible;#7CEB99;village;;;Elevé;2025-2026;plage d'années;OK;;espaces
+49;A-communal;Fays;Fays;;;#7CEB99;2;Passage faible;#7CEB99;4 façades;Raclage/pose partiel*;Raclage/pose partiel;;+ de 5 ans;délai relatif;;et enduisage;
+50;A-communal;Félix Defays Rue ;Félix Defays Rue;Rue Félix Defays;RAS;#00FF00;1;Passage élevé;#FF3300;jointives / 4 façades;;;Moyen bas;;;;;espaces
+51;A-communal;Fiérain Val du ;Fiérain Val du;Val du Fiérain;;#7CEB99;2;Passage faible;#7CEB99;négligeable;Enduisage;Enduisage;;8 ans;délai relatif;;;espaces
+52;A-communal;Fond de Noulé;Fond de Noulé;;;#7CEB99;2;Passage moyen;#009900;4 façades;Enduisage;Enduisage;Moyen élevé;5 ans;délai relatif;;mauvaises poches;
+53;A-communal;Fond de Ville;Fond de Ville;;;#00B050;;Passage faible;#7CEB99;campagne;Raclage/pose complet;Raclage/pose complet;Faible;;;;raclage laissé sur place profilé + tapis;couleur état hors légende
+54;A-communal;Fort Rue du ;Fort Rue du;Rue du Fort;;#975CCB;5;Passage faible;#7CEB99;Lotissement 4 façades;Raclage/pose complet;Raclage/pose complet;Moyen bas;urgent;qualitatif;quelques linéaires;cul de sac;espaces
+55;A-communal;François Jacob Rue ;François Jacob Rue;Rue François Jacob;;#009900;3;Passage moyen;#009900;maisons jointives/1 coté;Enduisage;Enduisage;;5 ans;délai relatif;;raclage;espaces
+56;A-communal;Francval Rue ;Francval Rue;Rue Francval;;#FF0000;4;Passage élevé;#FF3300;négligeable;;;;;;;;"espaces; rouge vif corrigé en 4 (D2)"
+57;A-communal;Georges Lemaire Rue ;Georges Lemaire Rue;Rue Georges Lemaire;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;2024;année passée;;;espaces
+58;A-communal;Goffontaine 1;Goffontaine 1;;RAS;#00FF00;1;Passage moyen;#009900;village;;;Elevé;;;néant;;tronçon/section probable
+59;A-communal;Goffontaine 2;Goffontaine 2;;;#009900;3;Passage faible;#7CEB99;haut;Raclage/pose partiel*;Raclage/pose partiel;Moyen élevé;;;néant;* raclage 200 m accès cimetière;tronçon/section probable
+60;A-communal;Goffontaine Trasenster;Goffontaine Trasenster;;RAS;#00FF00;1;Transit;#975CCB;néant;;;Faible;;;;accès Transenster et Step;tronçon/section probable
+61;A-communal;Golettes;Golettes;;RAS;#00FF00;1;Transit;#975CCB;maisons jointives;;;Elevé;;;existante / marquage cyclable;Rouge rond-point HS;
+62;A-communal;Grande Fontaine;Grande Fontaine;;RAS;#00FF00;1;Transit;#975CCB;néant;;;;prioritaire;qualitatif;;+ raclage pose  mauvaises poches;
+63;A-communal;Grand'Ry Cornesse;Grand'Ry Cornesse;;;#FF0000;4;Passage élevé;#FF3300;4 façades;Raclage/pose complet;Raclage/pose complet;Moyen élevé;5 ans;délai relatif;;;"tronçon/section probable; rouge vif corrigé en 4 (D2)"
+64;A-communal;Grand'Ry Wegnez;Grand'Ry Wegnez;;RAS;#00FF00;1;Transit;#975CCB;maisons jointives;;;Elevé;;;existante / marquage cyclable;;tronçon/section probable
+65;A-communal;Grands Près Rue des;Grands Près Rue des;Rue des Grands Près;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;;;;;
+66;A-communal;Grands Trys;Grands Trys;;RAS;#00FF00;1;Passage faible;#7CEB99;;;;;;;;accès ferme;
+67;A-communal;Grettouheid;Grettouheid;;RAS;#00FF00;1;Passage élevé;#FF3300;4 façades;;;Moyen élevé;;;;;
+68;A-communal;Henry François Hensay Rue ;Henry François Hensay Rue;Rue Henry François Hensay;RAS;#00FF00;1;Passage faible;#7CEB99;4 façades;raclage-pose complet;Raclage/pose complet;Moyen bas;;;;;espaces
+69;A-communal;Hezée;Hezée;;RAS;#00FF00;1;Transit;#975CCB;4 façades;;;Faible;2024;année passée;;;
+70;A-communal;Hospice Rue de l';Hospice Rue de l';Rue de l'Hospice;;#FF0000;4;Passage moyen;#009900;jointives / 4 façades;Raclage/pose complet;Raclage/pose complet;Moyen élevé;5 ans;délai relatif;;partie vers bois OK;rouge vif corrigé en 4 (D2)
+71;A-communal;Impasse de Prévôchamps;Impasse de Prévôchamps;;;#975CCB;5;Passage faible;#7CEB99;jointives;Mauvaise poches + raclage/ pose complet;Mauvaise poches + raclage/ pose complet;Moyen bas;;;;cul de sac;
+72;A-communal;Impasse Leroy;Impasse Leroy;;RAS;#00FF00;1;Passage faible;#7CEB99;;;;Moyen élevé;;;;cour;
+73;A-communal;Jacques Bouhy Rue ;Jacques Bouhy Rue;Rue Jacques Bouhy;;#009900;3;Passage élevé;#FF3300;maisons jointives/1 coté;Raclage/pose complet;Raclage/pose complet;Elevé;;;;Infrabel ?;"espaces; gestionnaire/existence à vérifier"
+74;A-communal;Jardins Rue des;Jardins Rue des;Rue des Jardins;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;;;;;
+75;A-communal;Jean Grandrath Rue ;Jean Grandrath Rue;Rue Jean Grandrath;RAS;#00FF00;1;Passage faible;#7CEB99;Lotissement 4 façades;;;Moyen élevé;;;;;espaces
+76;A-communal;Jean Simon Rue ;Jean Simon Rue;Rue Jean Simon;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;2026;année courante/future;;;espaces
+77;A-communal;Jenny Solheid Rue ;Jenny Solheid Rue;Rue Jenny Solheid;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;2024;année passée;;;espaces
+78;A-communal;Jonckay;Jonckay;;RAS;#00FF00;1;Passage élevé;#FF3300;jointives / 4 façades;;;Moyen élevé;;;existante;;
+79;A-communal;Joseph Meunier Rue ;Joseph Meunier Rue;Rue Joseph Meunier;RAS;#00FF00;1;Passage faible;#7CEB99;village  campagne;;;Moyen bas;;;;raclage laissé sur place profilé + tapis campagne terrain d'aviation;espaces
+80;A-communal;Joseph Sougnez Rue ;Joseph Sougnez Rue;Rue Joseph Sougnez;RAS;#00FF00;1;Passage faible;#7CEB99;village  campagne;;;Moyen bas;;;;;espaces
+81;A-communal;Koreux Ruelles du ;Koreux Ruelles du;Ruelles du Koreux;RAS;#00FF00;1;Passage moyen;#009900;campagne;;;Faible;;;;;espaces
+82;A-communal;la Nô Rue ;la Nô Rue;Rue la Nô;;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;2026;année courante/future;;;espaces
+83;A-communal;La Saute;La Saute;;;#009900;3;Passage faible;#7CEB99;campagne;Raclage/pose complet;Raclage/pose complet;Faible;;;;raclage laissé sur place profilé + tapis;
+84;A-communal;Lambermont Rue de;Lambermont Rue de;Rue de Lambermont;RAS;#00FF00;1;Passage faible;#7CEB99;4 façades (en bas);;;Moyen bas;;;;Zoning;
+85;A-communal;Laurent Mairlot Rue ;Laurent Mairlot Rue;Rue Laurent Mairlot;RAS;#00FF00;1;Transit;#975CCB;jointives / 4 façades;;;Moyen élevé;;;Bandes cyclable;;espaces
+86;A-communal;Lefin;Lefin;;RAS;#00FF00;1;Passage moyen;#009900;jointives;;;Moyen élevé;;;;1 tronçon en 2024 + Infrabel;gestionnaire/existence à vérifier
+87;A-communal;Léon Lepas Venelle ;Léon Lepas Venelle;Venelle Léon Lepas;RAS;#00FF00;1;Passage faible;#7CEB99;3 façades;;;Moyen élevé;;;;cul de sac;espaces
+88;A-communal;Les Bagneures;Les Bagneures;;;;;Passage faible;#7CEB99;campagne;;;Faible;2024;année passée;;;
+89;A-communal;Libération Rue de la ;Libération Rue de la;Rue de la Libération;RAS;#00FF00;1;Passage faible;#7CEB99;maisons jointives;;;Moyen bas;;;néant;accès circ. Loc.;espaces
+90;A-communal;Lieutenant Albert Dressen Rue ;Lieutenant Albert Dressen Rue;Rue Lieutenant Albert Dressen;RAS;#00FF00;1;Passage faible;#7CEB99;Lotissement 4 façades;;;Moyen bas;;;néant;cul de sac;espaces
+91;A-communal;Lieutenant Rue ;Lieutenant Rue;Rue Lieutenant;RAS;#00FF00;1;Passage élevé;#FF3300;Jointives ;;;Elevé;;;;;espaces
+92;A-communal;Louis Formatin Rue ;Louis Formatin Rue;Rue Louis Formatin;RAS;#00FF00;1;Passage élevé;#FF3300;jointives 3 façades;;;Moyen élevé;;;;;espaces
+93;A-communal;Maison-Bois;Maison-Bois;;;#FF0000;4;Passage élevé;#FF3300;campapagne;Raclage/pose partiel;Raclage/pose partiel;Moyen bas;;;;Golf du Haras;rouge vif corrigé en 4 (D2)
+94;A-communal;Marcel Fikenne Rue ;Marcel Fikenne Rue;Rue Marcel Fikenne;;#FF0000;4;Passage faible;#7CEB99;Lotissement 4 façades;Raclage/pose complet;Raclage/pose complet;Moyen bas;;;néant;non reprise ;"espaces; rouge vif corrigé en 4 (D2); gestionnaire/existence à vérifier"
+95;A-communal;Mathieu Regnier Rue ;Mathieu Regnier Rue;Rue Mathieu Regnier;RAS;#00FF00;1;Passage faible;#7CEB99;maisons jointives;;;Elevé;;;;;espaces
+96;A-communal;Mathieu Closset Rue ;Mathieu Closset Rue;Rue Mathieu Closset;RAS;#00FF00;1;Passage faible;#7CEB99;;;;;;;;;espaces
+97;A-communal;Mohonthier;Mohonthier;;;#009900;3;Passage faible;#7CEB99;campagne;Enduisage;Enduisage;Faible;+ de 5 ans;délai relatif;;;
+98;A-communal;Mortbonhomme;Mortbonhomme;;;#7CEB99;2;Passage faible;#7CEB99;campagne;;;Moyen bas;;;;Caniveau traversée à améliorer ;
+99;A-communal;Mousset;Mousset;;;#975CCB;5;Passage moyen;#009900;maisons jointives et activités industrielles;Raclage/pose complet;Raclage/pose complet;Moyen bas;3 ans;délai relatif;;attente F de C et démolitions Spaque;
+100;A-communal;Nessonvaux Route de ;Nessonvaux Route de;Route de Nessonvaux;RAS;#00FF00;1;Transit;#975CCB;4 façades;;;Faible;2023;année passée;;;espaces
+101;A-communal;Nids d'Aguesses;Nids d'Aguesses;;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 3/4 façades;;;Elevé;2023;année passée;;trapillons partie pavée Haras HS;
+102;A-communal;Nouvelle Rue ;Nouvelle Rue;Rue Nouvelle;;#00B050;;Lotissement;#7CEB99;maisons jointives;Raclage/pose partiel;Raclage/pose partiel;Elevé;;;;côté garage, RAS rue;"espaces; couleur état hors légende"
+103;A-communal;Paire Rue du ;Paire Rue du;Rue du Paire;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Moyen bas;;;;;espaces
+104;A-communal;Paire Ruelle du ;Paire Ruelle du;Ruelle du Paire;RAS;#00FF00;1;Passage moyen;#009900;Hall parking 3 façades;;;Faible;;;;hall du Paire;espaces
+105;A-communal;Paix Rue de la ;Paix Rue de la;Rue de la Paix;RAS;#00FF00;1;Passage faible;#7CEB99;Campagne;;;Moyen bas;;;;cimetière;espaces
+106;A-communal;Panorama Rue du ;Panorama Rue du;Rue du Panorama;RAS;#00FF00;1;Passage moyen;#009900;Lotissement 4 façades;;;Moyen bas;2026;année courante/future;néant;accès cimetière;espaces
+107;A-communal;Peléeheid Route de ;Peléeheid Route de;Route de Peléeheid;;#7CEB99;2;Passage moyen;#009900;Lotissement 4 façades;Enduisage;Enduisage;Moyen bas;2 ans;délai relatif;fait;accès village;espaces
+108;A-communal;Pepin Rue ;Pepin Rue;Rue Pepin;RAS;#00FF00;1;Passage élevé;#FF3300;village;;;Elevé;;;;;espaces
+109;A-communal;Pierre Hauzeur Rue ;Pierre Hauzeur Rue;Rue Pierre Hauzeur;;#7CEB99;2;Lotissement;#7CEB99;Lotissement 3 façades;Raclage/pose complet;Raclage/pose complet;Elevé;;;;;espaces
+110;A-communal;Pierre Piqueray Rue ;Pierre Piqueray Rue;Rue Pierre Piqueray;RAS;#00FF00;1;Passage élevé;#FF3300;négligeable;;;Faible;2020;année passée;;;espaces
+111;A-communal;Place Charles Fraipont;Place Charles Fraipont;;;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;2026;année courante/future;;;
+112;A-communal;Place Notre-Dame;Place Notre-Dame;;RAS;#00FF00;1;Passage faible;#7CEB99;jointives / 4 façades;;;Moyen élevé;;;;5m filets d'eau;
+113;A-communal;Place Sainte-Hubert;Place Sainte-Hubert;;RAS;#00FF00;1;Passage moyen;#009900;jointives / 4 façades;;;Moyen élevé;;;;;
+114;A-communal;Plateau Rue du ;Plateau Rue du;Rue du Plateau;;#009900;3;Lotissement;#7CEB99;Lotissement 3 façades;Raclage/pose complet;Raclage/pose complet;Moyen élevé;5 ans;délai relatif;;;espaces
+115;A-communal;Pompe Rue de la ;Pompe Rue de la;Rue de la Pompe;RAS;#00FF00;1;Passage faible;#7CEB99;maisons jointives;;;Faible;;;;;espaces
+116;A-communal;Pont Walrand Rue ;Pont Walrand Rue;Rue Pont Walrand;RAS;#00FF00;1;Passage élevé;#FF3300;maisons jointives 1 côté;;;Moyen bas;2020;année passée;;;espaces
+117;A-communal;Progrès Rue du ;Progrès Rue du;Rue du Progrès;;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;2026;année courante/future;;;espaces
+118;A-communal;Puits Ronval;Puits Ronval;;;#00B050;;Passage faible;#7CEB99;campagne;Raclage/pose complet;Raclage/pose complet;Faible;3 ans;délai relatif;;;couleur état hors légende
+119;A-communal;Quai Armand Follet;Quai Armand Follet;;;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;2026;année courante/future;;;
+120;A-communal;Quai de la Hoëgne;Quai de la Hoëgne;;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Elevé;;;;;
+121;A-communal;Quai Ferdinand Nicolaï;Quai Ferdinand Nicolaï;;RAS;#00FF00;1;Passage faible;#7CEB99;maisons jointives/1 coté;;;Moyen élevé;2025;année passée;;;
+122;A-communal;Quai Ferdinand Nicolaï Hoëgne;Quai Ferdinand Nicolaï Hoëgne;;;#00B050;;Passage faible;#7CEB99;maisons jointives/1 coté;Raclage/pose complet;Raclage/pose complet;Moyen élevé;3 ans;délai relatif;;;"tronçon/section probable; couleur état hors légende"
+123;A-communal;Raymond Legentil Rue ;Raymond Legentil Rue;Rue Raymond Legentil;RAS;#00FF00;1;Passage moyen;#009900;3 façades;;;Elevé;;;;;espaces
+124;A-communal;Refawtay;Refawtay;;RAS;#00FF00;1;Passage faible;#7CEB99;Lotissement 4 façades;;;Moyen bas;;;;soulèvement + 150m raclage pose n°25-35;
+125;A-communal;Rolais;Rolais;;RAS;#00FF00;1;Passage faible;#7CEB99;jointives / 4 façades;;;Moyen bas;2023;année passée;;;
+126;A-communal;Saint Germain;Saint Germain;;;#FF0000;4;Passage élevé;#FF3300;jointives / 4 façades;Raclage/pose complet;Raclage/pose complet;Moyen élevé;;;ilots de sécurité avec coussin;;rouge vif corrigé en 4 (D2)
+127;A-communal;Saint Hubert Rue ;Saint Hubert Rue;Rue Saint Hubert;;#00FF00;1;Passage moyen;#009900;jointives / 4 façades;;;Moyen élevé;2026-2027;plage d'années;;;espaces
+128;A-communal;Saussales Ruelle des;Saussales Ruelle des;Ruelle des Saussales;RAS;#00FF00;1;Passage faible;#7CEB99;campagne;;;Faible;;;;;
+129;A-communal;Sclassin;Sclassin;;RAS;#00FF00;1;Transit;#975CCB;campagne;;;Moyen bas;;;;;
+130;A-communal;Soiron Route de ;Soiron Route de;Route de Soiron;;#FF0000;4;Transit;#975CCB;4 façades;Raclage/pose partiel;Raclage/pose partiel;Moyen bas;5 ans;délai relatif;;tronçon salle;"espaces; rouge vif corrigé en 4 (D2)"
+131;A-communal;Soiron-Centre cimetière arrière;Soiron-Centre cimetière arrière;;;#00B050;;Passage faible;#7CEB99;Village;Raclage/pose complet;Raclage/pose complet;Elevé;;;;;"tronçon/section probable; couleur état hors légende"
+132;A-communal;Soiron-Centre cimetière centre;Soiron-Centre cimetière centre;;;#00B050;;Passage faible;#7CEB99;Village;Raclage/pose complet;Raclage/pose complet;Elevé;;;;;"tronçon/section probable; couleur état hors légende"
+133;A-communal;Soiron-Centre Place de l'église;Soiron-Centre Place de l'église;;;#00B050;;Passage faible;#7CEB99;Village;Raclage/pose complet;Raclage/pose complet;Elevé;;;;;"tronçon/section probable; couleur état hors légende"
+134;A-communal;Soiron-Centre Place du bac;Soiron-Centre Place du bac;;;#FF3300;4;Transit;#975CCB;Village;Raclage/pose complet;Raclage/pose complet;Elevé;;;;joints pavés ;tronçon/section probable
+135;A-communal;Soiron-Centre supérieure;Soiron-Centre supérieure;;;#FF3300;4;Transit;#975CCB;Village;Raclage/pose complet;Raclage/pose complet;Elevé;;;;joints pavés ;tronçon/section probable
+136;A-communal;Soiron-Centre Taverne;Soiron-Centre Taverne;;;#FF3300;4;Transit;#975CCB;Village;Raclage/pose complet;Raclage/pose complet;Elevé;;;;joints pavés ;tronçon/section probable
+137;A-communal;Sous le Château Rue ;Sous le Château Rue;Rue Sous le Château;RAS;#00FF00;1;Transit;#975CCB;4 façades;;;Faible;;;;;espaces
+138;A-communal;Sylvain Balau Rue ;Sylvain Balau Rue;Rue Sylvain Balau;RAS;#00FF00;1;Lotissement;#7CEB99;Lotissement 3 façades;;;Moyen bas;;;;;espaces
+139;A-communal;Thier Rue du ;Thier Rue du;Rue du Thier;RAS;#00FF00;1;Passage élevé;#FF3300;jointives / 4 façades;;;Moyen élevé;;;;;espaces
+140;A-communal;Tilleul;Tilleul;;;#00B050;;Transit;#975CCB;4 façades;Enduisage;Enduisage;Moyen élevé;;;à réparer;;couleur état hors légende
+141;A-communal;Tribomont Bertholet-Verviers Rue ;Tribomont Bertholet-Verviers Rue;Rue Tribomont Bertholet-Verviers;;#FF0000;4;Transit;#975CCB;4 façades;Raclage/pose partiel;Raclage/pose partiel;Moyen bas;;;;"Section ""Bertholet-Verviers""";"espaces; tronçon/section probable; rouge vif corrigé en 4 (D2)"
+142;A-communal;Tribomont principale Rue ;Tribomont principale Rue;Rue Tribomont principale;;#009900;3;Transit;#975CCB;4 façades;Enduisage;Enduisage;Moyen bas;;;;bas vers Ferme du Hara;"espaces; tronçon/section probable"
+143;A-communal;Turlurette;Turlurette;;;#FF0000;4;Passage faible;#7CEB99;négligeable;Raclage/pose complet;Raclage/pose complet;Faible;;;;Côté Lonneux raclage;rouge vif corrigé en 4 (D2)
+144;A-communal;Vieille Eglise;Vieille Eglise;;;#FF0000;4;Passage faible;#7CEB99;4 façades;Raclage/pose complet;Raclage/pose complet;Moyen bas;;;;faïençage le long du filet d'eau;rouge vif corrigé en 4 (D2)
+145;A-communal;Voie Constant;Voie Constant;;RAS;#00FF00;1;Passage moyen;#009900;4 façades;;;Moyen bas;;;;;
+146;A-communal;Voie Creuhy;Voie Creuhy;;;#00B050;;Passage élevé;#FF3300;négligeable;Enduisage;Enduisage;Faible;;;;mauvaise poche (400 mètres);couleur état hors légende
+147;A-communal;Voie du Bola;Voie du Bola;;RAS;#00FF00;1;;;;;;;;;;;
+148;A-communal;Voie du Moulin;Voie du Moulin;;RAS;#00FF00;1;Passage faible;#7CEB99;campagne;;;Faible;;;;;
+149;A-communal;Xhavée Rue ;Xhavée Rue;Rue Xhavée;RAS;#00FF00;1;Transit;#975CCB;4 façades;;;Moyen élevé;2025;année passée;Ilots, bande cyclable;;espaces
+150;A-communal;Xhendelesse Rue de ;Xhendelesse Rue de;Rue de Xhendelesse;RAS;#00FF00;1;Transit;#975CCB;Campagne;;;Faible;2023;année passée;;;espaces
+152;B-SPW;Alfred Drèze Rue;Alfred Drèze Rue;Rue Alfred Drèze;SPW;#29B95C;;;theme0-0.15;;;;;;;;;
+153;B-SPW;Ayrifagne;Ayrifagne;;SPW;#00B050;;;theme2-0.10;;;;;2025;année passée;;;
+154;B-SPW;Chinheid;Chinheid;;SPW;#00B050;;;theme0-0.15;;;;;;;;;
+155;B-SPW;Flère;Flère;;SPW;#00B050;;;theme0-0.15;;;;;;;;;
+156;B-SPW;Forges Thiry;Forges Thiry;;SPW;#00B050;;;theme2-0.10;;;;;2022;année passée;;Sauf ilot 2023;
+157;B-SPW;Hauts Sarts;Hauts Sarts;;SPW;#00B050;;;theme2-0.10;;;;;2025;année passée;;;
+158;B-SPW;Hodister Rue ;Hodister Rue;Rue Hodister;SPW;#00B050;;;theme0-0.15;;;;;2019;année passée;;;espaces
+159;B-SPW;Hubert Halet Rue ;Hubert Halet Rue;Rue Hubert Halet;SPW;#00B050;;;theme0-0.15;;;;;2019;année passée;;;espaces
+160;B-SPW;Louheau;Louheau;;SPW;#00B050;;;theme2-0.10;;;;;;;;;
+161;B-SPW;Louis Biérin Rue ;Louis Biérin Rue;Rue Louis Biérin;SPW;#00B050;;;theme0-0.15;;;;;;;;;espaces
+162;B-SPW;Massau;Massau;;SPW;#00B050;;;theme0-0.15;;;;;;;;;
+163;B-SPW;Neuve Rue ;Neuve Rue;Rue Neuve;SPW;#00B050;;;theme0-0.15;;;;;;;;;espaces
+164;B-SPW;Prévôchamps;Prévôchamps;;SPW;#00B050;;;theme0-0.15;;;;;;;;;
+165;B-SPW;Purgatoire Rue ;Purgatoire Rue;Rue Purgatoire;SPW;#00B050;;;theme0-0.15;;;;;2019-2027;plage d'années;;;espaces
+166;B-SPW;Régence Rue de la ;Régence Rue de la;Rue de la Régence;SPW;#00B050;;;theme0-0.15;;;;;;;;;espaces
+167;B-SPW;Route de Tancrémont;Route de Tancrémont;;SPW;#29B95C;;;theme0-0.15;;;;;2025;année passée;;;
+168;B-SPW;Vovegnez Rue ;Vovegnez Rue;Rue Vovegnez;SPW;#00B050;;;theme0-0.25;;;;;2019;année passée;;;espaces
+170;C-chemins;Bois l'Evêque Rue ;Bois l'Evêque Rue;Rue Bois l'Evêque;;theme7+0.00;;Passage faible;#7CEB99;campapagne;;;Faible;;;néant;accès bois;espaces
+171;C-chemins;Chemin de la Baleine;Chemin de la Baleine;;;theme7+0.00;;;#7CEB99;campapagne;;;;;;;Route de Soiron-Fond de Ville;
+172;C-chemins;Chemin de Nôheid;Chemin de Nôheid;;;theme7+0.00;;Passage faible;#7CEB99;ilot;;;Faible;;;;Drolenval chemin;
+173;C-chemins;Chemin du Bois Robert;Chemin du Bois Robert;;;theme7+0.00;;;#7CEB99;Chemin forestier;;;;;;;;
+174;C-chemins;Chemin du Loup;Chemin du Loup;;;theme7+0.00;;Passage faible;#7CEB99;campagne;;;Faible;;;;;
+175;C-chemins;Chemin du Moulin;Chemin du Moulin;;;theme7+0.00;;Passage faible;#7CEB99;campagne;;;;;;;Voie Creuhy vers Nausaury;
+176;C-chemins;Chemin du Nauzaury;Chemin du Nauzaury;;;theme7+0.00;;Passage faible;#7CEB99;campagne;;;Faible;;;;Partie tarmac OK;nom en double
+177;C-chemins;Fraity;Fraity;;;theme7+0.00;;Passage faible;#7CEB99;campagne-forestier;;;;;;;Fond des 3 bois -chapelle tancrémont;
+178;C-chemins;Hodwinry;Hodwinry;;;theme7+0.00;;Passage faible;#7CEB99;campagne-forestier;;;Faible;;;;1 habitation Vieille voie de Liège-Goffontaine;
+179;C-chemins;Les Golets;Les Golets;;;theme7+0.00;;Passage faible;#7CEB99;campagne;;;Faible;;;;Avec racalge;
+180;C-chemins;Marly Ruelle ;Marly Ruelle;Ruelle Marly;;theme7+0.00;;Passage faible;#7CEB99;campagne;;;Faible;;;;Joseph Sougnez campage arrière place;espaces
+181;C-chemins;Mazures;Mazures;;;theme7+0.00;;Passage faible;#7CEB99;Campagne-forestier;;;Faible;;;;Avec racalge;
+182;C-chemins;Sohan;Sohan;;;theme7+0.00;;Passage faible;#7CEB99;campagne;;;Faible;;;;;
+183;C-chemins;Try des Hayes;Try des Hayes;;;theme7+0.00;;Passage faible;#7CEB99;campagne;;;;;;;Aéromodélisme campagne Wegnez;

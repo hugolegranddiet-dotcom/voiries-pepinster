@@ -1,0 +1,12 @@
+# Dépendances et fichiers générés
+node_modules/
+.next/
+out/
+build/
+coverage/
+# Secrets — ne jamais enregistrer
+.env
+.env*.local
+# Système
+.DS_Store
+*.log
