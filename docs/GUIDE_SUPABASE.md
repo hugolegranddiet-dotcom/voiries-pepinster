@@ -47,13 +47,13 @@ Le navigateur s'ouvre : autorise l'accès, puis reviens au Terminal.
 npx supabase@3.1.0 link --project-ref TON_PROJECT_REF
 ```
 
-Remplace `TON_PROJECT_REF` par l'identifiant de l'étape 1 (point 3), sans guillemets ni espaces. Exemple : `npx supabase@3.1.0 link --project-ref abcdefghijklmnopqrst`. Le Terminal demande le **mot de passe de la base** : colle-le (rien ne s'affiche pendant la saisie, c'est normal) puis Entrée.
+Remplace `TON_PROJECT_REF` par l'identifiant de l'étape 1 (point 3), sans guillemets ni espaces. Exemple : `npx supabase@3.1.0 link --project-ref abcdefghijklmnopqrst`. Tu dois voir `Finished supabase link.` (le mot de passe de la base peut être demandé ici ou à la commande suivante : colle-le, rien ne s'affiche pendant la saisie, c'est normal).
 
 ```bash
-npx supabase@3.1.0 db push
+npx supabase@3.1.0 db push --remote
 ```
 
-Réponds `Y` pour confirmer. Tu dois voir `Applying migration 20261111200000_schema_initial.sql...` puis `Finished supabase db push.`
+`--remote` est indispensable : sans lui, l'outil cherche une base installée sur le Mac (message « Make sure Docker is running »). Si le **mot de passe de la base** est demandé, colle-le puis Entrée. Réponds `Y` pour confirmer. Tu dois voir `Applying migration 20261111200000_schema_initial.sql...` puis `Finished supabase db push.`
 
 ✅ Les tables, les règles de sécurité et le journal des modifications sont créés.
 

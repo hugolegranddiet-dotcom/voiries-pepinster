@@ -75,7 +75,7 @@ Mise en service pas à pas : **[`docs/GUIDE_SUPABASE.md`](docs/GUIDE_SUPABASE.md
 
 | Commande | Rôle |
 |---|---|
-| `npx supabase@3.1.0 db push` | applique les migrations de `supabase/migrations/` au projet relié |
+| `npx supabase@3.1.0 db push --remote` | applique les migrations de `supabase/migrations/` au projet relié |
 | `npm run db:seed` | importe (ou ré-importe sans doublon) carte, Excel, décisions ; n'écrase jamais une évaluation |
 | `npm run db:admin -- email` | déclare l'administrateur unique |
 | `npm run db:verifier` | vérifie sur le vrai projet : refus d'accès anonyme, inscriptions fermées, données complètes |
