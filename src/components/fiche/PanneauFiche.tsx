@@ -232,11 +232,7 @@ export function PanneauFiche({
             <Ligne
               libelle="État de la chaussée"
               valeur={
-                e?.etat_note
-                  ? LIBELLES_ETAT[e.etat_note]
-                  : e?.etat_note_suggeree
-                    ? <span className="italic text-muted">non validé — suggestion Excel : {e.etat_note_suggeree}/5</span>
-                    : null
+                e?.etat_note ? LIBELLES_ETAT[e.etat_note] : null
               }
             />
             <Ligne libelle="Circulation" valeur={e?.intensite_circulation ? LIBELLES_INTENSITE[e.intensite_circulation] : null} />
@@ -283,16 +279,6 @@ export function PanneauFiche({
           <Champ
             id="f-etat"
             libelle="État de la chaussée (1 = bon, 5 = dégradé)"
-            aide={
-              e?.etat_note_suggeree && courant.etat_note !== String(e.etat_note_suggeree) ? (
-                <>
-                  Suggestion d&apos;après la couleur de l&apos;Excel : <strong>{e.etat_note_suggeree}</strong>.{" "}
-                  <button type="button" className="text-brand underline underline-offset-2" onClick={() => set("etat_note")(String(e.etat_note_suggeree))}>
-                    Utiliser cette note
-                  </button>
-                </>
-              ) : undefined
-            }
           >
             <Choix id="f-etat" valeur={courant.etat_note} options={Object.entries(LIBELLES_ETAT)} onChange={set("etat_note")} />
           </Champ>
@@ -348,26 +334,6 @@ export function PanneauFiche({
             ))}
           </ul>
         </section>
-      )}
-
-      {/* Valeurs d'origine de l'Excel (jamais modifiées) */}
-      {fiche.origineExcel.length > 0 && (
-        <details className="rounded-lg border border-line p-3">
-          <summary className="cursor-pointer text-sm font-semibold text-ink">Valeurs d&apos;origine (Excel)</summary>
-          {fiche.origineExcel.map((o) => (
-            <dl key={o.ligne} className="mt-2 divide-y divide-line">
-              <Ligne libelle="Ligne Excel" valeur={`${o.ligne} — « ${o.nomExcel} »`} />
-              <Ligne libelle="État" valeur={[o.etat, o.couleurEtat ? `couleur ${o.couleurEtat}` : null].filter(Boolean).join(", ") || null} />
-              <Ligne libelle="Type d'habitat" valeur={o.typeHabitat} />
-              <Ligne libelle="Type de voirie" valeur={o.typeVoire} />
-              <Ligne libelle="Densité" valeur={o.densite} />
-              <Ligne libelle="Travaux" valeur={o.ampleurTravaux} />
-              <Ligne libelle="Année prévue" valeur={o.echeance} />
-              <Ligne libelle="Sécurisation" valeur={o.securisation} />
-              <Ligne libelle="Particularité" valeur={o.particularite} />
-            </dl>
-          ))}
-        </details>
       )}
 
       {/* Informations OpenStreetMap */}

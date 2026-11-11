@@ -92,8 +92,32 @@ export function ValidationNotes() {
         </p>
       )}
 
+      {total > 0 && (
+        <div className="flex flex-col gap-2 rounded-xl border border-brand/30 bg-brand-soft p-4 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-ink">
+            Tout accepter d&apos;un coup ? Les corrections se feront ensuite voirie par voirie, dans la fiche.
+          </p>
+          <button
+            type="button"
+            disabled={enCours}
+            onClick={() => {
+              setChoix(new Set(enAttente));
+              setConfirmer(true);
+            }}
+            className="shrink-0 rounded-lg bg-brand px-3 py-2 text-sm font-semibold text-white hover:bg-brand-strong disabled:opacity-40"
+          >
+            Tout valider ({total})
+          </button>
+        </div>
+      )}
+
       {total === 0 ? (
-        <p className="rounded-xl border border-line bg-surface p-4 text-sm text-ink">Toutes les notes suggérées ont été traitées.</p>
+        <div className="rounded-xl border border-line bg-surface p-4 text-sm text-ink">
+          <p>Toutes les notes suggérées ont été validées. Les corrections se font maintenant dans la fiche de chaque voirie.</p>
+          <Link href="/priorites" className="mt-2 inline-block font-medium text-brand underline underline-offset-2">
+            Voir le classement
+          </Link>
+        </div>
       ) : (
         NOTES.map((n) => {
           const liste = groupes.get(n)!;

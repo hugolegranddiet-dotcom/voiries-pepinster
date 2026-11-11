@@ -54,7 +54,6 @@ const Vide = () => <span className="text-muted">—</span>;
 
 function CelluleEtat({ l }: { l: LigneListe }) {
   if (l.etatNote) return <span className="font-medium text-ink">{l.etatNote}</span>;
-  if (l.etatSuggere) return <span className="text-muted">suggérée {l.etatSuggere}</span>;
   return <Vide />;
 }
 

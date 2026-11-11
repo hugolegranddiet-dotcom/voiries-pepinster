@@ -20,7 +20,6 @@ export interface LigneListe {
   gestionnaire: Gestionnaire;
   statutFiche: StatutFiche;
   etatNote: number | null;
-  etatSuggere: number | null;
   intensite: string | null;
   densite: string | null;
   travaux: string | null;
@@ -63,7 +62,6 @@ export function versLigne(f: FicheVoirie, parametres: ParametresScore = PARAMETR
     gestionnaire: f.gestionnaire,
     statutFiche: f.statutFiche,
     etatNote: e?.etat_note ?? null,
-    etatSuggere: e?.etat_note_suggeree ?? null,
     intensite: e?.intensite_circulation ?? null,
     densite: e?.densite_habitation ?? null,
     travaux: e?.ampleur_travaux ?? null,
