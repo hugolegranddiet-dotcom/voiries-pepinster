@@ -10,7 +10,7 @@ export default function PageVoiries() {
     <div className="flex h-full flex-col">
       <EnTetePage
         titre="Voiries"
-        description="Toutes les voiries de Pepinster. Clique sur une ligne pour ouvrir et modifier sa fiche ; l'icône carte la montre sur la carte. Le score de priorité arrivera en phase 6."
+        description="Toutes les voiries de Pepinster. Clique sur une ligne pour ouvrir et modifier sa fiche ; l'icône carte la montre sur la carte."
       />
       <Suspense fallback={<p className="p-6 text-sm text-muted">Chargement des voiries…</p>}>
         <TableauVoiries />

@@ -9,6 +9,8 @@ import { BadgeGestionnaire, BadgePriorite, COULEUR_BANDE } from "@/components/ba
 import { LIBELLES_BANDES } from "@/lib/priority/defaults";
 import { cleEtat, COULEURS_ETAT, FILTRES_ETAT, LIBELLES_FILTRE_ETAT } from "@/lib/donnees/etat";
 import { useDonnees } from "@/components/donnees/FournisseurDonnees";
+import { ErreurDonnees } from "@/components/donnees/ErreurDonnees";
+import { BoutonExport } from "@/components/donnees/BoutonExport";
 import { PanneauFiche } from "@/components/fiche/PanneauFiche";
 import { IconeCarte, IconeFermer } from "@/components/icones";
 import { LIBELLES_GESTIONNAIRE, LIBELLES_STATUT, LIBELLES_DENSITE, LIBELLES_INTENSITE, type DensiteHabitation, type Gestionnaire, type IntensiteCirculation, type StatutFiche } from "@/lib/domaine";
@@ -143,7 +145,11 @@ export function TableauVoiries() {
     ([...filtres.types].sort().join() !== [...TYPES_PAR_DEFAUT].sort().join() ? 1 : 0);
 
   if (etat.statut === "erreur") {
-    return <p role="alert" className="m-4 rounded-lg border border-line bg-surface px-4 py-3 text-sm text-prio-rouge md:m-8">{etat.message}</p>;
+    return (
+      <div className="m-4 md:m-8">
+        <ErreurDonnees message={etat.message} />
+      </div>
+    );
   }
   if (!donnees) {
     return <p role="status" className="m-4 text-sm text-muted md:m-8">Chargement des voiries…</p>;
@@ -178,6 +184,9 @@ export function TableauVoiries() {
                 Réinitialiser les filtres
               </button>
             )}
+            <span className="sm:ml-auto">
+              <BoutonExport prefixe="voiries-pepinster-liste" libelle="Exporter la liste (CSV)" fiches={() => triees.map((l) => donnees.fiches[l.id])} />
+            </span>
           </div>
           <div id="filtres-voiries" className={`${filtresOuverts ? "grid" : "hidden"} mt-3 gap-4 border-t border-line pt-3 md:grid-cols-2 xl:grid-cols-5`}>
             <BlocCase legende="Types de voies">

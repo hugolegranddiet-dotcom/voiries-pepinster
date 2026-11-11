@@ -5,6 +5,7 @@ import { useCallback, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { IconeFermer } from "@/components/icones";
 import { useDonnees } from "@/components/donnees/FournisseurDonnees";
+import { ErreurDonnees } from "@/components/donnees/ErreurDonnees";
 import { PanneauFiche } from "@/components/fiche/PanneauFiche";
 import { RechercheVoirie } from "@/components/carte/RechercheVoirie";
 import { COULEURS_BANDE, type ModeCouleur } from "@/components/carte/styles-carte";
@@ -111,7 +112,9 @@ export function CarteVoiries() {
     <div className="relative flex h-full">
       <section aria-label="Carte des voiries" className="relative min-w-0 flex-1">
         {etat.statut === "erreur" ? (
-          <EtatCarte texte={etat.message} erreur />
+          <div className="carte-attente flex h-full items-center justify-center p-6">
+            <ErreurDonnees message={etat.message} />
+          </div>
         ) : !donnees ? (
           <EtatCarte texte="Chargement des voiries…" />
         ) : (

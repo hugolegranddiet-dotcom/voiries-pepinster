@@ -2,7 +2,7 @@
 
 Application web privée de suivi de l'état des voiries de la commune de Pepinster.
 
-**État : phase 6 terminée — score de priorité (fonction unique testée), couleurs sur la carte, la liste et la fiche avec le détail du calcul, classement communal, validation par lot des notes suggérées, paramètres modifiables et versionnés. Les données de démonstration ont été retirées. Reste la phase 7 (finition et publication).**
+**État : phase 7 terminée — version 1.0, prête à être publiée (la publication attend l'accord de Hugo : [`docs/GUIDE_DEPLOIEMENT.md`](docs/GUIDE_DEPLOIEMENT.md)). Mode d'emploi pour l'utilisateur : page **Aide** de l'application.**
 
 | Document | Contenu |
 |---|---|
@@ -12,6 +12,8 @@ Application web privée de suivi de l'état des voiries de la commune de Pepinst
 | [`CLAUDE.md`](CLAUDE.md) | règles de travail pour Claude |
 | [`COVERAGE_REPORT.md`](COVERAGE_REPORT.md) | couverture géographique (généré par `npm run geo:build`) |
 | [`MATCHING_REPORT.md`](MATCHING_REPORT.md) | correspondances Excel ↔ carte (généré par `npm run match`) |
+| [`docs/GUIDE_SUPABASE.md`](docs/GUIDE_SUPABASE.md) | mise en service de la base de données |
+| [`docs/GUIDE_DEPLOIEMENT.md`](docs/GUIDE_DEPLOIEMENT.md) | mise en ligne sur Vercel (à faire seulement après décision) |
 | [`Brief_Claude_Code_Voiries_Pepinster.md`](Brief_Claude_Code_Voiries_Pepinster.md) | cahier des charges |
 | `source/etat_voiries_pepinster.xlsx` | fichier Excel d'origine (jamais modifié) |
 
@@ -46,6 +48,7 @@ Ouvre ensuite **http://localhost:3000** dans ton navigateur. Pour arrêter : `Ct
 | `npm run typecheck` | cohérence des types TypeScript |
 | `npm run test` | tests automatiques (Vitest) |
 | `npm run check` | les trois à la suite |
+| `npm run test:e2e` | tests de sécurité de bout en bout sur la version de production (la 1re fois : `npx playwright install chromium`) |
 | `npm run build` | compilation de la version finale |
 
 ## Données géographiques
@@ -79,5 +82,8 @@ Mise en service pas à pas : **[`docs/GUIDE_SUPABASE.md`](docs/GUIDE_SUPABASE.md
 | `npm run db:seed` | importe (ou ré-importe sans doublon) carte, Excel, décisions ; n'écrase jamais une évaluation |
 | `npm run db:admin -- email` | déclare l'administrateur unique |
 | `npm run db:verifier` | vérifie sur le vrai projet : refus d'accès anonyme, inscriptions fermées, données complètes |
+| `npm run db:sauvegarde` | sauvegarde datée des données saisies → `sauvegardes/` (jamais sur GitHub : à copier dans un endroit sûr) |
+| `npm run db:restaurer -- fichier.json` | montre ce qu'une restauration changerait ; ajouter `--confirmer` pour l'appliquer (ne supprime rien) |
+| `npm run db:mot-de-passe -- email` | mot de passe oublié : en crée un nouveau, affiché une seule fois |
 
 Configuration : copier `.env.example` en `.env.local` (jamais versionné). La clé `SUPABASE_SECRET_KEY` ne sert qu'aux scripts locaux.

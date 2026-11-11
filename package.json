@@ -18,7 +18,11 @@
     "match:import": "tsx --tsconfig tsconfig.json scripts/match/import-decisions.ts",
     "db:seed": "tsx --tsconfig tsconfig.json scripts/db/seed.ts",
     "db:admin": "tsx --tsconfig tsconfig.json scripts/db/admin.ts",
-    "db:verifier": "tsx --tsconfig tsconfig.json scripts/db/verifier.ts"
+    "db:verifier": "tsx --tsconfig tsconfig.json scripts/db/verifier.ts",
+    "db:sauvegarde": "tsx --tsconfig tsconfig.json scripts/db/sauvegarde.ts",
+    "db:restaurer": "tsx --tsconfig tsconfig.json scripts/db/restaurer.ts",
+    "test:e2e": "playwright test",
+    "db:mot-de-passe": "tsx --tsconfig tsconfig.json scripts/db/mot-de-passe.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
@@ -31,7 +35,9 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
     "@electric-sql/pglite": "^0.5.16",
+    "@playwright/test": "1.63.0",
     "@tailwindcss/turbopack": "4.3.3",
     "@types/geojson": "^7946.0.16",
     "@types/leaflet": "^1.9.22",
@@ -41,6 +47,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
     "exceljs": "^4.4.0",
+    "playwright-core": "1.63.0",
     "tailwindcss": "4.3.3",
     "tsx": "^4.23.15",
     "typescript": "^5",

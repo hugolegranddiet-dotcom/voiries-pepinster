@@ -343,6 +343,7 @@ Chaque phase se termine par : vérifications automatiques, résumé des fichiers
 | ~~O8~~ | Valider les correspondances | – | **Résolu** (D16) |
 | ~~O10~~ | Deux lignes Excel sur la même voirie | – | **Résolu** (D17) |
 | **O9** | Tracé des **sections** (Bouhaye inf./sup., Soiron-Centre…) | couleur des sections | à définir sur la carte lors de la phase d'édition (5) ; d'ici là, rattachées à leur voirie mère |
+| **O11** | **Publication en ligne** (Vercel Hobby, 0 €) | mise en ligne | **en attente de ta décision.** Tout est prêt : [`docs/GUIDE_DEPLOIEMENT.md`](docs/GUIDE_DEPLOIEMENT.md). Point à vérifier avant : Vercel Hobby est réservé à un usage **non commercial** (personne n'est payé pour l'outil) |
 | **O7** | Autoriser Claude à **écrire** sur le dépôt GitHub (installation de l'application GitHub « Claude ») | sauvegarde | le premier enregistrement est prêt et attend cette autorisation |
 
 ---

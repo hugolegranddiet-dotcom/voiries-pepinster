@@ -11,7 +11,7 @@ import type { ResultatAction } from "@/app/actions/evaluations";
 
 const SESSION_EXPIREE = "Ta session a expiré : recharge la page pour te reconnecter.";
 const MIGRATION_MANQUANTE =
-  "La base n'a pas encore la mise à jour de la phase 6. Sur le Mac, lance : npx supabase@3.1.0 db push --remote";
+  "La base de données n'a pas encore toutes ses mises à jour. Préviens Hugo (sur le Mac : npx supabase@3.1.0 db push --remote).";
 
 async function contexte() {
   if (!configSupabase()) return null;

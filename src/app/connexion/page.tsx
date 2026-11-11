@@ -29,7 +29,7 @@ export default function PageConnexion() {
           ) : (
             <p role="alert" className="text-sm text-ink">
               L&apos;application n&apos;est pas encore reliée à sa base de données. Il manque le
-              fichier <code>.env.local</code> (voir <code>.env.example</code> et le guide de la phase 4).
+              fichier <code>.env.local</code> (voir <code>.env.example</code> et <code>docs/GUIDE_SUPABASE.md</code>).
             </p>
           )}
         </div>

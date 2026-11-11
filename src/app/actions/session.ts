@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { z } from "zod";
+import { cheminSur } from "@/lib/securite/redirection";
 import { clientServeur, configSupabase } from "@/lib/supabase/serveur";
 
 const SchemaConnexion = z.object({
@@ -14,12 +15,6 @@ export interface EtatConnexion {
   erreur: string | null;
   /** Adresse saisie, réaffichée après une erreur. */
   email?: string;
-}
-
-/** Évite les redirections vers un autre site : seul un chemin interne est accepté. */
-function cheminSur(suite: string | undefined): string {
-  if (!suite || !suite.startsWith("/") || suite.startsWith("//") || suite.startsWith("/connexion")) return "/carte";
-  return suite;
 }
 
 export async function seConnecter(_precedent: EtatConnexion, donnees: FormData): Promise<EtatConnexion> {

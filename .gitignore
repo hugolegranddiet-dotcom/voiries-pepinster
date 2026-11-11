@@ -56,3 +56,6 @@ next-env.d.ts
 # Fichiers temporaires de l'outil Supabase
 /supabase/.temp/
 /supabase/.branches/
+
+# Sauvegardes de la base (données du père) : à copier dans un endroit sûr, jamais sur GitHub
+/sauvegardes/

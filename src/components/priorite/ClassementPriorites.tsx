@@ -6,6 +6,8 @@ import { useMemo, useState } from "react";
 import { BadgeGestionnaire, BadgePriorite } from "@/components/badges";
 import { AvertissementScore } from "@/components/blocs";
 import { useDonnees } from "@/components/donnees/FournisseurDonnees";
+import { ErreurDonnees } from "@/components/donnees/ErreurDonnees";
+import { BoutonExport } from "@/components/donnees/BoutonExport";
 import { IconeCarte } from "@/components/icones";
 import { classer, type LigneClassement } from "@/lib/priority/classement";
 import { LIBELLES_RAISON } from "@/lib/priority/score";
@@ -47,7 +49,7 @@ export function ClassementPriorites() {
     [donnees],
   );
 
-  if (etat.statut === "erreur") return <p role="alert" className="text-sm text-prio-rouge">{etat.message}</p>;
+  if (etat.statut === "erreur") return <ErreurDonnees message={etat.message} />;
   if (!donnees || !c) return <p role="status" className="text-sm text-muted">Chargement du classement…</p>;
 
   const aCarte = (id: string) => Boolean(donnees.fiches[id]?.aTrace || donnees.fiches[id]?.parentId);
@@ -84,6 +86,12 @@ export function ClassementPriorites() {
             <input type="checkbox" className="size-4 accent-[var(--brand)]" checked={exclure} onChange={(e) => setExclure(e.target.checked)} />
             Exclure les voiries SPW et d&apos;autres gestionnaires
           </label>
+          <BoutonExport
+            prefixe="voiries-pepinster-classement"
+            libelle="Exporter le classement (CSV)"
+            fiches={() => c.classees.map((l) => donnees.fiches[l.id])}
+            rang={(id) => c.classees.find((l) => l.id === id)?.rang ?? null}
+          />
         </div>
         {c.classees.length === 0 ? (
           <p className="px-4 py-6 text-sm text-muted">

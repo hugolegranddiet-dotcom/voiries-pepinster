@@ -7,6 +7,8 @@ import { activerParametres, publierParametres } from "@/app/actions/priorites";
 import { BadgePriorite, COULEUR_BANDE } from "@/components/badges";
 import { AvertissementScore, Carte } from "@/components/blocs";
 import { useDonnees } from "@/components/donnees/FournisseurDonnees";
+import { ErreurDonnees } from "@/components/donnees/ErreurDonnees";
+import { BoutonExport } from "@/components/donnees/BoutonExport";
 import { LIBELLES_GESTIONNAIRE, type Gestionnaire } from "@/lib/domaine";
 import { classer } from "@/lib/priority/classement";
 import {
@@ -120,7 +122,7 @@ export function ParametresEditables() {
       setMessage({ ok: true, texte: `Version ${r.donnees.version} active : la carte, la liste et le classement l'utilisent maintenant.` });
     });
 
-  if (etat.statut === "erreur") return <p role="alert" className="text-sm text-prio-rouge">{etat.message}</p>;
+  if (etat.statut === "erreur") return <ErreurDonnees message={etat.message} />;
   if (!donnees) return <p role="status" className="text-sm text-muted">Chargement des paramètres…</p>;
 
   const versions = [...donnees.versionsParametres].reverse();
@@ -231,6 +233,18 @@ export function ParametresEditables() {
           </ol>
         </Carte>
       )}
+
+      <Carte titre="Sauvegarde des données">
+        <p className="mb-3 text-sm text-muted">
+          Télécharge un fichier lisible par Excel avec toutes les voiries, leurs évaluations et leur score. À faire de temps en temps et à garder
+          précieusement (par exemple une fois par mois).
+        </p>
+        <BoutonExport
+          prefixe="voiries-pepinster-sauvegarde"
+          libelle={`Télécharger toutes les voiries (${Object.keys(donnees.fiches).length})`}
+          fiches={() => Object.values(donnees.fiches).sort((a, b) => a.id.localeCompare(b.id))}
+        />
+      </Carte>
 
       <Carte titre="Versions enregistrées">
         {versions.length === 0 ? (

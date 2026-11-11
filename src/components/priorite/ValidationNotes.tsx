@@ -7,6 +7,7 @@ import { useMemo, useState, useTransition } from "react";
 import { validerNotesSuggerees } from "@/app/actions/priorites";
 import { BadgeGestionnaire } from "@/components/badges";
 import { useDonnees } from "@/components/donnees/FournisseurDonnees";
+import { ErreurDonnees } from "@/components/donnees/ErreurDonnees";
 import { LIBELLES_ETAT, type Note1a5 } from "@/lib/domaine";
 import { nomAffiche } from "@/lib/donnees/libelles";
 import type { FicheVoirie } from "@/lib/donnees/types";
@@ -70,7 +71,7 @@ export function ValidationNotes() {
       });
     });
 
-  if (etat.statut === "erreur") return <p role="alert" className="text-sm text-prio-rouge">{etat.message}</p>;
+  if (etat.statut === "erreur") return <ErreurDonnees message={etat.message} />;
   if (!donnees) return <p role="status" className="text-sm text-muted">Chargement…</p>;
 
   return (
