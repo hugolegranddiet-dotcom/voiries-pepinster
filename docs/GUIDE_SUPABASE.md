@@ -17,7 +17,10 @@ Tout se fait sur ton Mac, dans le navigateur et le Terminal. Copie les commandes
    - *Database Password* : clique **Generate a password**, puis **copie-le dans ton gestionnaire de mots de passe** (il servira à l'étape 3) ;
    - *Region* : une région **Europe** (par ex. *Central EU (Frankfurt)*) ;
    - **Create new project**. Attends 1 à 2 minutes que le projet soit prêt.
-3. Note l'**identifiant du projet** (*Project ref*) : ce sont les lettres de l'adresse du projet, `https://`**`abcdefghijkl`**`.supabase.co`. On le voit aussi dans l'adresse du tableau de bord.
+3. Note l'**identifiant du projet** (*Project ref*) : une suite d'une vingtaine de lettres minuscules, par ex. `abcdefghijklmnopqrst`. Trois façons de le trouver :
+   - **le plus simple** : dans la barre d'adresse du navigateur, quand tu es dans ton projet : `https://supabase.com/dashboard/project/`**`abcdefghijklmnopqrst`** → c'est la partie après `/project/` ;
+   - **Project Settings** (roue dentée en bas à gauche) → **General** → champ **Project ID** (bouton *Copy* à côté) ;
+   - dans l'adresse du projet : `https://`**`abcdefghijklmnopqrst`**`.supabase.co`.
 
 ## Étape 2 — Fermer les inscriptions (1 min)
 
@@ -44,7 +47,7 @@ Le navigateur s'ouvre : autorise l'accès, puis reviens au Terminal.
 npx supabase@3.1.0 link --project-ref TON_PROJECT_REF
 ```
 
-Remplace `TON_PROJECT_REF` par l'identifiant de l'étape 1. Le Terminal demande le **mot de passe de la base** : colle-le (rien ne s'affiche pendant la saisie, c'est normal) puis Entrée.
+Remplace `TON_PROJECT_REF` par l'identifiant de l'étape 1 (point 3), sans guillemets ni espaces. Exemple : `npx supabase@3.1.0 link --project-ref abcdefghijklmnopqrst`. Le Terminal demande le **mot de passe de la base** : colle-le (rien ne s'affiche pendant la saisie, c'est normal) puis Entrée.
 
 ```bash
 npx supabase@3.1.0 db push
