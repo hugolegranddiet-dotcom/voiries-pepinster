@@ -5,7 +5,10 @@
 //       lit la colonne DÉCISION remplie dans Excel ;
 //   npm run match:import -- --forte "Hugo, conversation du JJ/MM/AAAA"
 //       validation PAR LOT des propositions de confiance « forte » encore sans décision,
-//       uniquement sur demande explicite (la source est obligatoire et enregistrée).
+//       uniquement sur demande explicite (la source est obligatoire et enregistrée) ;
+//   npm run match:import -- --ecarter-sans-voirie "Hugo, conversation du JJ/MM/AAAA"
+//       écarte (NON) les lignes sans aucune voirie proposée et encore sans décision.
+// Un « OK » posé sur une partie de rue est enregistré comme SECTION (décision D4).
 // Puis lancer `npm run match` pour appliquer.
 
 import { createHash } from "node:crypto";
@@ -41,7 +44,22 @@ async function main() {
   const erreurs: string[] = [];
   let ajoutees = 0;
 
-  if (args[0] === "--forte") {
+  const methodeParLigne = new Map(propositions.map((p) => [p.ligne, p.methode]));
+  if (args[0] === "--ecarter-sans-voirie") {
+    const source = args[1]?.trim();
+    if (!source) throw new Error("Indiquer qui décide : --ecarter-sans-voirie \"Hugo, …\"");
+    for (const p of propositions.filter((x) => !x.propositionId && !parLigne.has(x.ligne))) {
+      parLigne.set(p.ligne, {
+        ligne: p.ligne,
+        decision: "NON",
+        voirieId: null,
+        commentaire: "aucune voirie trouvée : ligne écartée",
+        source: `lignes sans voirie écartées — ${source}`,
+        date,
+      });
+      ajoutees++;
+    }
+  } else if (args[0] === "--forte") {
     const source = args[1]?.trim();
     if (!source) throw new Error("Indiquer qui valide : --forte \"Hugo, conversation du JJ/MM/AAAA\"");
     for (const p of propositions.filter((x) => x.confiance === "forte" && !parLigne.has(x.ligne))) {
@@ -85,7 +103,12 @@ async function main() {
         erreurs.push(`ligne Excel ${ligne} : décision « ${brut} » inconnue`);
         return;
       }
-      const decision = brut as ChoixDecision;
+      let decision = brut as ChoixDecision;
+      let note: string | null = null;
+      if (decision === "OK" && methodeParLigne.get(ligne) === "section") {
+        decision = "SECTION";
+        note = "OK sur une partie de rue, enregistré comme SECTION (D4)";
+      }
       const propose = texteCellule(row.getCell(c("Identifiant proposé")).value) || null;
       let voirieId: string | null = decision === "OK" || decision === "SECTION" ? propose : null;
       if (decision === "AUTRE") {
@@ -108,7 +131,7 @@ async function main() {
         ligne,
         decision,
         voirieId,
-        commentaire: texteCellule(row.getCell(c("Commentaire")).value) || null,
+        commentaire: [texteCellule(row.getCell(c("Commentaire")).value), note].filter(Boolean).join(" · ") || null,
         source: `fichier ${basename(chemin)} (empreinte ${empreinte})`,
         date,
       });

@@ -1,1082 +1,2342 @@
 [
  {
   "ligne": 2,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:a l'assise",
+  "decision": {
+   "ligne": 2,
+   "decision": "OK",
+   "voirieId": "n:a l'assise",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 3,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:al clusare",
+  "decision": {
+   "ligne": 3,
+   "decision": "OK",
+   "voirieId": "n:al clusare",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 4,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:avenue albert ier",
+  "decision": {
+   "ligne": 4,
+   "decision": "OK",
+   "voirieId": "n:avenue albert ier",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 5,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue alfred brabant",
+  "decision": {
+   "ligne": 5,
+   "decision": "OK",
+   "voirieId": "n:rue alfred brabant",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 6,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue des anneuses",
+  "decision": {
+   "ligne": 6,
+   "decision": "OK",
+   "voirieId": "n:rue des anneuses",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 7,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue antoine franssen",
+  "decision": {
+   "ligne": 7,
+   "decision": "OK",
+   "voirieId": "n:rue antoine franssen",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 8,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:route de l'armee secrete",
+  "decision": {
+   "ligne": 8,
+   "decision": "OK",
+   "voirieId": "n:route de l'armee secrete",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 9,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:au chene",
+  "decision": {
+   "ligne": 9,
+   "decision": "OK",
+   "voirieId": "n:au chene",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 10,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:aux cours",
+  "decision": {
+   "ligne": 10,
+   "decision": "OK",
+   "voirieId": "n:aux cours",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 11,
-  "statut": "a_valider",
+  "statut": "rejete",
   "voirieId": null,
-  "decision": null
+  "decision": {
+   "ligne": 11,
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "aucune voirie trouvée : ligne écartée",
+   "source": "lignes sans voirie écartées — Hugo, conversation du 11/11/2026 (« laisse tomber les introuvées »)",
+   "date": "2026-11-11T20:01:33.575Z"
+  }
  },
  {
   "ligne": 12,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue d'avallon",
+  "decision": {
+   "ligne": 12,
+   "decision": "OK",
+   "voirieId": "n:rue d'avallon",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 13,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:beau site",
+  "decision": {
+   "ligne": 13,
+   "decision": "OK",
+   "voirieId": "n:beau site",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 14,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:belle vue",
+  "decision": {
+   "ligne": 14,
+   "decision": "OK",
+   "voirieId": "n:belle vue",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 15,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue du biez",
+  "decision": {
+   "ligne": 15,
+   "decision": "OK",
+   "voirieId": "n:rue du biez",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 16,
-  "statut": "a_valider",
+  "statut": "rejete",
   "voirieId": null,
-  "decision": null
+  "decision": {
+   "ligne": 16,
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "aucune voirie trouvée : ligne écartée",
+   "source": "lignes sans voirie écartées — Hugo, conversation du 11/11/2026 (« laisse tomber les introuvées »)",
+   "date": "2026-11-11T20:01:33.575Z"
+  }
  },
  {
   "ligne": 17,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue du bois d'oltmont",
+  "decision": {
+   "ligne": 17,
+   "decision": "OK",
+   "voirieId": "n:rue du bois d'oltmont",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 18,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:bois herman",
+  "decision": {
+   "ligne": 18,
+   "decision": "OK",
+   "voirieId": "n:bois herman",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 19,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:bouhais",
+  "decision": {
+   "ligne": 19,
+   "decision": "OK",
+   "voirieId": "n:bouhais",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 20,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:bouhaye",
+  "decision": {
+   "ligne": 20,
+   "decision": "SECTION",
+   "voirieId": "n:bouhaye",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 21,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:bouhaye",
+  "decision": {
+   "ligne": 21,
+   "decision": "SECTION",
+   "voirieId": "n:bouhaye",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 22,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue campagne",
+  "decision": {
+   "ligne": 22,
+   "decision": "OK",
+   "voirieId": "n:rue campagne",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 23,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:chalseche",
+  "decision": {
+   "ligne": 23,
+   "decision": "OK",
+   "voirieId": "n:chalseche",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 24,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue charles fraipont",
+  "decision": {
+   "ligne": 24,
+   "decision": "OK",
+   "voirieId": "n:rue charles fraipont",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 25,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:chemin aux fraises",
+  "decision": {
+   "ligne": 25,
+   "decision": "OK",
+   "voirieId": "n:chemin aux fraises",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 26,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:chemin de l'hermitage",
+  "decision": {
+   "ligne": 26,
+   "decision": "OK",
+   "voirieId": "n:chemin de l'hermitage",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 27,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:chemin de thibaumont",
+  "decision": {
+   "ligne": 27,
+   "decision": "OK",
+   "voirieId": "n:chemin de thibaumont",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 28,
-  "statut": "a_valider",
+  "statut": "rejete",
   "voirieId": null,
-  "decision": null
+  "decision": {
+   "ligne": 28,
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "aucune voirie trouvée : ligne écartée",
+   "source": "lignes sans voirie écartées — Hugo, conversation du 11/11/2026 (« laisse tomber les introuvées »)",
+   "date": "2026-11-11T20:01:33.575Z"
+  }
  },
  {
   "ligne": 29,
-  "statut": "a_valider",
+  "statut": "rejete",
   "voirieId": null,
-  "decision": null
+  "decision": {
+   "ligne": 29,
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "aucune voirie trouvée : ligne écartée",
+   "source": "lignes sans voirie écartées — Hugo, conversation du 11/11/2026 (« laisse tomber les introuvées »)",
+   "date": "2026-11-11T20:01:33.575Z"
+  }
  },
  {
   "ligne": 30,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:cite mon logis",
+  "decision": {
+   "ligne": 30,
+   "decision": "OK",
+   "voirieId": "n:cite mon logis",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 31,
-  "statut": "a_valider",
+  "statut": "rejete",
   "voirieId": null,
-  "decision": null
+  "decision": {
+   "ligne": 31,
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "aucune voirie trouvée : ligne écartée",
+   "source": "lignes sans voirie écartées — Hugo, conversation du 11/11/2026 (« laisse tomber les introuvées »)",
+   "date": "2026-11-11T20:01:33.575Z"
+  }
  },
  {
   "ligne": 32,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue des combattants",
+  "decision": {
+   "ligne": 32,
+   "decision": "OK",
+   "voirieId": "n:rue des combattants",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 33,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:route de cornesse",
+  "decision": {
+   "ligne": 33,
+   "decision": "OK",
+   "voirieId": "n:route de cornesse",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 34,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:coulee",
+  "decision": {
+   "ligne": 34,
+   "decision": "OK",
+   "voirieId": "n:coulee",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 35,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:cour marechal",
+  "decision": {
+   "ligne": 35,
+   "decision": "OK",
+   "voirieId": "n:cour marechal",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 36,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue courte",
+  "decision": {
+   "ligne": 36,
+   "decision": "OK",
+   "voirieId": "n:rue courte",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 37,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:route de la croix maga",
+  "decision": {
+   "ligne": 37,
+   "decision": "OK",
+   "voirieId": "n:route de la croix maga",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 38,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:cromhaise",
+  "decision": {
+   "ligne": 38,
+   "decision": "OK",
+   "voirieId": "n:cromhaise",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 39,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue des deportes",
+  "decision": {
+   "ligne": 39,
+   "decision": "OK",
+   "voirieId": "n:rue des deportes",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 40,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue des doux fonds",
+  "decision": {
+   "ligne": 40,
+   "decision": "OK",
+   "voirieId": "n:rue des doux fonds",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 41,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:douys",
+  "decision": {
+   "ligne": 41,
+   "decision": "OK",
+   "voirieId": "n:douys",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 42,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:drolenval",
+  "decision": {
+   "ligne": 42,
+   "decision": "SECTION",
+   "voirieId": "n:drolenval",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 43,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:drolenval",
+  "decision": {
+   "ligne": 43,
+   "decision": "SECTION",
+   "voirieId": "n:drolenval",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 44,
-  "statut": "n_existe_plus",
+  "statut": "rejete",
   "voirieId": null,
-  "decision": null
+  "decision": {
+   "ligne": 44,
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "aucune voirie trouvée : ligne écartée",
+   "source": "lignes sans voirie écartées — Hugo, conversation du 11/11/2026 (« laisse tomber les introuvées »)",
+   "date": "2026-11-11T20:01:33.575Z"
+  }
  },
  {
   "ligne": 45,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:el fagne",
+  "decision": {
+   "ligne": 45,
+   "decision": "OK",
+   "voirieId": "n:el fagne",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 46,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue emile fairon",
+  "decision": {
+   "ligne": 46,
+   "decision": "OK",
+   "voirieId": "n:rue emile fairon",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 47,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue emile vandervelde",
+  "decision": {
+   "ligne": 47,
+   "decision": "OK",
+   "voirieId": "n:rue emile vandervelde",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 48,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue eugene pauquay",
+  "decision": {
+   "ligne": 48,
+   "decision": "OK",
+   "voirieId": "n:rue eugene pauquay",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 49,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:fays",
+  "decision": {
+   "ligne": 49,
+   "decision": "OK",
+   "voirieId": "n:fays",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 50,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue felix defays",
+  "decision": {
+   "ligne": 50,
+   "decision": "OK",
+   "voirieId": "n:rue felix defays",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 51,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:val du fierain",
+  "decision": {
+   "ligne": 51,
+   "decision": "OK",
+   "voirieId": "n:val du fierain",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 52,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:fond de noule",
+  "decision": {
+   "ligne": 52,
+   "decision": "OK",
+   "voirieId": "n:fond de noule",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 53,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:fond de ville",
+  "decision": {
+   "ligne": 53,
+   "decision": "OK",
+   "voirieId": "n:fond de ville",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 54,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue du fort",
+  "decision": {
+   "ligne": 54,
+   "decision": "OK",
+   "voirieId": "n:rue du fort",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 55,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue francois jacob",
+  "decision": {
+   "ligne": 55,
+   "decision": "OK",
+   "voirieId": "n:rue francois jacob",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 56,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue francval",
+  "decision": {
+   "ligne": 56,
+   "decision": "OK",
+   "voirieId": "n:rue francval",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 57,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue georges lemaire",
+  "decision": {
+   "ligne": 57,
+   "decision": "OK",
+   "voirieId": "n:rue georges lemaire",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 58,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:goffontaine",
+  "decision": {
+   "ligne": 58,
+   "decision": "SECTION",
+   "voirieId": "n:goffontaine",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 59,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:goffontaine",
+  "decision": {
+   "ligne": 59,
+   "decision": "SECTION",
+   "voirieId": "n:goffontaine",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 60,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:goffontaine",
+  "decision": {
+   "ligne": 60,
+   "decision": "SECTION",
+   "voirieId": "n:goffontaine",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 61,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:golettes",
+  "decision": {
+   "ligne": 61,
+   "decision": "OK",
+   "voirieId": "n:golettes",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 62,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:grande fontaine",
+  "decision": {
+   "ligne": 62,
+   "decision": "OK",
+   "voirieId": "n:grande fontaine",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 63,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:grand'ry cornesse",
+  "decision": {
+   "ligne": 63,
+   "decision": "OK",
+   "voirieId": "n:grand'ry cornesse",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 64,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:grand'ry wegnez",
+  "decision": {
+   "ligne": 64,
+   "decision": "OK",
+   "voirieId": "n:grand'ry wegnez",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 65,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue des grands pres",
+  "decision": {
+   "ligne": 65,
+   "decision": "OK",
+   "voirieId": "n:rue des grands pres",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 66,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:grand trys",
+  "decision": {
+   "ligne": 66,
+   "decision": "OK",
+   "voirieId": "n:grand trys",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 67,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:grettouheid",
+  "decision": {
+   "ligne": 67,
+   "decision": "OK",
+   "voirieId": "n:grettouheid",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 68,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue henry francois hensay",
+  "decision": {
+   "ligne": 68,
+   "decision": "OK",
+   "voirieId": "n:rue henry francois hensay",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 69,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:hezee",
+  "decision": {
+   "ligne": 69,
+   "decision": "OK",
+   "voirieId": "n:hezee",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 70,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue de l'hospice",
+  "decision": {
+   "ligne": 70,
+   "decision": "OK",
+   "voirieId": "n:rue de l'hospice",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 71,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:impasse de prevochamps",
+  "decision": {
+   "ligne": 71,
+   "decision": "OK",
+   "voirieId": "n:impasse de prevochamps",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 72,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:impasse leroy",
+  "decision": {
+   "ligne": 72,
+   "decision": "OK",
+   "voirieId": "n:impasse leroy",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 73,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue jacques bouhy",
+  "decision": {
+   "ligne": 73,
+   "decision": "OK",
+   "voirieId": "n:rue jacques bouhy",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 74,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue des jardins",
+  "decision": {
+   "ligne": 74,
+   "decision": "OK",
+   "voirieId": "n:rue des jardins",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 75,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue jean grandrath",
+  "decision": {
+   "ligne": 75,
+   "decision": "OK",
+   "voirieId": "n:rue jean grandrath",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 76,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue jean simon",
+  "decision": {
+   "ligne": 76,
+   "decision": "OK",
+   "voirieId": "n:rue jean simon",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 77,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue jenny solheid",
+  "decision": {
+   "ligne": 77,
+   "decision": "OK",
+   "voirieId": "n:rue jenny solheid",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 78,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:jonckay",
+  "decision": {
+   "ligne": 78,
+   "decision": "OK",
+   "voirieId": "n:jonckay",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 79,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue joseph meunier",
+  "decision": {
+   "ligne": 79,
+   "decision": "OK",
+   "voirieId": "n:rue joseph meunier",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 80,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue joseph sougnez",
+  "decision": {
+   "ligne": 80,
+   "decision": "OK",
+   "voirieId": "n:rue joseph sougnez",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 81,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:ruelle du koreux",
+  "decision": {
+   "ligne": 81,
+   "decision": "OK",
+   "voirieId": "n:ruelle du koreux",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 82,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue la no",
+  "decision": {
+   "ligne": 82,
+   "decision": "OK",
+   "voirieId": "n:rue la no",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 83,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:saute",
+  "decision": {
+   "ligne": 83,
+   "decision": "OK",
+   "voirieId": "n:saute",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 84,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue de lambermont",
+  "decision": {
+   "ligne": 84,
+   "decision": "OK",
+   "voirieId": "n:rue de lambermont",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 85,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue laurent mairlot",
+  "decision": {
+   "ligne": 85,
+   "decision": "OK",
+   "voirieId": "n:rue laurent mairlot",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 86,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:lefin",
+  "decision": {
+   "ligne": 86,
+   "decision": "OK",
+   "voirieId": "n:lefin",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 87,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:venelle leon le pas",
+  "decision": {
+   "ligne": 87,
+   "decision": "OK",
+   "voirieId": "n:venelle leon le pas",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 88,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:les bagneures",
+  "decision": {
+   "ligne": 88,
+   "decision": "OK",
+   "voirieId": "n:les bagneures",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 89,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue de la liberation",
+  "decision": {
+   "ligne": 89,
+   "decision": "OK",
+   "voirieId": "n:rue de la liberation",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 90,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue lieutenant albert dressen",
+  "decision": {
+   "ligne": 90,
+   "decision": "OK",
+   "voirieId": "n:rue lieutenant albert dressen",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 91,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue lieutenant",
+  "decision": {
+   "ligne": 91,
+   "decision": "OK",
+   "voirieId": "n:rue lieutenant",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 92,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue louis formatin",
+  "decision": {
+   "ligne": 92,
+   "decision": "OK",
+   "voirieId": "n:rue louis formatin",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 93,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:maison bois",
+  "decision": {
+   "ligne": 93,
+   "decision": "OK",
+   "voirieId": "n:maison bois",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 94,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue marcel fikenne",
+  "decision": {
+   "ligne": 94,
+   "decision": "OK",
+   "voirieId": "n:rue marcel fikenne",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 95,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue mathieu regnier",
+  "decision": {
+   "ligne": 95,
+   "decision": "OK",
+   "voirieId": "n:rue mathieu regnier",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 96,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue mathieu closset",
+  "decision": {
+   "ligne": 96,
+   "decision": "OK",
+   "voirieId": "n:rue mathieu closset",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 97,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:mohonthier",
+  "decision": {
+   "ligne": 97,
+   "decision": "OK",
+   "voirieId": "n:mohonthier",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 98,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:mortbonhomme",
+  "decision": {
+   "ligne": 98,
+   "decision": "OK",
+   "voirieId": "n:mortbonhomme",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 99,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:mousset",
+  "decision": {
+   "ligne": 99,
+   "decision": "OK",
+   "voirieId": "n:mousset",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 100,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:route de nessonvaux",
+  "decision": {
+   "ligne": 100,
+   "decision": "OK",
+   "voirieId": "n:route de nessonvaux",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 101,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:nids d'aguesses",
+  "decision": {
+   "ligne": 101,
+   "decision": "OK",
+   "voirieId": "n:nids d'aguesses",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 102,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue nouvelle",
+  "decision": {
+   "ligne": 102,
+   "decision": "OK",
+   "voirieId": "n:rue nouvelle",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 103,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue du paire",
+  "decision": {
+   "ligne": 103,
+   "decision": "OK",
+   "voirieId": "n:rue du paire",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 104,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue du paire",
+  "decision": {
+   "ligne": 104,
+   "decision": "OK",
+   "voirieId": "n:rue du paire",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 105,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue de la paix#1",
+  "decision": {
+   "ligne": 105,
+   "decision": "OK",
+   "voirieId": "n:rue de la paix#1",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 106,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue du panorama",
+  "decision": {
+   "ligne": 106,
+   "decision": "OK",
+   "voirieId": "n:rue du panorama",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 107,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:route de peleeheid",
+  "decision": {
+   "ligne": 107,
+   "decision": "OK",
+   "voirieId": "n:route de peleeheid",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 108,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue pepin",
+  "decision": {
+   "ligne": 108,
+   "decision": "OK",
+   "voirieId": "n:rue pepin",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 109,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue pierre hauzeur",
+  "decision": {
+   "ligne": 109,
+   "decision": "OK",
+   "voirieId": "n:rue pierre hauzeur",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 110,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue pierre piqueray",
+  "decision": {
+   "ligne": 110,
+   "decision": "OK",
+   "voirieId": "n:rue pierre piqueray",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 111,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:place charles fraipont",
+  "decision": {
+   "ligne": 111,
+   "decision": "OK",
+   "voirieId": "n:place charles fraipont",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 112,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:place notre dame",
+  "decision": {
+   "ligne": 112,
+   "decision": "OK",
+   "voirieId": "n:place notre dame",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 113,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:place saint hubert",
+  "decision": {
+   "ligne": 113,
+   "decision": "OK",
+   "voirieId": "n:place saint hubert",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 114,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue du plateau",
+  "decision": {
+   "ligne": 114,
+   "decision": "OK",
+   "voirieId": "n:rue du plateau",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 115,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue de la pompe",
+  "decision": {
+   "ligne": 115,
+   "decision": "OK",
+   "voirieId": "n:rue de la pompe",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 116,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:pont walrand",
+  "decision": {
+   "ligne": 116,
+   "decision": "OK",
+   "voirieId": "n:pont walrand",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 117,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue du progres",
+  "decision": {
+   "ligne": 117,
+   "decision": "OK",
+   "voirieId": "n:rue du progres",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 118,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:puits ronval",
+  "decision": {
+   "ligne": 118,
+   "decision": "OK",
+   "voirieId": "n:puits ronval",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 119,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:quai armand follet",
+  "decision": {
+   "ligne": 119,
+   "decision": "OK",
+   "voirieId": "n:quai armand follet",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 120,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:quai de la hoegne",
+  "decision": {
+   "ligne": 120,
+   "decision": "OK",
+   "voirieId": "n:quai de la hoegne",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 121,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:quai ferdinand nicolai",
+  "decision": {
+   "ligne": 121,
+   "decision": "OK",
+   "voirieId": "n:quai ferdinand nicolai",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 122,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:quai ferdinand nicolai",
+  "decision": {
+   "ligne": 122,
+   "decision": "SECTION",
+   "voirieId": "n:quai ferdinand nicolai",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 123,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue raymond legentil",
+  "decision": {
+   "ligne": 123,
+   "decision": "OK",
+   "voirieId": "n:rue raymond legentil",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 124,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:refawtay",
+  "decision": {
+   "ligne": 124,
+   "decision": "OK",
+   "voirieId": "n:refawtay",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 125,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rolais",
+  "decision": {
+   "ligne": 125,
+   "decision": "OK",
+   "voirieId": "n:rolais",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 126,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:saint germain",
+  "decision": {
+   "ligne": 126,
+   "decision": "OK",
+   "voirieId": "n:saint germain",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 127,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:place saint hubert",
+  "decision": {
+   "ligne": 127,
+   "decision": "OK",
+   "voirieId": "n:place saint hubert",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 128,
-  "statut": "a_valider",
+  "statut": "rejete",
   "voirieId": null,
-  "decision": null
+  "decision": {
+   "ligne": 128,
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "aucune voirie trouvée : ligne écartée",
+   "source": "lignes sans voirie écartées — Hugo, conversation du 11/11/2026 (« laisse tomber les introuvées »)",
+   "date": "2026-11-11T20:01:33.575Z"
+  }
  },
  {
   "ligne": 129,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:sclassin",
+  "decision": {
+   "ligne": 129,
+   "decision": "OK",
+   "voirieId": "n:sclassin",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 130,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:route de soiron#1",
+  "decision": {
+   "ligne": 130,
+   "decision": "OK",
+   "voirieId": "n:route de soiron#1",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 131,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:soiron centre",
+  "decision": {
+   "ligne": 131,
+   "decision": "SECTION",
+   "voirieId": "n:soiron centre",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 132,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:soiron centre",
+  "decision": {
+   "ligne": 132,
+   "decision": "SECTION",
+   "voirieId": "n:soiron centre",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 133,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:soiron centre",
+  "decision": {
+   "ligne": 133,
+   "decision": "SECTION",
+   "voirieId": "n:soiron centre",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 134,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:soiron centre",
+  "decision": {
+   "ligne": 134,
+   "decision": "SECTION",
+   "voirieId": "n:soiron centre",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 135,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:soiron centre",
+  "decision": {
+   "ligne": 135,
+   "decision": "SECTION",
+   "voirieId": "n:soiron centre",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 136,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:soiron centre",
+  "decision": {
+   "ligne": 136,
+   "decision": "SECTION",
+   "voirieId": "n:soiron centre",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 137,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:sous le chateau",
+  "decision": {
+   "ligne": 137,
+   "decision": "OK",
+   "voirieId": "n:sous le chateau",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 138,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue sylvain balau",
+  "decision": {
+   "ligne": 138,
+   "decision": "OK",
+   "voirieId": "n:rue sylvain balau",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 139,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue du thier",
+  "decision": {
+   "ligne": 139,
+   "decision": "OK",
+   "voirieId": "n:rue du thier",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 140,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:tilleul",
+  "decision": {
+   "ligne": 140,
+   "decision": "OK",
+   "voirieId": "n:tilleul",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 141,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:rue tribomont",
+  "decision": {
+   "ligne": 141,
+   "decision": "SECTION",
+   "voirieId": "n:rue tribomont",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 142,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "section_a_definir",
+  "voirieId": "n:rue tribomont",
+  "decision": {
+   "ligne": 142,
+   "decision": "SECTION",
+   "voirieId": "n:rue tribomont",
+   "commentaire": "OK sur une partie de rue, enregistré comme SECTION (D4)",
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 143,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:turlurette",
+  "decision": {
+   "ligne": 143,
+   "decision": "OK",
+   "voirieId": "n:turlurette",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 144,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:vieille eglise",
+  "decision": {
+   "ligne": 144,
+   "decision": "OK",
+   "voirieId": "n:vieille eglise",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 145,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:voie constant",
+  "decision": {
+   "ligne": 145,
+   "decision": "OK",
+   "voirieId": "n:voie constant",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 146,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:voie creuhy",
+  "decision": {
+   "ligne": 146,
+   "decision": "OK",
+   "voirieId": "n:voie creuhy",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 147,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:voie du bola",
+  "decision": {
+   "ligne": 147,
+   "decision": "OK",
+   "voirieId": "n:voie du bola",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 148,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:voie du moulin",
+  "decision": {
+   "ligne": 148,
+   "decision": "OK",
+   "voirieId": "n:voie du moulin",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 149,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue xhavee",
+  "decision": {
+   "ligne": 149,
+   "decision": "OK",
+   "voirieId": "n:rue xhavee",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 150,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue de xhendelesse",
+  "decision": {
+   "ligne": 150,
+   "decision": "OK",
+   "voirieId": "n:rue de xhendelesse",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 152,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue alfred dreze",
+  "decision": {
+   "ligne": 152,
+   "decision": "OK",
+   "voirieId": "n:rue alfred dreze",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 153,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:ayrifagne",
+  "decision": {
+   "ligne": 153,
+   "decision": "OK",
+   "voirieId": "n:ayrifagne",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 154,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:chinheid",
+  "decision": {
+   "ligne": 154,
+   "decision": "OK",
+   "voirieId": "n:chinheid",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 155,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:flere",
+  "decision": {
+   "ligne": 155,
+   "decision": "OK",
+   "voirieId": "n:flere",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 156,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:forges thiry",
+  "decision": {
+   "ligne": 156,
+   "decision": "OK",
+   "voirieId": "n:forges thiry",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 157,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:hauts sarts",
+  "decision": {
+   "ligne": 157,
+   "decision": "OK",
+   "voirieId": "n:hauts sarts",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 158,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue hodister",
+  "decision": {
+   "ligne": 158,
+   "decision": "OK",
+   "voirieId": "n:rue hodister",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 159,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue hubert halet",
+  "decision": {
+   "ligne": 159,
+   "decision": "OK",
+   "voirieId": "n:rue hubert halet",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 160,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:louheau",
+  "decision": {
+   "ligne": 160,
+   "decision": "OK",
+   "voirieId": "n:louheau",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 161,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue louis bierin",
+  "decision": {
+   "ligne": 161,
+   "decision": "OK",
+   "voirieId": "n:rue louis bierin",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 162,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue massau",
+  "decision": {
+   "ligne": 162,
+   "decision": "OK",
+   "voirieId": "n:rue massau",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 163,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue neuve",
+  "decision": {
+   "ligne": 163,
+   "decision": "OK",
+   "voirieId": "n:rue neuve",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 164,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:prevochamps",
+  "decision": {
+   "ligne": 164,
+   "decision": "OK",
+   "voirieId": "n:prevochamps",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 165,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue purgatoire",
+  "decision": {
+   "ligne": 165,
+   "decision": "OK",
+   "voirieId": "n:rue purgatoire",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 166,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue de la regence",
+  "decision": {
+   "ligne": 166,
+   "decision": "OK",
+   "voirieId": "n:rue de la regence",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 167,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:route de tancremont",
+  "decision": {
+   "ligne": 167,
+   "decision": "OK",
+   "voirieId": "n:route de tancremont",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 168,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue vovegnez",
+  "decision": {
+   "ligne": 168,
+   "decision": "OK",
+   "voirieId": "n:rue vovegnez",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 170,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:rue bois l'eveque",
+  "decision": {
+   "ligne": 170,
+   "decision": "OK",
+   "voirieId": "n:rue bois l'eveque",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 171,
-  "statut": "a_valider",
+  "statut": "rejete",
   "voirieId": null,
-  "decision": null
+  "decision": {
+   "ligne": 171,
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "aucune voirie trouvée : ligne écartée",
+   "source": "lignes sans voirie écartées — Hugo, conversation du 11/11/2026 (« laisse tomber les introuvées »)",
+   "date": "2026-11-11T20:01:33.575Z"
+  }
  },
  {
   "ligne": 172,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:chemin de noheid",
+  "decision": {
+   "ligne": 172,
+   "decision": "OK",
+   "voirieId": "n:chemin de noheid",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 173,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:chemin du bois robert",
+  "decision": {
+   "ligne": 173,
+   "decision": "OK",
+   "voirieId": "n:chemin du bois robert",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 174,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:chemin du loup",
+  "decision": {
+   "ligne": 174,
+   "decision": "OK",
+   "voirieId": "n:chemin du loup",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 175,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:voie du moulin",
+  "decision": {
+   "ligne": 175,
+   "decision": "OK",
+   "voirieId": "n:voie du moulin",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 176,
-  "statut": "a_valider",
+  "statut": "rejete",
   "voirieId": null,
-  "decision": null
+  "decision": {
+   "ligne": 176,
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "aucune voirie trouvée : ligne écartée",
+   "source": "lignes sans voirie écartées — Hugo, conversation du 11/11/2026 (« laisse tomber les introuvées »)",
+   "date": "2026-11-11T20:01:33.575Z"
+  }
  },
  {
   "ligne": 177,
-  "statut": "a_valider",
+  "statut": "rejete",
   "voirieId": null,
-  "decision": null
+  "decision": {
+   "ligne": 177,
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "aucune voirie trouvée : ligne écartée",
+   "source": "lignes sans voirie écartées — Hugo, conversation du 11/11/2026 (« laisse tomber les introuvées »)",
+   "date": "2026-11-11T20:01:33.575Z"
+  }
  },
  {
   "ligne": 178,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:hodwinry",
+  "decision": {
+   "ligne": 178,
+   "decision": "OK",
+   "voirieId": "n:hodwinry",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 179,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:les golets",
+  "decision": {
+   "ligne": 179,
+   "decision": "OK",
+   "voirieId": "n:les golets",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 180,
-  "statut": "a_valider",
+  "statut": "rejete",
   "voirieId": null,
-  "decision": null
+  "decision": {
+   "ligne": 180,
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "aucune voirie trouvée : ligne écartée",
+   "source": "lignes sans voirie écartées — Hugo, conversation du 11/11/2026 (« laisse tomber les introuvées »)",
+   "date": "2026-11-11T20:01:33.575Z"
+  }
  },
  {
   "ligne": 181,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:mazures",
+  "decision": {
+   "ligne": 181,
+   "decision": "OK",
+   "voirieId": "n:mazures",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 182,
-  "statut": "a_valider",
-  "voirieId": null,
-  "decision": null
+  "statut": "valide",
+  "voirieId": "n:sohan",
+  "decision": {
+   "ligne": 182,
+   "decision": "OK",
+   "voirieId": "n:sohan",
+   "commentaire": null,
+   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
+   "date": "2026-11-11T20:01:32.882Z"
+  }
  },
  {
   "ligne": 183,
-  "statut": "a_valider",
+  "statut": "rejete",
   "voirieId": null,
-  "decision": null
+  "decision": {
+   "ligne": 183,
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "aucune voirie trouvée : ligne écartée",
+   "source": "lignes sans voirie écartées — Hugo, conversation du 11/11/2026 (« laisse tomber les introuvées »)",
+   "date": "2026-11-11T20:01:33.575Z"
+  }
  }
 ]
