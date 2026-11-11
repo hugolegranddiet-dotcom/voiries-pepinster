@@ -8,6 +8,7 @@ import type { CategorieVoie } from "@/lib/geo/voiries";
 import type { SegmentProps } from "@/lib/geo/types";
 import type { BandePriorite, ParametresScore } from "@/lib/priority/defaults";
 import { calculerScore } from "@/lib/priority/score";
+import { cleEtat, COULEURS_ETAT } from "@/lib/donnees/etat";
 
 export const COULEUR_LIMITE = "#12262f";
 /** Contour sombre de la voirie sélectionnée (sa couleur de priorité reste visible). */
@@ -26,17 +27,34 @@ export const COULEURS_BANDE: Record<BandePriorite, string> = {
   gris: "#8a9499",
 };
 
+/** Ce que la couleur des routes représente sur la carte. */
+export type ModeCouleur = "priorite" | "etat";
+
 export interface ApparenceVoirie {
-  bande: BandePriorite;
+  couleur: string;
+  /** Voirie notée (état) ou évaluée (score) : trait plus épais. */
+  evaluee: boolean;
   /** SPW ou autre gestionnaire : trait en pointillés (jamais une couleur forcée). */
   pointille: boolean;
 }
 
-/** Apparence d'une voirie, d'après sa fiche, le score, et l'indice SPW si le gestionnaire est inconnu. */
-export function apparenceDe(fiche: FicheVoirie | undefined, indiceSpwSegment: boolean, p: ParametresScore): ApparenceVoirie {
+/**
+ * Apparence d'une voirie, d'après sa fiche : couleur du score (mode « priorite »)
+ * ou de la note d'état (mode « etat ») ; pointillés si SPW / autre gestionnaire
+ * (ou indice SPW quand le gestionnaire est inconnu).
+ */
+export function apparenceDe(
+  fiche: FicheVoirie | undefined,
+  indiceSpwSegment: boolean,
+  p: ParametresScore,
+  mode: ModeCouleur = "priorite",
+): ApparenceVoirie {
   const gestion = fiche?.gestionnaire ?? "inconnu";
+  const etat = cleEtat(fiche?.evaluation?.etat_note);
+  const bande = mode === "priorite" ? calculerScore(fiche?.evaluation, p).bande : null;
   return {
-    bande: calculerScore(fiche?.evaluation, p).bande,
+    couleur: bande ? COULEURS_BANDE[bande] : COULEURS_ETAT[etat],
+    evaluee: bande ? bande !== "gris" : etat !== "non_note",
     pointille: gestion === "spw" || gestion === "autre" || (gestion === "inconnu" && indiceSpwSegment),
   };
 }
@@ -45,9 +63,9 @@ const EPAISSEUR: Record<CategorieVoie, number> = { voirie: 3.5, chemin: 2, acces
 const POINTILLE = "8 6";
 
 export function styleSegment(p: SegmentProps, a: ApparenceVoirie): PathOptions {
-  const evaluee = a.bande !== "gris";
+  const evaluee = a.evaluee;
   return {
-    color: COULEURS_BANDE[a.bande],
+    color: a.couleur,
     // Une voirie évaluée est un peu plus épaisse que les voies non évaluées.
     weight: EPAISSEUR[p.cat] + (evaluee ? 1.5 : 0),
     opacity: evaluee ? 1 : p.cat === "voirie" ? 0.9 : 0.75,

@@ -7,6 +7,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { BadgeGestionnaire, BadgePriorite, COULEUR_BANDE } from "@/components/badges";
 import { LIBELLES_BANDES } from "@/lib/priority/defaults";
+import { cleEtat, COULEURS_ETAT, FILTRES_ETAT, LIBELLES_FILTRE_ETAT } from "@/lib/donnees/etat";
 import { useDonnees } from "@/components/donnees/FournisseurDonnees";
 import { PanneauFiche } from "@/components/fiche/PanneauFiche";
 import { IconeCarte, IconeFermer } from "@/components/icones";
@@ -40,7 +41,7 @@ const COLONNES: Array<{ cle: ColonneTri | null; libelle: string; classe?: string
 ];
 
 function filtresInitiaux(): Filtres {
-  return { recherche: "", types: TYPES_PAR_DEFAUT, gestionnaires: new Set(), statuts: new Set(), etatManquant: false, bandes: new Set() };
+  return { recherche: "", types: TYPES_PAR_DEFAUT, gestionnaires: new Set(), statuts: new Set(), etats: new Set(), bandes: new Set() };
 }
 
 function basculer<T>(ens: ReadonlySet<T>, v: T): Set<T> {
@@ -53,7 +54,13 @@ function basculer<T>(ens: ReadonlySet<T>, v: T): Set<T> {
 const Vide = () => <span className="text-muted">—</span>;
 
 function CelluleEtat({ l }: { l: LigneListe }) {
-  if (l.etatNote) return <span className="font-medium text-ink">{l.etatNote}</span>;
+  if (l.etatNote)
+    return (
+      <span className="inline-flex items-center gap-1.5 font-medium text-ink">
+        <span className="size-2.5 rounded-full" style={{ background: COULEURS_ETAT[cleEtat(l.etatNote)] }} aria-hidden="true" />
+        {l.etatNote}
+      </span>
+    );
   return <Vide />;
 }
 
@@ -132,7 +139,7 @@ export function TableauVoiries() {
     );
 
   const nbFiltresActifs =
-    (filtres.gestionnaires.size ? 1 : 0) + (filtres.statuts.size ? 1 : 0) + (filtres.etatManquant ? 1 : 0) + (filtres.bandes.size ? 1 : 0) +
+    (filtres.gestionnaires.size ? 1 : 0) + (filtres.statuts.size ? 1 : 0) + (filtres.etats.size ? 1 : 0) + (filtres.bandes.size ? 1 : 0) +
     ([...filtres.types].sort().join() !== [...TYPES_PAR_DEFAUT].sort().join() ? 1 : 0);
 
   if (etat.statut === "erreur") {
@@ -194,10 +201,13 @@ export function TableauVoiries() {
                 </Case>
               ))}
             </BlocCase>
-            <BlocCase legende="Données">
-              <Case coche={filtres.etatManquant} onChange={() => majFiltres((f) => ({ ...f, etatManquant: !f.etatManquant }))}>
-                État pas encore noté
-              </Case>
+            <BlocCase legende="État de la chaussée (tous si rien n'est coché)">
+              {FILTRES_ETAT.map((n) => (
+                <Case key={n} coche={filtres.etats.has(n)} onChange={() => majFiltres((f) => ({ ...f, etats: basculer(f.etats, n) }))}>
+                  <span className="size-3 rounded-full" style={{ background: COULEURS_ETAT[n] }} aria-hidden="true" />
+                  {LIBELLES_FILTRE_ETAT[n]}
+                </Case>
+              ))}
             </BlocCase>
             <BlocCase legende="Priorité (toutes si rien n'est coché)">
               {(["rouge", "orange", "jaune", "vert", "gris"] as const).map((b) => (

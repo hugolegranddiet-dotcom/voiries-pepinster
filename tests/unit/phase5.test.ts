@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { apparenceDe, COULEURS_BANDE, styleSegment, stylesSelection } from "@/components/carte/styles-carte";
 import { PARAMETRES_PAR_DEFAUT as P } from "@/lib/priority/defaults";
+import { COULEURS_ETAT } from "@/lib/donnees/etat";
 import { ModificationFiche, ModificationVoirie } from "@/lib/db/schemas";
 import { differences, versFormulaire } from "@/lib/donnees/formulaire";
 import type { Evaluation, FicheVoirie } from "@/lib/donnees/types";
@@ -28,7 +29,7 @@ function fiche(f: Partial<FicheVoirie> = {}): FicheVoirie {
   };
 }
 
-const filtresBase: Filtres = { recherche: "", types: TYPES_PAR_DEFAUT, gestionnaires: new Set(), statuts: new Set(), etatManquant: false, bandes: new Set() };
+const filtresBase: Filtres = { recherche: "", types: TYPES_PAR_DEFAUT, gestionnaires: new Set(), statuts: new Set(), etats: new Set(), bandes: new Set() };
 
 describe("liste des voiries", () => {
   const lignes = [
@@ -59,9 +60,15 @@ describe("liste des voiries", () => {
 
   it("combine les filtres", () => {
     expect(filtrer(lignes, { ...filtresBase, gestionnaires: new Set(["spw"]) }).map((l) => l.id)).toEqual(["b"]);
-    expect(filtrer(lignes, { ...filtresBase, etatManquant: true }).map((l) => l.id)).toEqual(["b", "c"]);
-    expect(filtrer(lignes, { ...filtresBase, types: new Set(["chemins", "sans_nom"]), etatManquant: true }).map((l) => l.id)).toEqual(["d"]);
+    expect(filtrer(lignes, { ...filtresBase, etats: new Set(["non_note"] as const) }).map((l) => l.id)).toEqual(["b", "c"]);
+    expect(filtrer(lignes, { ...filtresBase, types: new Set(["chemins", "sans_nom"]), etats: new Set(["non_note"] as const) }).map((l) => l.id)).toEqual(["d"]);
     expect(filtrer(lignes, { ...filtresBase, recherche: "eglise", gestionnaires: new Set(["commune"]) })).toHaveLength(0);
+  });
+
+  it("filtre par note d'état (plusieurs notes possibles)", () => {
+    const tous = { ...filtresBase, types: new Set(["voiries", "sections", "chemins", "sans_nom", "acces"] as const) };
+    expect(filtrer(lignes, { ...tous, etats: new Set(["4"] as const) }).map((l) => l.id)).toEqual(["a"]);
+    expect(filtrer(lignes, { ...tous, etats: new Set(["4", "2"] as const) }).map((l) => l.id)).toEqual(["a", "e"]);
   });
 
   it("trie, en gardant toujours les valeurs vides à la fin", () => {
@@ -132,6 +139,16 @@ describe("une voirie, une seule couleur pour tous ses segments", () => {
     expect([...couleurs(rid, sansNote)]).toEqual([COULEURS_BANDE.gris]); // une suggestion ne colore pas
     expect([...couleurs(rid, notee)]).toEqual([COULEURS_BANDE.rouge]); // score 76 : tout rouge, ensemble
     expect([...couleurs(rid, notee, true)]).toEqual([COULEURS_BANDE.rouge]); // sélection : même couleur, avec contour
+  });
+
+  it.runIf(segments.length > 0)("mode « état » : tous les segments prennent la couleur de la note", () => {
+    const rid = "n:rue du paire";
+    const notee = fiche({ id: rid, evaluation: evaluation({ etat_note: 4 }) }); // pas de score (état seul), mais une note
+    const traits = segments.filter((s) => s.rid === rid);
+    expect(new Set(traits.map((s) => styleSegment(s, apparenceDe(notee, s.spw, P, "etat")).color))).toEqual(new Set([COULEURS_ETAT["4"]]));
+    expect(new Set(traits.map((s) => styleSegment(s, apparenceDe(notee, s.spw, P, "priorite")).color))).toEqual(new Set([COULEURS_BANDE.gris]));
+    const sansNote = fiche({ id: rid, evaluation: evaluation({ etat_note_suggeree: 4 }) });
+    expect(styleSegment(traits[0], apparenceDe(sansNote, false, P, "etat")).color).toBe(COULEURS_ETAT.non_note);
   });
 
   it("SPW : pointillés, jamais une couleur forcée", () => {

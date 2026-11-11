@@ -11,7 +11,8 @@ import type { CategorieVoie } from "@/lib/geo/voiries";
 import type { SegmentProps } from "@/lib/geo/types";
 import type { FicheVoirie } from "@/lib/donnees/types";
 import type { Gestionnaire } from "@/lib/domaine";
-import { apparenceDe, STYLE_COMMUNE, STYLE_SECTION, styleSegment, stylesSelection, type ApparenceVoirie } from "@/components/carte/styles-carte";
+import { apparenceDe, STYLE_COMMUNE, STYLE_SECTION, styleSegment, stylesSelection, type ApparenceVoirie, type ModeCouleur } from "@/components/carte/styles-carte";
+import { cleEtat, type FiltreEtat } from "@/lib/donnees/etat";
 import type { ParametresScore } from "@/lib/priority/defaults";
 
 export type LimiteGeo = FeatureCollection<MultiPolygon, { type: "commune" | "section"; nom: string }>;
@@ -25,13 +26,17 @@ interface Props {
   gestionnaireVisible: Gestionnaire | null;
   fiches: Record<string, FicheVoirie>;
   parametres: ParametresScore;
+  /** Ce que représente la couleur : score de priorité ou note d'état. */
+  modeCouleur: ModeCouleur;
+  /** Notes d'état affichées (toutes si la liste contient les 6 valeurs). */
+  etatsVisibles: ReadonlySet<FiltreEtat>;
   /** Voirie à mettre en évidence (pour une section : sa voirie mère). */
   selection: string | null;
   onSelection: (roadId: string) => void;
 }
 
 /** Couche des voies : un tracé par segment, mais couleur et sélection par voirie logique. */
-function CoucheVoies({ voies, categoriesVisibles, gestionnaireVisible, fiches, parametres, selection, onSelection }: Omit<Props, "limite">) {
+function CoucheVoies({ voies, categoriesVisibles, gestionnaireVisible, fiches, parametres, modeCouleur, etatsVisibles, selection, onSelection }: Omit<Props, "limite">) {
   const carte = useMap();
   // La première sélection (venue de l'adresse) recentre toujours la carte.
   const premiereSelection = useRef(selection !== null);
@@ -48,10 +53,10 @@ function CoucheVoies({ voies, categoriesVisibles, gestionnaireVisible, fiches, p
     const m = new Map<string, ApparenceVoirie>();
     for (const f of voies.features) {
       const cle = `${f.properties.rid}|${f.properties.spw}`;
-      if (!m.has(cle)) m.set(cle, apparenceDe(fiches[f.properties.rid], f.properties.spw, parametres));
+      if (!m.has(cle)) m.set(cle, apparenceDe(fiches[f.properties.rid], f.properties.spw, parametres, modeCouleur));
     }
     return m;
-  }, [voies, fiches, parametres]);
+  }, [voies, fiches, parametres, modeCouleur]);
   const apparence = useCallback((p: SegmentProps) => apparences.get(`${p.rid}|${p.spw}`)!, [apparences]);
 
   // (Re)création de la couche quand les filtres, les fiches ou les paramètres changent
@@ -61,7 +66,11 @@ function CoucheVoies({ voies, categoriesVisibles, gestionnaireVisible, fiches, p
       renderer: rendu,
       filter: (f) => {
         const p = f.properties as SegmentProps;
-        return categoriesVisibles[p.cat] && (!gestionnaireVisible || (fiches[p.rid]?.gestionnaire ?? "inconnu") === gestionnaireVisible);
+        return (
+          categoriesVisibles[p.cat] &&
+          (!gestionnaireVisible || (fiches[p.rid]?.gestionnaire ?? "inconnu") === gestionnaireVisible) &&
+          etatsVisibles.has(cleEtat(fiches[p.rid]?.evaluation?.etat_note))
+        );
       },
       style: (f) => styleSegment(f!.properties as SegmentProps, apparence(f!.properties as SegmentProps)),
       onEachFeature: (f, layer) => {
@@ -76,7 +85,7 @@ function CoucheVoies({ voies, categoriesVisibles, gestionnaireVisible, fiches, p
     return () => {
       couche.remove();
     };
-  }, [carte, voies, categoriesVisibles, gestionnaireVisible, fiches, apparence, rendu]);
+  }, [carte, voies, categoriesVisibles, gestionnaireVisible, etatsVisibles, fiches, apparence, rendu]);
 
   // Mise en évidence de TOUS les segments de la voirie sélectionnée, par-dessus :
   // un contour sombre, puis la couleur de priorité de la voirie.
@@ -97,7 +106,7 @@ function CoucheVoies({ voies, categoriesVisibles, gestionnaireVisible, fiches, p
     return () => {
       groupe.remove();
     };
-  }, [selection, voies, apparence, carte, rendu, categoriesVisibles, gestionnaireVisible]);
+  }, [selection, voies, apparence, carte, rendu, categoriesVisibles, gestionnaireVisible, etatsVisibles]);
 
   return null;
 }
@@ -146,6 +155,8 @@ export default function CarteLeaflet(props: Props) {
         gestionnaireVisible={props.gestionnaireVisible}
         fiches={props.fiches}
         parametres={props.parametres}
+        modeCouleur={props.modeCouleur}
+        etatsVisibles={props.etatsVisibles}
         selection={props.selection}
         onSelection={props.onSelection}
       />

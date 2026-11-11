@@ -7,7 +7,8 @@ import { IconeFermer } from "@/components/icones";
 import { useDonnees } from "@/components/donnees/FournisseurDonnees";
 import { PanneauFiche } from "@/components/fiche/PanneauFiche";
 import { RechercheVoirie } from "@/components/carte/RechercheVoirie";
-import { COULEURS_BANDE } from "@/components/carte/styles-carte";
+import { COULEURS_BANDE, type ModeCouleur } from "@/components/carte/styles-carte";
+import { cleEtat, COULEURS_ETAT, FILTRES_ETAT, LIBELLES_FILTRE_ETAT, type FiltreEtat } from "@/lib/donnees/etat";
 import { LIBELLES_BANDES, type ParametresScore } from "@/lib/priority/defaults";
 import { LIBELLES_GESTIONNAIRE, type Gestionnaire } from "@/lib/domaine";
 import type { CategorieVoie } from "@/lib/geo/voiries";
@@ -34,20 +35,25 @@ const FILTRES: Array<{ cle: CategorieVoie; libelle: string }> = [
   { cle: "acces", libelle: "Accès et parkings sans nom" },
 ];
 
-function Legende({ parametres }: { parametres: ParametresScore }) {
+function Legende({ parametres, mode }: { parametres: ParametresScore; mode: ModeCouleur }) {
   return (
     <ul className="space-y-1.5 text-xs">
-      {parametres.seuils.map((t) => (
+      {mode === "priorite" && parametres.seuils.map((t) => (
         <li key={t.bande} className="flex items-center gap-2">
           <span className="h-1.5 w-6 rounded-full" style={{ background: COULEURS_BANDE[t.bande] }} aria-hidden="true" />
           <span className="w-14 tabular-nums text-ink">{t.min} – {t.max}</span>
           <span className="text-muted">{LIBELLES_BANDES[t.bande]}</span>
         </li>
       ))}
-      <li className="flex items-center gap-2">
-        <span className="h-1 w-6 rounded-full" style={{ background: COULEURS_BANDE.gris }} aria-hidden="true" />
-        <span className="text-ink">Non évalué</span>
-      </li>
+      {mode === "priorite" && (
+        <li className="flex items-center gap-2">
+          <span className="h-1 w-6 rounded-full" style={{ background: COULEURS_BANDE.gris }} aria-hidden="true" />
+          <span className="text-ink">Non évalué</span>
+        </li>
+      )}
+      {mode === "etat" && (
+        <li className="text-muted">Couleurs des notes : voir « État de la chaussée » ci-dessus.</li>
+      )}
       <li className="flex items-center gap-2">
         <span className="h-2 w-6 rounded-full border-2 border-ink" style={{ background: COULEURS_BANDE.orange }} aria-hidden="true" />
         <span className="text-ink">Voirie sélectionnée (contour)</span>
@@ -73,6 +79,8 @@ export function CarteVoiries() {
   const selection = useSearchParams().get("voirie");
   const [visibles, setVisibles] = useState<Record<CategorieVoie, boolean>>({ voirie: true, chemin: true, acces: false });
   const [gestionnaire, setGestionnaire] = useState<Gestionnaire | null>(null);
+  const [modeCouleur, setModeCouleur] = useState<ModeCouleur>("priorite");
+  const [etats, setEtats] = useState<ReadonlySet<FiltreEtat>>(() => new Set(FILTRES_ETAT));
   const [panneauOuvert, setPanneauOuvert] = useState(false);
 
   const choisir = useCallback(
@@ -85,6 +93,13 @@ export function CarteVoiries() {
   const fiche = selection && donnees ? donnees.fiches[selection] ?? null : null;
   // Une partie de rue (section) n'a pas encore de tracé : on montre sa voirie mère.
   const selectionGeo = fiche?.parentId ?? (fiche ? selection : null);
+
+  // Nombre de voiries tracées par note d'état (pour les cases du filtre).
+  const comptesEtat = useMemo(() => {
+    const c = Object.fromEntries(FILTRES_ETAT.map((n) => [n, 0])) as Record<FiltreEtat, number>;
+    donnees?.voiries.voiries.forEach((v) => c[cleEtat(donnees.fiches[v.id]?.evaluation?.etat_note)]++);
+    return c;
+  }, [donnees]);
 
   const comptes = useMemo(() => {
     const c: Record<CategorieVoie, number> = { voirie: 0, chemin: 0, acces: 0 };
@@ -107,6 +122,8 @@ export function CarteVoiries() {
             gestionnaireVisible={gestionnaire}
             fiches={donnees.fiches}
             parametres={donnees.parametres}
+            modeCouleur={modeCouleur}
+            etatsVisibles={etats}
             selection={selectionGeo}
             onSelection={choisir}
           />
@@ -160,9 +177,53 @@ export function CarteVoiries() {
                 </label>
               ))}
             </fieldset>
+            <fieldset className="mt-3 border-t border-line pt-3">
+              <legend className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted">Couleur des routes</legend>
+              {(
+                [
+                  ["priorite", "Priorité (score)"],
+                  ["etat", "État de la chaussée"],
+                ] as const
+              ).map(([m, libelle]) => (
+                <label key={m} className="flex cursor-pointer items-center gap-2 py-0.5 text-sm text-ink">
+                  <input type="radio" name="mode-couleur" className="size-4 accent-[var(--brand)]" checked={modeCouleur === m} onChange={() => setModeCouleur(m)} />
+                  {libelle}
+                </label>
+              ))}
+            </fieldset>
+            <fieldset className="mt-3 border-t border-line pt-3">
+              <legend className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted">État de la chaussée</legend>
+              {FILTRES_ETAT.map((n) => (
+                <label key={n} className="flex cursor-pointer items-center gap-2 py-0.5 text-sm text-ink">
+                  <input
+                    type="checkbox"
+                    className="size-4 accent-[var(--brand)]"
+                    checked={etats.has(n)}
+                    onChange={() =>
+                      setEtats((e) => {
+                        const x = new Set(e);
+                        if (x.has(n)) x.delete(n);
+                        else x.add(n);
+                        return x;
+                      })
+                    }
+                  />
+                  {modeCouleur === "etat" && <span className="h-1.5 w-4 rounded-full" style={{ background: COULEURS_ETAT[n] }} aria-hidden="true" />}
+                  <span className="flex-1">{LIBELLES_FILTRE_ETAT[n]}</span>
+                  <span className="tabular-nums text-xs text-muted">{comptesEtat[n] || ""}</span>
+                </label>
+              ))}
+              {etats.size < FILTRES_ETAT.length && (
+                <button type="button" onClick={() => setEtats(new Set(FILTRES_ETAT))} className="mt-1 text-xs text-brand underline underline-offset-2">
+                  Tout afficher
+                </button>
+              )}
+            </fieldset>
             <div className="mt-3 border-t border-line pt-3">
-              <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted">Priorité (score sur 100)</p>
-              {donnees && <Legende parametres={donnees.parametres} />}
+              <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted">
+                {modeCouleur === "priorite" ? "Priorité (score sur 100)" : "Légende"}
+              </p>
+              {donnees && <Legende parametres={donnees.parametres} mode={modeCouleur} />}
             </div>
             {donnees && (
               <p className="mt-3 border-t border-line pt-2 text-[0.7rem] leading-snug text-muted">

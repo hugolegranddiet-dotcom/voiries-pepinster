@@ -4,6 +4,7 @@ import type { Gestionnaire, StatutFiche } from "@/lib/domaine";
 import { normaliserNom } from "@/lib/geo/noms";
 import { nomAffiche } from "@/lib/donnees/libelles";
 import type { CategorieFiche, FicheVoirie } from "@/lib/donnees/types";
+import { cleEtat, type FiltreEtat } from "@/lib/donnees/etat";
 import { PARAMETRES_PAR_DEFAUT, type BandePriorite, type ParametresScore } from "@/lib/priority/defaults";
 import { calculerScore } from "@/lib/priority/score";
 
@@ -90,8 +91,8 @@ export interface Filtres {
   types: ReadonlySet<TypeListe>;
   gestionnaires: ReadonlySet<Gestionnaire>;
   statuts: ReadonlySet<StatutFiche>;
-  /** Seulement les voiries dont l'état n'est pas encore noté. */
-  etatManquant: boolean;
+  /** Notes d'état à garder (vide = toutes) ; « non_note » = pas encore notée. */
+  etats: ReadonlySet<FiltreEtat>;
   /** Couleurs de priorité (vide = toutes). */
   bandes: ReadonlySet<BandePriorite>;
 }
@@ -104,7 +105,7 @@ export function filtrer(lignes: readonly LigneListe[], f: Filtres): LigneListe[]
       f.types.has(l.type) &&
       (f.gestionnaires.size === 0 || f.gestionnaires.has(l.gestionnaire)) &&
       (f.statuts.size === 0 || f.statuts.has(l.statutFiche)) &&
-      (!f.etatManquant || l.etatNote === null) &&
+      (f.etats.size === 0 || f.etats.has(cleEtat(l.etatNote))) &&
       (f.bandes.size === 0 || f.bandes.has(l.bande)) &&
       (!f.recherche.trim() || correspond(l, f.recherche)),
   );
