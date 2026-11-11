@@ -56,6 +56,20 @@ async function main() {
   verifier(await db.from("road_evaluations").upsert(d.evaluations, { onConflict: "road_id", ignoreDuplicates: true }), "évaluations");
   console.log(`✓ ${d.evaluations.length} évaluations créées si absentes (jamais écrasées)`);
 
+  // Seule exception : une évaluation « conflit à résoudre » ne contient aucune saisie.
+  // Quand le conflit a été tranché (une seule ligne retenue), on la remplace.
+  const conflits = verifier(
+    await db.from("road_evaluations").select("road_id").eq("statut_validation", "conflit_a_resoudre"),
+    "conflits",
+  ) as Array<{ road_id: string }>;
+  const resolues = d.evaluations.filter(
+    (e) => e.statut_validation !== "conflit_a_resoudre" && conflits.some((c) => c.road_id === e.road_id),
+  );
+  if (resolues.length) {
+    verifier(await db.from("road_evaluations").upsert(resolues, { onConflict: "road_id" }), "conflits résolus");
+    console.log(`✓ ${resolues.length} conflit(s) résolu(s) : ${resolues.map((e) => e.road_id).join(", ")}`);
+  }
+
   for (const g of d.gestionnaires) {
     verifier(await db.from("roads").update(g.valeurs).in("id", g.ids).eq("statut_fiche", "a_completer"), "gestionnaires");
   }

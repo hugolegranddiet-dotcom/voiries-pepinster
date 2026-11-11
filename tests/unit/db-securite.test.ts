@@ -210,7 +210,7 @@ describe("import des vraies données dans le vrai schéma", () => {
     expect(await n("select count(*)::int n from public.roads")).toBe(1135);
     expect(await n("select count(*)::int n from public.road_segments")).toBe(1489);
     expect(await n("select count(*)::int n from public.import_rows")).toBe(180);
-    expect(await n("select count(*)::int n from public.road_evaluations where statut_validation = 'conflit_a_resoudre'")).toBe(3);
+    expect(await n("select count(*)::int n from public.road_evaluations where statut_validation = 'conflit_a_resoudre'")).toBe(0); // D17
     expect(await n("select count(*)::int n from public.road_evaluations where etat_note is not null")).toBe(0);
     expect(await n("select count(*)::int n from public.road_segments s left join public.roads r on r.id = s.road_id where r.id is null")).toBe(0);
   }, 60_000);
@@ -262,8 +262,8 @@ describe("lecture de la carte depuis la base", () => {
     expect(biez.validees[0].etatNote).toBeNull();
     // Les parties de rue sont rattachées à leur voirie mère.
     expect(d.excel.parVoirie["n:bouhaye"].sections.map((s) => s.nom)).toEqual(["Bouhaye inférieure", "Bouhaye supérieure"]);
-    // Les conflits (O10) montrent les deux lignes, sans en choisir une.
-    expect(d.excel.parVoirie["n:rue du paire"].validees.map((f) => f.ligne)).toEqual([103, 104]);
+    // Conflit tranché (D17) : seule la ligne 103 reste sur la Rue du Paire.
+    expect(d.excel.parVoirie["n:rue du paire"].validees.map((f) => f.ligne)).toEqual([103]);
     expect(d.notes["n:rue du biez"].particularites).toBe("Ecole, trottois HS");
   }, 60_000);
 });

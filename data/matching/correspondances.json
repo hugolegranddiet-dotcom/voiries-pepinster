@@ -1327,15 +1327,15 @@
  },
  {
   "ligne": 104,
-  "statut": "valide",
-  "voirieId": "n:rue du paire",
+  "statut": "rejete",
+  "voirieId": null,
   "decision": {
    "ligne": 104,
-   "decision": "OK",
-   "voirieId": "n:rue du paire",
-   "commentaire": null,
-   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
-   "date": "2026-11-11T20:01:32.882Z"
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "« Ruelle du Paire » absente de la carte : ligne écartée (la Rue du Paire garde la ligne 103)",
+   "source": "conflits O10 tranchés — Hugo, conversation du 11/11/2026 (« Rue du Paire : ligne 103 ; une rue et une place Saint-Hubert, 2 choses différentes ; Voie/Chemin du Moulin : garde celui que tu as »)",
+   "date": "2026-11-11T20:45:25.602721+00:00"
   }
  },
  {
@@ -1626,15 +1626,15 @@
  },
  {
   "ligne": 127,
-  "statut": "valide",
-  "voirieId": "n:place saint hubert",
+  "statut": "rejete",
+  "voirieId": null,
   "decision": {
    "ligne": 127,
-   "decision": "OK",
-   "voirieId": "n:place saint hubert",
-   "commentaire": null,
-   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
-   "date": "2026-11-11T20:01:32.882Z"
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "« Rue Saint-Hubert » distincte de la Place et absente de la carte : ligne écartée",
+   "source": "conflits O10 tranchés — Hugo, conversation du 11/11/2026 (« Rue du Paire : ligne 103 ; une rue et une place Saint-Hubert, 2 choses différentes ; Voie/Chemin du Moulin : garde celui que tu as »)",
+   "date": "2026-11-11T20:45:25.602721+00:00"
   }
  },
  {
@@ -2224,15 +2224,15 @@
  },
  {
   "ligne": 175,
-  "statut": "valide",
-  "voirieId": "n:voie du moulin",
+  "statut": "rejete",
+  "voirieId": null,
   "decision": {
    "ligne": 175,
-   "decision": "OK",
-   "voirieId": "n:voie du moulin",
-   "commentaire": null,
-   "source": "fichier validation_correspondances_2026-11-11_hugo.xlsx (empreinte 6b0144770abc)",
-   "date": "2026-11-11T20:01:32.882Z"
+   "decision": "NON",
+   "voirieId": null,
+   "commentaire": "« Chemin du Moulin » absent de la carte : ligne écartée (la Voie du Moulin garde la ligne 148)",
+   "source": "conflits O10 tranchés — Hugo, conversation du 11/11/2026 (« Rue du Paire : ligne 103 ; une rue et une place Saint-Hubert, 2 choses différentes ; Voie/Chemin du Moulin : garde celui que tu as »)",
+   "date": "2026-11-11T20:45:25.602721+00:00"
   }
  },
  {

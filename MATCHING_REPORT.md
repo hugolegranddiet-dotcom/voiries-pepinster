@@ -10,11 +10,11 @@
 
 | Statut | Lignes |
 |---|---:|
-| validées | 152 |
+| validées | 149 |
 | à valider | 0 |
 | sections à tracer | 16 |
 | introuvables sur la carte (fiche sans tracé) | 0 |
-| rejetées | 12 |
+| rejetées | 15 |
 | n'existe plus | 0 |
 
 ## 2. Propositions par confiance
@@ -37,18 +37,18 @@ Rien n'est appliqué automatiquement, même en confiance « forte » : chaque li
 | 83 | La Saute | Saute (Cornesse) |  |  | valide |
 | 87 | Léon Lepas Venelle | Venelle Léon Le Pas (Pepinster) |  |  | valide |
 | 103 | Paire Rue du | Rue du Paire (Wegnez) |  | voirie aussi proposée pour la/les ligne(s) 104 | valide |
-| 104 | Paire Ruelle du | Rue du Paire (Wegnez) |  | voirie aussi proposée pour la/les ligne(s) 103 | valide |
+| 104 | Paire Ruelle du | Rue du Paire (Wegnez) |  | voirie aussi proposée pour la/les ligne(s) 103 | rejete |
 | 105 | Paix Rue de la | Rue de la Paix (Wegnez) | Rue de la Paix | 2 voiries possibles : choisir la bonne | valide |
 | 113 | Place Sainte-Hubert | Place Saint Hubert (Wegnez) |  | voirie aussi proposée pour la/les ligne(s) 127 | valide |
 | 116 | Pont Walrand Rue | Pont Walrand (Cornesse/Pepinster) |  |  | valide |
-| 127 | Saint Hubert Rue | Place Saint Hubert (Wegnez) |  | voirie aussi proposée pour la/les ligne(s) 113 | valide |
+| 127 | Saint Hubert Rue | Place Saint Hubert (Wegnez) |  | voirie aussi proposée pour la/les ligne(s) 113 | rejete |
 | 130 | Soiron Route de | Route de Soiron (Cornesse) | Route de Soiron | 2 voiries possibles : choisir la bonne | valide |
 | 137 | Sous le Château Rue | Sous le Château (Cornesse/Wegnez) |  |  | valide |
 | 148 | Voie du Moulin | Voie du Moulin (Soiron) |  | voirie aussi proposée pour la/les ligne(s) 175 | valide |
 | 153 | Ayrifagne | Ayrifagne (Pepinster) |  | Excel : SPW, mais la carte ne la situe pas sur le réseau régional | valide |
 | 156 | Forges Thiry | Forges Thiry (Pepinster) |  | Excel : SPW, mais la carte ne la situe pas sur le réseau régional | valide |
 | 162 | Massau | Rue Massau (Cornesse) |  |  | valide |
-| 175 | Chemin du Moulin | Voie du Moulin (Soiron) |  | voirie aussi proposée pour la/les ligne(s) 148 | valide |
+| 175 | Chemin du Moulin | Voie du Moulin (Soiron) |  | voirie aussi proposée pour la/les ligne(s) 148 | rejete |
 
 ## 4. Parties de rue (sections, décision D4) (16)
 

@@ -321,6 +321,7 @@ Chaque phase se termine par : vérifications automatiques, résumé des fichiers
 | **D13** | Développement | **ici, avec Claude**, sauvegarde sur GitHub | Hugo teste sur son Mac quand il le souhaite (§10.2) |
 | **D14** | Noms en double sur la carte (COVERAGE §5) | « si même endroit, même rue ; sinon homonyme » | morceaux de même nom à moins de **300 m** réunis en une voirie ; au-delà, homonymes séparés (Route de Soiron, Rue de la Paix) ; journal dans `COVERAGE_REPORT.md` |
 | **D16** | Validation des correspondances (11/11/2026) | fichier rempli par Hugo : OK sur les 168 propositions ; « laisse tomber les introuvées » | 152 lignes validées ; 16 parties de rue enregistrées comme SECTION (OK sur une section = SECTION, D4) ; 12 lignes sans voirie écartées ; fichier reçu archivé dans `data/matching/recus/` |
+| **D17** | Conflits O10 (11/11/2026) | Rue du Paire = ligne 103 ; Place et Rue Saint-Hubert sont distinctes ; Voie du Moulin = ligne 148 | lignes 103, 113, 148 gardées ; lignes 104 (Ruelle du Paire), 127 (Rue Saint-Hubert), 175 (Chemin du Moulin) écartées car absentes de la carte (comme D16) |
 | **D15** | Relecture de la liste des rues OSM (COVERAGE §8) | « fais au mieux » | pas de relecture ligne à ligne par le père ; les écarts apparaissent dans `MATCHING_REPORT.md` (lignes Excel introuvables, voiries sans ligne Excel) |
 
 ### 9.2 Points encore ouverts
@@ -330,7 +331,7 @@ Chaque phase se termine par : vérifications automatiques, résumé des fichiers
 | ~~O3~~ | Accès réseau pour la phase 2 | – | **Résolu** : extraction OSM lancée sur le Mac de Hugo (`npm run geo:extract`, 11/11/2026, relation 2436184). Réseau régional SPW consulté pour identification seulement : tracés non conservés, seul le résultat du recoupement est gardé |
 | **O5** | `Chemin du Nauzaury` (lignes 29 et 176) : une voirie ou deux parties ? | non bloquant | aucune voirie de ce nom dans OSM : les deux lignes sont « aucune voirie trouvée » ; décision dans le fichier de validation |
 | ~~O8~~ | Valider les correspondances | – | **Résolu** (D16) |
-| **O10** | **Deux lignes Excel validées sur la même voirie** : Rue du Paire (l. 103 + 104), Place Saint Hubert (l. 113 + 127), Voie du Moulin (l. 148 + 175) | évaluation de ces 3 voiries | aucune donnée n'est choisie : leur évaluation reste vide (« conflit à résoudre ») jusqu'à décision de Hugo |
+| ~~O10~~ | Deux lignes Excel sur la même voirie | – | **Résolu** (D17) |
 | **O9** | Tracé des **sections** (Bouhaye inf./sup., Soiron-Centre…) | couleur des sections | à définir sur la carte lors de la phase d'édition (5) ; d'ici là, rattachées à leur voirie mère |
 | **O7** | Autoriser Claude à **écrire** sur le dépôt GitHub (installation de l'application GitHub « Claude ») | sauvegarde | le premier enregistrement est prêt et attend cette autorisation |
 
