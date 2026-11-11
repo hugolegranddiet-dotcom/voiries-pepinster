@@ -264,6 +264,15 @@ L'ampleur des travaux, les échéances, le type d'habitat et les textes libres (
 
 La fiche de chaque voirie montrera le détail du calcul : chaque critère, sa valeur, ses points, son poids, sa contribution, puis la couverture, la version des paramètres utilisée et les critères manquants.
 
+### 6.7 Contrôle par la liste témoin (phase 6, D8)
+
+Test automatique `tests/unit/temoin.test.ts`, avec les paramètres par défaut et **toutes les notes suggérées validées telles quelles** (simulation, aucune donnée modifiée) :
+- les **5 premières places** du classement communal (127 voiries) sont des voiries de `Récap 102026` ;
+- **12 des 14** sont dans les 15 premières, **toutes** dans les 20 premières ;
+- hors liste mais haut placées : Mousset (6ᵉ), Rue Francval (10ᵉ), Rue du Fort (13ᵉ) — à regarder par le père.
+
+Correspondance des 14 noms avec `Feuil1` (nom identique, une seule ligne chacun) : `data/excel/recap_102026.json`.
+
 ---
 
 ## 7. Plan de développement phase par phase

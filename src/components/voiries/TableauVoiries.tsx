@@ -5,7 +5,8 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { BadgeGestionnaire, BadgePriorite } from "@/components/badges";
+import { BadgeGestionnaire, BadgePriorite, COULEUR_BANDE } from "@/components/badges";
+import { LIBELLES_BANDES } from "@/lib/priority/defaults";
 import { useDonnees } from "@/components/donnees/FournisseurDonnees";
 import { PanneauFiche } from "@/components/fiche/PanneauFiche";
 import { IconeCarte, IconeFermer } from "@/components/icones";
@@ -34,12 +35,12 @@ const COLONNES: Array<{ cle: ColonneTri | null; libelle: string; classe?: string
   { cle: "densite", libelle: "Densité" },
   { cle: "travaux", libelle: "Travaux" },
   { cle: "echeance", libelle: "Échéance" },
-  { cle: null, libelle: "Score" },
+  { cle: "score", libelle: "Score" },
   { cle: "manquants", libelle: "Manquant" },
 ];
 
 function filtresInitiaux(): Filtres {
-  return { recherche: "", types: TYPES_PAR_DEFAUT, gestionnaires: new Set(), statuts: new Set(), etatManquant: false };
+  return { recherche: "", types: TYPES_PAR_DEFAUT, gestionnaires: new Set(), statuts: new Set(), etatManquant: false, bandes: new Set() };
 }
 
 function basculer<T>(ens: ReadonlySet<T>, v: T): Set<T> {
@@ -97,7 +98,7 @@ export function TableauVoiries() {
     [router, chemin],
   );
 
-  const lignes = useMemo(() => (donnees ? Object.values(donnees.fiches).map(versLigne) : []), [donnees]);
+  const lignes = useMemo(() => (donnees ? Object.values(donnees.fiches).map((f) => versLigne(f, donnees.parametres)) : []), [donnees]);
   const triees = useMemo(() => trier(filtrer(lignes, filtres), tri.colonne, tri.sens), [lignes, filtres, tri]);
   const nbPages = Math.max(1, Math.ceil(triees.length / PAR_PAGE));
   const pageCourante = Math.min(page, nbPages - 1);
@@ -125,10 +126,14 @@ export function TableauVoiries() {
   };
 
   const trierPar = (c: ColonneTri) =>
-    setTri((t) => (t.colonne === c ? { colonne: c, sens: t.sens === "asc" ? "desc" : "asc" } : { colonne: c, sens: "asc" }));
+    setTri((t) =>
+      t.colonne === c
+        ? { colonne: c, sens: t.sens === "asc" ? "desc" : "asc" }
+        : { colonne: c, sens: c === "score" || c === "etatNote" ? "desc" : "asc" }, // le plus prioritaire d'abord
+    );
 
   const nbFiltresActifs =
-    (filtres.gestionnaires.size ? 1 : 0) + (filtres.statuts.size ? 1 : 0) + (filtres.etatManquant ? 1 : 0) +
+    (filtres.gestionnaires.size ? 1 : 0) + (filtres.statuts.size ? 1 : 0) + (filtres.etatManquant ? 1 : 0) + (filtres.bandes.size ? 1 : 0) +
     ([...filtres.types].sort().join() !== [...TYPES_PAR_DEFAUT].sort().join() ? 1 : 0);
 
   if (etat.statut === "erreur") {
@@ -168,7 +173,7 @@ export function TableauVoiries() {
               </button>
             )}
           </div>
-          <div id="filtres-voiries" className={`${filtresOuverts ? "grid" : "hidden"} mt-3 gap-4 border-t border-line pt-3 md:grid-cols-2 xl:grid-cols-4`}>
+          <div id="filtres-voiries" className={`${filtresOuverts ? "grid" : "hidden"} mt-3 gap-4 border-t border-line pt-3 md:grid-cols-2 xl:grid-cols-5`}>
             <BlocCase legende="Types de voies">
               {TYPES.map((t) => (
                 <Case key={t.cle} coche={filtres.types.has(t.cle)} onChange={() => majFiltres((f) => ({ ...f, types: basculer(f.types, t.cle) }))}>
@@ -194,6 +199,14 @@ export function TableauVoiries() {
               <Case coche={filtres.etatManquant} onChange={() => majFiltres((f) => ({ ...f, etatManquant: !f.etatManquant }))}>
                 État pas encore noté
               </Case>
+            </BlocCase>
+            <BlocCase legende="Priorité (toutes si rien n'est coché)">
+              {(["rouge", "orange", "jaune", "vert", "gris"] as const).map((b) => (
+                <Case key={b} coche={filtres.bandes.has(b)} onChange={() => majFiltres((f) => ({ ...f, bandes: basculer(f.bandes, b) }))}>
+                  <span className={`size-3 rounded-full ${COULEUR_BANDE[b]}`} aria-hidden="true" />
+                  {LIBELLES_BANDES[b]}
+                </Case>
+              ))}
             </BlocCase>
           </div>
         </div>
@@ -259,7 +272,7 @@ export function TableauVoiries() {
                     <td className="px-3 py-2">{texteDensite(l.densite) ?? <Vide />}</td>
                     <td className="px-3 py-2">{texteTravaux(l.travaux) ?? <Vide />}</td>
                     <td className="max-w-40 truncate px-3 py-2" title={l.echeance ?? undefined}>{l.echeance ?? <Vide />}</td>
-                    <td className="px-3 py-2 whitespace-nowrap"><BadgePriorite score={null} /></td>
+                    <td className="px-3 py-2 whitespace-nowrap"><BadgePriorite score={l.score} bande={l.bande} provisoire={l.provisoire} /></td>
                     <td className="px-3 py-2 text-xs text-muted">{l.manquants.length ? l.manquants.join(", ") : "—"}</td>
                     <td className="px-3 py-2">
                       {(l.aTrace || donnees.fiches[l.id]?.parentId) && (
@@ -293,6 +306,7 @@ export function TableauVoiries() {
             }}
             className="rounded-lg border border-line bg-surface px-2 py-1.5 text-sm text-ink"
           >
+            <option value="score:desc">Priorité (la plus haute d&apos;abord)</option>
             <option value="nom:asc">Nom (A → Z)</option>
             <option value="etatNote:desc">État (pire d&apos;abord)</option>
             <option value="manquants:desc">Données manquantes</option>
@@ -316,6 +330,7 @@ export function TableauVoiries() {
                   </span>
                   {l.anciennesCommunes && <span className="block text-xs text-muted">{l.anciennesCommunes}</span>}
                   <span className="mt-1.5 flex flex-wrap gap-x-4 gap-y-0.5 text-sm">
+                    <BadgePriorite score={l.score} bande={l.bande} provisoire={l.provisoire} />
                     <span><span className="text-muted">État : </span><CelluleEtat l={l} /></span>
                     {l.travaux && <span><span className="text-muted">Travaux : </span>{texteTravaux(l.travaux)}</span>}
                   </span>

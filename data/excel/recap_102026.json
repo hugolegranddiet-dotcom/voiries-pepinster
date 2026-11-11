@@ -1,0 +1,91 @@
+{
+  "source": "source/etat_voiries_pepinster.xlsx, feuille « Récap 102026 » (lecture seule, non importée)",
+  "role": "Liste témoin (décision D8) : liste actuelle des priorités du père, utilisée uniquement pour tester le classement.",
+  "methode": "Chaque nom de la feuille Récap est identique (espaces mis à part) au nom de la colonne A d'une seule ligne de Feuil1 ; l'identifiant de voirie vient de la correspondance validée (D16) ou de la partie de rue (s:<ligne>).",
+  "voiries": [
+    {
+      "nomRecap": "Emile Vandervelde Rue",
+      "ligneRecap": 3,
+      "ligneFeuil1": 47,
+      "roadId": "n:rue emile vandervelde"
+    },
+    {
+      "nomRecap": "Grand'Ry Cornesse",
+      "ligneRecap": 5,
+      "ligneFeuil1": 63,
+      "roadId": "n:grand'ry cornesse"
+    },
+    {
+      "nomRecap": "Maison-Bois",
+      "ligneRecap": 7,
+      "ligneFeuil1": 93,
+      "roadId": "n:maison bois"
+    },
+    {
+      "nomRecap": "Saint Germain",
+      "ligneRecap": 9,
+      "ligneFeuil1": 126,
+      "roadId": "n:saint germain"
+    },
+    {
+      "nomRecap": "Soiron Route de",
+      "ligneRecap": 11,
+      "ligneFeuil1": 130,
+      "roadId": "n:route de soiron#1"
+    },
+    {
+      "nomRecap": "Soiron-Centre Place du bac",
+      "ligneRecap": 13,
+      "ligneFeuil1": 134,
+      "roadId": "s:134"
+    },
+    {
+      "nomRecap": "Soiron-Centre supérieure",
+      "ligneRecap": 14,
+      "ligneFeuil1": 135,
+      "roadId": "s:135"
+    },
+    {
+      "nomRecap": "Soiron-Centre Taverne",
+      "ligneRecap": 15,
+      "ligneFeuil1": 136,
+      "roadId": "s:136"
+    },
+    {
+      "nomRecap": "Tribomont Bertholet-Verviers Rue",
+      "ligneRecap": 17,
+      "ligneFeuil1": 141,
+      "roadId": "s:141"
+    },
+    {
+      "nomRecap": "Bouhaye supérieure",
+      "ligneRecap": 19,
+      "ligneFeuil1": 21,
+      "roadId": "s:21"
+    },
+    {
+      "nomRecap": "Cornesse Route de",
+      "ligneRecap": 20,
+      "ligneFeuil1": 33,
+      "roadId": "n:route de cornesse"
+    },
+    {
+      "nomRecap": "Bouhaye inférieure",
+      "ligneRecap": 21,
+      "ligneFeuil1": 20,
+      "roadId": "s:20"
+    },
+    {
+      "nomRecap": "Impasse de Prévôchamps",
+      "ligneRecap": 23,
+      "ligneFeuil1": 71,
+      "roadId": "n:impasse de prevochamps"
+    },
+    {
+      "nomRecap": "Biez Rue du",
+      "ligneRecap": 25,
+      "ligneFeuil1": 15,
+      "roadId": "n:rue du biez"
+    }
+  ]
+}

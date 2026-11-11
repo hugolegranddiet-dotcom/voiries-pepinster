@@ -7,7 +7,8 @@ import { IconeFermer } from "@/components/icones";
 import { useDonnees } from "@/components/donnees/FournisseurDonnees";
 import { PanneauFiche } from "@/components/fiche/PanneauFiche";
 import { RechercheVoirie } from "@/components/carte/RechercheVoirie";
-import { COULEUR_NON_EVALUE, COULEUR_NOTE_SAISIE } from "@/components/carte/styles-carte";
+import { COULEURS_BANDE } from "@/components/carte/styles-carte";
+import { LIBELLES_BANDES, type ParametresScore } from "@/lib/priority/defaults";
 import { LIBELLES_GESTIONNAIRE, type Gestionnaire } from "@/lib/domaine";
 import type { CategorieVoie } from "@/lib/geo/voiries";
 
@@ -33,21 +34,23 @@ const FILTRES: Array<{ cle: CategorieVoie; libelle: string }> = [
   { cle: "acces", libelle: "Accès et parkings sans nom" },
 ];
 
-function Legende() {
+function Legende({ parametres }: { parametres: ParametresScore }) {
   return (
     <ul className="space-y-1.5 text-xs">
+      {parametres.seuils.map((t) => (
+        <li key={t.bande} className="flex items-center gap-2">
+          <span className="h-1.5 w-6 rounded-full" style={{ background: COULEURS_BANDE[t.bande] }} aria-hidden="true" />
+          <span className="w-14 tabular-nums text-ink">{t.min} – {t.max}</span>
+          <span className="text-muted">{LIBELLES_BANDES[t.bande]}</span>
+        </li>
+      ))}
       <li className="flex items-center gap-2">
-        <span className="h-1.5 w-6 rounded-full" style={{ background: COULEUR_NON_EVALUE }} aria-hidden="true" />
-        <span className="text-ink">État non noté</span>
+        <span className="h-1 w-6 rounded-full" style={{ background: COULEURS_BANDE.gris }} aria-hidden="true" />
+        <span className="text-ink">Non évalué</span>
       </li>
       <li className="flex items-center gap-2">
-        <span className="h-1.5 w-6 rounded-full" style={{ background: COULEUR_NOTE_SAISIE }} aria-hidden="true" />
-        <span className="text-ink">État noté</span>
-        <span className="text-muted">(priorité : phase 6)</span>
-      </li>
-      <li className="flex items-center gap-2">
-        <span className="h-1.5 w-6 rounded-full bg-brand" aria-hidden="true" />
-        <span className="text-ink">Voirie sélectionnée</span>
+        <span className="h-2 w-6 rounded-full border-2 border-ink" style={{ background: COULEURS_BANDE.orange }} aria-hidden="true" />
+        <span className="text-ink">Voirie sélectionnée (contour)</span>
       </li>
       <li className="flex items-center gap-2">
         <span className="w-6 border-t-2 border-dashed border-ink" aria-hidden="true" />
@@ -103,6 +106,7 @@ export function CarteVoiries() {
             categoriesVisibles={visibles}
             gestionnaireVisible={gestionnaire}
             fiches={donnees.fiches}
+            parametres={donnees.parametres}
             selection={selectionGeo}
             onSelection={choisir}
           />
@@ -157,8 +161,8 @@ export function CarteVoiries() {
               ))}
             </fieldset>
             <div className="mt-3 border-t border-line pt-3">
-              <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted">Légende</p>
-              <Legende />
+              <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted">Priorité (score sur 100)</p>
+              {donnees && <Legende parametres={donnees.parametres} />}
             </div>
             {donnees && (
               <p className="mt-3 border-t border-line pt-2 text-[0.7rem] leading-snug text-muted">

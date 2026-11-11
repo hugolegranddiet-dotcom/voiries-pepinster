@@ -11,6 +11,16 @@ import type {
 } from "@/lib/domaine";
 import type { AmpleurTravaux } from "@/lib/excel/types";
 import type { DonneesVoiries, SegmentProps } from "@/lib/geo/types";
+import type { ParametresScore } from "@/lib/priority/defaults";
+
+/** Une version des paramètres du score enregistrée en base. */
+export interface VersionParametres extends ParametresScore {
+  version: number;
+  actif: boolean;
+  creeLe: string;
+  /** false si la ligne en base n'a pas pu être relue (valeurs par défaut affichées). */
+  lisible: boolean;
+}
 
 /** Ligne de la table road_evaluations (noms de colonnes de la base). */
 export interface Evaluation {
@@ -84,4 +94,8 @@ export interface DonneesApp {
   voiries: DonneesVoiries;
   /** Fiches de TOUTES les voiries, sections comprises. */
   fiches: Record<string, FicheVoirie>;
+  /** Paramètres ACTIFS du score (ou valeurs par défaut, voir l'avertissement). */
+  parametres: ParametresScore;
+  parametresAvertissement: null | "aucune_version" | "version_illisible";
+  versionsParametres: VersionParametres[];
 }

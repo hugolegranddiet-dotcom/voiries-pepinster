@@ -5,6 +5,10 @@ import Link from "next/link";
 import { useMemo, useState, useTransition, type ReactNode } from "react";
 import { enregistrerFiche } from "@/app/actions/evaluations";
 import { BadgeGestionnaire, BadgePriorite } from "@/components/badges";
+import { DetailScore } from "@/components/priorite/DetailScore";
+import { dansClassementCommunal } from "@/lib/priority/classement";
+import type { ParametresScore } from "@/lib/priority/defaults";
+import { calculerScore } from "@/lib/priority/score";
 import { AvertissementScore } from "@/components/blocs";
 import { useDonnees } from "@/components/donnees/FournisseurDonnees";
 import {
@@ -19,6 +23,20 @@ import {
 import { LIBELLES_CATEGORIE, LIBELLES_RISQUE, LIBELLES_TRAVAUX, nomAffiche } from "@/lib/donnees/libelles";
 import { differences, versFormulaire, type Formulaire } from "@/lib/donnees/formulaire";
 import type { Evaluation } from "@/lib/donnees/types";
+
+/** Score qu'aurait la voirie avec les valeurs du formulaire (aperçu, rien n'est enregistré). */
+function apercu(f: Formulaire, p: ParametresScore) {
+  const r = calculerScore(
+    {
+      etat_note: f.etat_note ? Number(f.etat_note) : null,
+      intensite_circulation: f.intensite_circulation || null,
+      densite_habitation: f.densite_habitation || null,
+      risque_securite: f.risque_securite ? Number(f.risque_securite) : null,
+    },
+    p,
+  );
+  return { score: r.score, bande: r.bande, provisoire: r.provisoire };
+}
 
 // ---------------------------------------------------------------------------
 // Petits composants d'affichage
@@ -186,13 +204,19 @@ export function PanneauFiche({
         </p>
       )}
 
-      <section aria-label="Priorité" className="rounded-lg border border-line bg-canvas p-3">
-        <p className="text-xs font-medium uppercase tracking-wide text-muted">Priorité</p>
-        <div className="mt-1">
-          <BadgePriorite score={null} taille="grande" />
-        </div>
-        <p className="mt-1 text-xs text-muted">Le calcul du score arrive en phase 6.</p>
-      </section>
+      {donnees && (
+        <DetailScore
+          resultat={calculerScore(e, donnees.parametres)}
+          parametres={donnees.parametres}
+          horsClassement={!dansClassementCommunal(fiche.gestionnaire, donnees.parametres)}
+        />
+      )}
+      {edition && donnees && modifie && (
+        <p role="status" className="-mt-2 rounded-lg border border-dashed border-line px-3 py-2 text-sm text-ink">
+          Avec ces valeurs (pas encore enregistrées) :{" "}
+          <BadgePriorite {...apercu(courant, donnees.parametres)} />
+        </p>
+      )}
 
       {/* Évaluation : lecture ou modification */}
       {!edition ? (

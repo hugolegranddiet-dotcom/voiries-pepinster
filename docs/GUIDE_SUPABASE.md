@@ -141,6 +141,16 @@ Ouvre **http://localhost:3000** :
 
 ---
 
+## Mises à jour de la base (phases suivantes)
+
+Quand une phase ajoute un fichier dans `supabase/migrations/`, il faut l'envoyer à Supabase une fois, après `git pull` :
+
+```bash
+npx supabase@3.1.0 db push --remote
+```
+
+Réponds `Y`. Tu dois voir `Applying migration …` pour chaque nouveau fichier (en phase 6 : `20261111230000_phase6_priorites.sql`), puis `Finished supabase db push.` Les migrations déjà appliquées ne sont pas refaites, et **aucune donnée n'est effacée**.
+
 ## À savoir
 
 - **Mise en pause (offre gratuite)** : un projet presque inactif pendant environ une semaine est mis en pause. Supabase prévient par e-mail ; les données sont **conservées** ; on le réactive depuis le tableau de bord. On en reparlera à la phase 7 (mise en ligne).

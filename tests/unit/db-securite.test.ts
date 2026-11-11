@@ -7,6 +7,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { PGlite } from "@electric-sql/pglite";
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
+import { PARAMETRES_PAR_DEFAUT } from "@/lib/priority/defaults";
 
 const ADMIN = "11111111-1111-4111-8111-111111111111";
 const INTRUS = "22222222-2222-4222-8222-222222222222";
@@ -168,6 +169,58 @@ describe("administrateur (le père)", () => {
   });
 });
 
+describe("phase 6 : paramètres versionnés et validation des notes suggérées", () => {
+  const APPEL = `select public.publier_parametres('{"etat":60,"intensite":20,"densite":10,"risque":10}', '{}', '[]', 0.7, '{commune}') as v`;
+
+  it("refuse la publication de paramètres aux visiteurs et aux intrus", async () => {
+    await comme("anon");
+    expect(await erreur(APPEL)).toMatch(/permission denied/);
+    await comme("authenticated", INTRUS);
+    expect(await erreur(APPEL)).toMatch(/acces_refuse/);
+  });
+
+  it("publie une nouvelle version active et garde l'ancienne", async () => {
+    await comme("authenticated", ADMIN);
+    const r = await db.query<{ v: number }>(APPEL);
+    expect(r.rows[0].v).toBe(2);
+    const versions = await db.query("select version, actif, created_by::text from public.priority_settings order by version");
+    expect(versions.rows).toEqual([
+      { version: 1, actif: false, created_by: null },
+      { version: 2, actif: true, created_by: ADMIN },
+    ]);
+    // Retour à la version 1 : toujours une seule version active.
+    await db.exec("select public.activer_parametres(1)");
+    const actives = await db.query<{ version: number }>("select version from public.priority_settings where actif");
+    expect(actives.rows).toEqual([{ version: 1 }]);
+    expect(await erreur("select public.activer_parametres(99)")).toMatch(/version_inconnue/);
+    const j = await db.query<{ n: number }>("select count(*)::int n from public.change_log where table_name = 'priority_settings'");
+    expect(j.rows[0].n).toBeGreaterThanOrEqual(3);
+  });
+
+  it("valide par lot les seules notes suggérées encore vides", async () => {
+    await commeService(() =>
+      db.exec(`
+        insert into public.roads (id, nom, categorie) values ('n:a', 'A', 'voirie'), ('n:b', 'B', 'voirie'), ('n:c', 'C', 'voirie');
+        insert into public.road_evaluations (road_id, etat_note_suggeree, etat_note) values ('n:a', 4, null), ('n:b', 2, 5), ('n:c', null, null);
+      `),
+    );
+    // Un intrus ne valide rien (sécurité par ligne).
+    await comme("authenticated", INTRUS);
+    expect((await db.query("select public.valider_notes_suggerees(array['n:a'])")).rows).toHaveLength(0);
+    await comme("authenticated", ADMIN);
+    const r = await db.query<{ id: string }>("select public.valider_notes_suggerees(array['n:a', 'n:b', 'n:c']) as id");
+    expect(r.rows).toEqual([{ id: "n:a" }]);
+    const notes = await db.query("select road_id, etat_note from public.road_evaluations where road_id in ('n:a', 'n:b', 'n:c') order by road_id");
+    expect(notes.rows).toEqual([
+      { road_id: "n:a", etat_note: 4 },
+      { road_id: "n:b", etat_note: 5 }, // note déjà saisie : jamais écrasée
+      { road_id: "n:c", etat_note: null },
+    ]);
+    const j = await db.query("select champ, avant, apres, auteur::text from public.change_log where record_id = 'n:a' and operation = 'UPDATE'");
+    expect(j.rows).toEqual([{ champ: "etat_note", avant: null, apres: 4, auteur: ADMIN }]);
+  });
+});
+
 describe("import des vraies données dans le vrai schéma", () => {
   it("respecte toutes les contraintes (clés, valeurs, champs obligatoires)", async () => {
     const { construireDonnees } = await import("../../scripts/db/construire");
@@ -281,6 +334,10 @@ describe("lecture de la carte depuis la base", () => {
     expect(section.categorie).toBe("section");
     expect(section.aTrace).toBe(false);
     expect(section.anciennesCommunes).toEqual(bouhaye.anciennesCommunes);
+    // Paramètres du score : la version 1 importée, relue telle quelle.
+    expect(d.parametresAvertissement).toBeNull();
+    expect(d.parametres).toEqual({ ...PARAMETRES_PAR_DEFAUT, version: 1 });
+    expect(d.versionsParametres.map((v) => [v.version, v.actif, v.lisible])).toEqual([[1, true, true]]);
     // Conflit tranché (D17) : seule la ligne 103 reste sur la Rue du Paire.
     expect(d.fiches["n:rue du paire"].origineExcel.map((o) => o.ligne)).toEqual([103]);
     // Une voirie sans ligne Excel reste « à compléter ».

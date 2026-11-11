@@ -17,14 +17,17 @@ export const COULEUR_BANDE: Record<BandePriorite, string> = {
 /** Pastille de priorité : couleur + chiffre + texte (jamais la couleur seule). */
 export function BadgePriorite({
   score,
+  bande: bandeDonnee,
   provisoire = false,
   taille = "normale",
 }: {
   score: number | null;
+  /** Bande calculée par calculerScore (sinon : seuils par défaut). */
+  bande?: BandePriorite;
   provisoire?: boolean;
   taille?: "normale" | "grande";
 }) {
-  const bande = bandeDuScore(score);
+  const bande = bandeDonnee ?? bandeDuScore(score);
   const grande = taille === "grande";
   return (
     <span className="inline-flex items-center gap-2">
@@ -63,14 +66,6 @@ export function BadgeGestionnaire({ gestionnaire }: { gestionnaire: Gestionnaire
       }`}
     >
       {LIBELLES_GESTIONNAIRE[gestionnaire]}
-    </span>
-  );
-}
-
-export function EtiquetteDemo() {
-  return (
-    <span className="rounded bg-demo-bg px-1.5 py-0.5 text-[0.7rem] font-bold uppercase tracking-wide text-demo-ink ring-1 ring-demo-line">
-      démo
     </span>
   );
 }

@@ -4,6 +4,8 @@ import type { Gestionnaire, StatutFiche } from "@/lib/domaine";
 import { normaliserNom } from "@/lib/geo/noms";
 import { nomAffiche } from "@/lib/donnees/libelles";
 import type { CategorieFiche, FicheVoirie } from "@/lib/donnees/types";
+import { PARAMETRES_PAR_DEFAUT, type BandePriorite, type ParametresScore } from "@/lib/priority/defaults";
+import { calculerScore } from "@/lib/priority/score";
 
 /** Types de voies proposés dans les filtres. */
 export type TypeListe = "voiries" | "sections" | "chemins" | "sans_nom" | "acces";
@@ -25,6 +27,10 @@ export interface LigneListe {
   echeance: string | null;
   risque: number | null;
   manquants: string[];
+  /** Score calculé par calculerScore (null = Non évalué). */
+  score: number | null;
+  bande: BandePriorite;
+  provisoire: boolean;
   aTrace: boolean;
   /** Texte de recherche normalisé (nom + anciennes communes). */
   cle: string;
@@ -38,8 +44,9 @@ export function typeDeFiche(f: FicheVoirie): TypeListe {
   return "voiries";
 }
 
-export function versLigne(f: FicheVoirie): LigneListe {
+export function versLigne(f: FicheVoirie, parametres: ParametresScore = PARAMETRES_PAR_DEFAUT): LigneListe {
   const e = f.evaluation;
+  const r = calculerScore(e, parametres);
   const manquants: string[] = [];
   if (!e?.etat_note) manquants.push("état");
   if (!e?.intensite_circulation) manquants.push("circulation");
@@ -63,6 +70,9 @@ export function versLigne(f: FicheVoirie): LigneListe {
     echeance: e?.echeance_brute ?? (e?.annee_prevue ? String(e.annee_prevue) : null),
     risque: e?.risque_securite ?? null,
     manquants,
+    score: r.score,
+    bande: r.bande,
+    provisoire: r.provisoire,
     aTrace: f.aTrace,
     cle: normaliserNom(`${nom} ${f.anciennesCommunes.join(" ")}`),
   };
@@ -84,6 +94,8 @@ export interface Filtres {
   statuts: ReadonlySet<StatutFiche>;
   /** Seulement les voiries dont l'état n'est pas encore noté. */
   etatManquant: boolean;
+  /** Couleurs de priorité (vide = toutes). */
+  bandes: ReadonlySet<BandePriorite>;
 }
 
 export const TYPES_PAR_DEFAUT: ReadonlySet<TypeListe> = new Set(["voiries", "sections"]);
@@ -95,11 +107,12 @@ export function filtrer(lignes: readonly LigneListe[], f: Filtres): LigneListe[]
       (f.gestionnaires.size === 0 || f.gestionnaires.has(l.gestionnaire)) &&
       (f.statuts.size === 0 || f.statuts.has(l.statutFiche)) &&
       (!f.etatManquant || l.etatNote === null) &&
+      (f.bandes.size === 0 || f.bandes.has(l.bande)) &&
       (!f.recherche.trim() || correspond(l, f.recherche)),
   );
 }
 
-export type ColonneTri = "nom" | "anciennesCommunes" | "gestionnaire" | "etatNote" | "intensite" | "densite" | "travaux" | "echeance" | "manquants";
+export type ColonneTri = "score" | "nom" | "anciennesCommunes" | "gestionnaire" | "etatNote" | "intensite" | "densite" | "travaux" | "echeance" | "manquants";
 
 const RANG_INTENSITE: Record<string, number> = { faible: 1, moyen: 2, eleve: 3, transit: 4 };
 const RANG_DENSITE: Record<string, number> = { nul: 0, faible: 1, moyen_bas: 2, moyen_eleve: 3, eleve: 4 };

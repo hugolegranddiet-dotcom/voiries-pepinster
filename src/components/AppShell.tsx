@@ -2,25 +2,6 @@ import type { ReactNode } from "react";
 import { NavLinks } from "@/components/NavLinks";
 import { seDeconnecter } from "@/app/actions/session";
 
-/** Bandeau visible sur toutes les pages tant que les données sont fictives. */
-function BandeauDemo() {
-  return (
-    <div
-      role="note"
-      className="border-b border-demo-line bg-demo-bg px-4 py-2 text-center text-sm text-demo-ink"
-    >
-      <strong className="mr-1 rounded bg-demo-ink px-1.5 py-0.5 text-xs font-bold tracking-wide text-demo-bg">
-        DÉMO
-      </strong>
-      <span className="sm:hidden">Priorités : données fictives.</span>
-      <span className="hidden sm:inline">
-        La carte et la liste des voiries sont réelles. L&apos;écran Priorités utilise encore
-        des données fictives (score : phase 6).
-      </span>
-    </div>
-  );
-}
-
 function Marque({ claire = false }: { claire?: boolean }) {
   return (
     <div className="flex items-center gap-2.5">
@@ -51,7 +32,7 @@ function Marque({ claire = false }: { claire?: boolean }) {
   );
 }
 
-/** Cadre commun : bandeau démo, navigation et zone de contenu. */
+/** Cadre commun : navigation et zone de contenu. */
 export function AppShell({ children }: { children: ReactNode }) {
   return (
     <div className="flex h-dvh flex-col">
@@ -61,7 +42,6 @@ export function AppShell({ children }: { children: ReactNode }) {
       >
         Aller au contenu
       </a>
-      <BandeauDemo />
 
       {/* En-tête téléphone */}
       <header className="flex items-center justify-between gap-3 border-b border-line bg-surface px-4 py-2.5 md:hidden">
@@ -91,7 +71,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                 Se déconnecter
               </button>
             </form>
-            <p className="text-xs leading-relaxed text-white/50">Version de développement — phase 5</p>
+            <p className="text-xs leading-relaxed text-white/50">Version de développement — phase 6</p>
           </div>
         </aside>
 

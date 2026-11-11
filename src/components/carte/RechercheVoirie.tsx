@@ -13,7 +13,7 @@ export function RechercheVoirie({ fiches, onChoisir }: { fiches: Record<string, 
   const [actif, setActif] = useState(0);
   const idListe = useId();
   // Seules les voiries nommées (et les parties de rue) sont cherchables.
-  const lignes = useMemo(() => Object.values(fiches).filter((f) => f.nom).map(versLigne), [fiches]);
+  const lignes = useMemo(() => Object.values(fiches).filter((f) => f.nom).map((f) => versLigne(f)), [fiches]);
   const resultats = useMemo(
     () => (texte.trim().length < 2 ? [] : lignes.filter((l) => correspond(l, texte)).sort((a, b) => a.nom.localeCompare(b.nom, "fr")).slice(0, MAX)),
     [lignes, texte],

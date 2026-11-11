@@ -2,7 +2,8 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { apparenceDe, COULEUR_NOTE_SAISIE, styleSegment } from "@/components/carte/styles-carte";
+import { apparenceDe, COULEURS_BANDE, styleSegment, stylesSelection } from "@/components/carte/styles-carte";
+import { PARAMETRES_PAR_DEFAUT as P } from "@/lib/priority/defaults";
 import { ModificationFiche, ModificationVoirie } from "@/lib/db/schemas";
 import { differences, versFormulaire } from "@/lib/donnees/formulaire";
 import type { Evaluation, FicheVoirie } from "@/lib/donnees/types";
@@ -27,7 +28,7 @@ function fiche(f: Partial<FicheVoirie> = {}): FicheVoirie {
   };
 }
 
-const filtresBase: Filtres = { recherche: "", types: TYPES_PAR_DEFAUT, gestionnaires: new Set(), statuts: new Set(), etatManquant: false };
+const filtresBase: Filtres = { recherche: "", types: TYPES_PAR_DEFAUT, gestionnaires: new Set(), statuts: new Set(), etatManquant: false, bandes: new Set() };
 
 describe("liste des voiries", () => {
   const lignes = [
@@ -37,7 +38,7 @@ describe("liste des voiries", () => {
     fiche({ id: "d", nom: null, categorie: "chemin" }),
     fiche({ id: "e", nom: "Sentier des Écoliers", categorie: "chemin", evaluation: evaluation({ etat_note: 2 }) }),
     fiche({ id: "f", nom: null, categorie: "acces" }),
-  ].map(versLigne);
+  ].map((x) => versLigne(x));
 
   it("classe chaque fiche dans le bon type (les voies sans nom à part)", () => {
     expect(lignes.map((l) => l.type)).toEqual(["voiries", "voiries", "sections", "sans_nom", "chemins", "acces"]);
@@ -117,24 +118,30 @@ describe("une voirie, une seule couleur pour tous ses segments", () => {
     : [];
 
   const couleurs = (rid: string, f: FicheVoirie, selection = false) =>
-    new Set(segments.filter((s) => s.rid === rid).map((s) => styleSegment(s, apparenceDe(f, s.spw), selection).color));
+    new Set(
+      segments
+        .filter((s) => s.rid === rid)
+        .map((s) => (selection ? stylesSelection(s, apparenceDe(f, s.spw, P)).trait : styleSegment(s, apparenceDe(f, s.spw, P))).color),
+    );
 
   it.runIf(segments.length > 0).each(["n:grande fontaine", "n:rue du paire", "n:rue neuve"])("%s", (rid) => {
     const n = segments.filter((s) => s.rid === rid).length;
     expect(n).toBeGreaterThan(1);
-    const sansNote = fiche({ id: rid, evaluation: evaluation({ etat_note_suggeree: 4 }) });
-    const avecNote = fiche({ id: rid, evaluation: evaluation({ etat_note: 3 }) });
-    expect(couleurs(rid, sansNote).size).toBe(1); // tout gris (une suggestion ne colore pas)
-    expect([...couleurs(rid, avecNote)]).toEqual([COULEUR_NOTE_SAISIE]); // tout bleu après la note
-    expect(couleurs(rid, avecNote, true).size).toBe(1); // sélection : tous surlignés ensemble
+    const sansNote = fiche({ id: rid, evaluation: evaluation({ etat_note_suggeree: 4, intensite_circulation: "transit" }) });
+    const notee = fiche({ id: rid, evaluation: evaluation({ etat_note: 4, intensite_circulation: "transit", densite_habitation: "moyen_bas" }) });
+    expect([...couleurs(rid, sansNote)]).toEqual([COULEURS_BANDE.gris]); // une suggestion ne colore pas
+    expect([...couleurs(rid, notee)]).toEqual([COULEURS_BANDE.rouge]); // score 76 : tout rouge, ensemble
+    expect([...couleurs(rid, notee, true)]).toEqual([COULEURS_BANDE.rouge]); // sélection : même couleur, avec contour
   });
 
   it("SPW : pointillés, jamais une couleur forcée", () => {
     const s: SegmentProps = { sid: "1", rid: "r", w: 1, hw: "primary", cat: "voirie", clip: false, spw: true };
-    const spw = styleSegment(s, apparenceDe(fiche({ gestionnaire: "spw", evaluation: evaluation({ etat_note: 3 }) }), true), false);
-    expect(spw.color).toBe(COULEUR_NOTE_SAISIE);
+    const ev = evaluation({ etat_note: 3, intensite_circulation: "eleve", densite_habitation: "moyen_eleve", risque_securite: 3 });
+    const spw = styleSegment(s, apparenceDe(fiche({ gestionnaire: "spw", evaluation: ev }), true, P));
+    expect(spw.color).toBe(COULEURS_BANDE.orange); // score 57, comme une voirie communale
     expect(spw.dashArray).toBeTruthy();
-    const commune = styleSegment(s, apparenceDe(fiche({ gestionnaire: "commune" }), true), false);
+    const commune = styleSegment(s, apparenceDe(fiche({ gestionnaire: "commune", evaluation: ev }), true, P));
+    expect(commune.color).toBe(spw.color);
     expect(commune.dashArray).toBeUndefined(); // gestionnaire connu : l'indice SPW ne compte plus
   });
 });

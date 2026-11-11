@@ -15,6 +15,10 @@ interface Contexte {
   etat: Etat;
   /** Applique localement le résultat d'un enregistrement réussi. */
   majFiche: (roadId: string, maj: { voirie?: Partial<Pick<FicheVoirie, "gestionnaire" | "gestionnaireDetail" | "statutFiche">>; evaluation?: Evaluation | null }) => void;
+  /** Après une validation par lot : la note suggérée devient la note d'état, localement. */
+  validerSuggestionsLocalement: (ids: string[]) => void;
+  /** Relit tout depuis la base (après un changement de paramètres). */
+  recharger: () => Promise<void>;
 }
 
 const MESSAGES: Record<number, string> = {
@@ -26,24 +30,46 @@ const MESSAGES: Record<number, string> = {
 
 const ContexteDonnees = createContext<Contexte | null>(null);
 
+/** Lit toutes les données depuis /api/carte (sans jamais lever d'erreur). */
+async function lireDonnees(): Promise<Etat> {
+  try {
+    const r = await fetch("/api/carte", { cache: "no-store" });
+    if (!r.ok) return { statut: "erreur", message: MESSAGES[r.status] ?? "Impossible de charger les données." };
+    return { statut: "pret", donnees: (await r.json()) as DonneesApp };
+  } catch {
+    return { statut: "erreur", message: "Impossible de joindre le serveur." };
+  }
+}
+
 export function FournisseurDonnees({ children }: { children: ReactNode }) {
   const [etat, setEtat] = useState<Etat>({ statut: "chargement" });
 
   useEffect(() => {
     let annule = false;
-    fetch("/api/carte", { cache: "no-store" })
-      .then(async (r) => {
-        if (annule) return;
-        if (!r.ok) {
-          setEtat({ statut: "erreur", message: MESSAGES[r.status] ?? "Impossible de charger les données." });
-          return;
-        }
-        setEtat({ statut: "pret", donnees: (await r.json()) as DonneesApp });
-      })
-      .catch(() => !annule && setEtat({ statut: "erreur", message: "Impossible de joindre le serveur." }));
+    lireDonnees().then((e) => {
+      if (!annule) setEtat(e);
+    });
     return () => {
       annule = true;
     };
+  }, []);
+
+  const recharger = useCallback(async () => {
+    setEtat(await lireDonnees());
+  }, []);
+
+  const validerSuggestionsLocalement = useCallback((ids: string[]) => {
+    setEtat((e) => {
+      if (e.statut !== "pret") return e;
+      const fiches = { ...e.donnees.fiches };
+      for (const id of ids) {
+        const f = fiches[id];
+        const ev = f?.evaluation;
+        if (!ev || ev.etat_note !== null || ev.etat_note_suggeree === null) continue;
+        fiches[id] = { ...f, evaluation: { ...ev, etat_note: ev.etat_note_suggeree, updated_at: new Date().toISOString() } };
+      }
+      return { statut: "pret", donnees: { ...e.donnees, fiches } };
+    });
   }, []);
 
   const majFiche = useCallback<Contexte["majFiche"]>((roadId, maj) => {
@@ -60,7 +86,10 @@ export function FournisseurDonnees({ children }: { children: ReactNode }) {
     });
   }, []);
 
-  const valeur = useMemo(() => ({ etat, majFiche }), [etat, majFiche]);
+  const valeur = useMemo(
+    () => ({ etat, majFiche, validerSuggestionsLocalement, recharger }),
+    [etat, majFiche, validerSuggestionsLocalement, recharger],
+  );
   return <ContexteDonnees.Provider value={valeur}>{children}</ContexteDonnees.Provider>;
 }
 

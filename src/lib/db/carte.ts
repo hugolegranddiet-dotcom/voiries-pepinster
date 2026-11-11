@@ -6,7 +6,9 @@ import type { Gestionnaire, StatutFiche } from "@/lib/domaine";
 import type { CelluleBrute, FicheExcel } from "@/lib/excel/types";
 import type { VoirieLogique } from "@/lib/geo/types";
 import type { CategorieVoie } from "@/lib/geo/voiries";
-import type { CategorieFiche, DonneesApp, Evaluation, FicheVoirie, OrigineExcel } from "@/lib/donnees/types";
+import type { CategorieFiche, DonneesApp, Evaluation, FicheVoirie, OrigineExcel, VersionParametres } from "@/lib/donnees/types";
+import { PARAMETRES_PAR_DEFAUT } from "@/lib/priority/defaults";
+import { lireParametres } from "@/lib/priority/parametres";
 
 const PAGE = 1000;
 
@@ -43,6 +45,17 @@ interface LigneRoad {
   distance_autre_groupe_m: number | null;
 }
 
+interface LigneParametres {
+  version: number;
+  actif: boolean;
+  poids: unknown;
+  echelles: unknown;
+  seuils: unknown;
+  couverture_min: unknown;
+  gestionnaires_classement: unknown;
+  created_at: string;
+}
+
 const texte = (c: CelluleBrute | undefined) =>
   c?.valeur === null || c?.valeur === undefined ? null : String(c.valeur).trim() || null;
 
@@ -73,7 +86,7 @@ export async function lireDonneesApp(supabase: SupabaseClient): Promise<DonneesA
   if (e1) throw new Error(e1.message);
   if (!snap) throw new Error("base_vide");
 
-  const [roads, segments, evaluations, lignesExcel] = await Promise.all([
+  const [roads, segments, evaluations, lignesExcel, reglages] = await Promise.all([
     toutLire<LigneRoad>((a, b) =>
       supabase
         .from("roads")
@@ -93,7 +106,25 @@ export async function lireDonneesApp(supabase: SupabaseClient): Promise<DonneesA
         .order("excel_ligne")
         .range(a, b),
     ),
+    toutLire<LigneParametres>((a, b) =>
+      supabase
+        .from("priority_settings")
+        .select("version, actif, poids, echelles, seuils, couverture_min, gestionnaires_classement, created_at")
+        .order("version")
+        .range(a, b),
+    ),
   ]);
+
+  // Paramètres du score : la version active, sinon les valeurs par défaut (signalé à l'écran).
+  const active = reglages.find((r) => r.actif);
+  const lus = active ? lireParametres(active) : null;
+  const versionsParametres: VersionParametres[] = reglages.map((r) => ({
+    ...(lireParametres(r) ?? PARAMETRES_PAR_DEFAUT),
+    version: r.version,
+    actif: r.actif,
+    creeLe: r.created_at,
+    lisible: lireParametres(r) !== null,
+  }));
 
   const segmentsParRoad = new Map<string, string[]>();
   for (const s of segments) segmentsParRoad.set(s.road_id, [...(segmentsParRoad.get(s.road_id) ?? []), s.id]);
@@ -174,5 +205,8 @@ export async function lireDonneesApp(supabase: SupabaseClient): Promise<DonneesA
       voiries,
     },
     fiches,
+    parametres: lus ?? PARAMETRES_PAR_DEFAUT,
+    parametresAvertissement: lus ? null : active ? "version_illisible" : "aucune_version",
+    versionsParametres,
   };
 }
