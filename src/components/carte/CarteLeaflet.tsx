@@ -9,7 +9,9 @@ import { GeoJSON, MapContainer, ScaleControl, TileLayer, useMap } from "react-le
 import type { FeatureCollection, LineString, MultiPolygon } from "geojson";
 import type { CategorieVoie } from "@/lib/geo/voiries";
 import type { SegmentProps } from "@/lib/geo/types";
-import { STYLE_COMMUNE, STYLE_SECTION, styleSegment } from "@/components/carte/styles-carte";
+import type { FicheVoirie } from "@/lib/donnees/types";
+import type { Gestionnaire } from "@/lib/domaine";
+import { apparenceDe, STYLE_COMMUNE, STYLE_SECTION, styleSegment } from "@/components/carte/styles-carte";
 
 export type LimiteGeo = FeatureCollection<MultiPolygon, { type: "commune" | "section"; nom: string }>;
 export type VoiesGeo = FeatureCollection<LineString, SegmentProps>;
@@ -18,12 +20,16 @@ interface Props {
   limite: LimiteGeo;
   voies: VoiesGeo;
   categoriesVisibles: Record<CategorieVoie, boolean>;
+  /** null = tous les gestionnaires. */
+  gestionnaireVisible: Gestionnaire | null;
+  fiches: Record<string, FicheVoirie>;
+  /** Voirie à mettre en évidence (pour une section : sa voirie mère). */
   selection: string | null;
   onSelection: (roadId: string) => void;
 }
 
 /** Couche des voies : un tracé par segment, mais sélection et style par voirie logique. */
-function CoucheVoies({ voies, categoriesVisibles, selection, onSelection }: Omit<Props, "limite">) {
+function CoucheVoies({ voies, categoriesVisibles, gestionnaireVisible, fiches, selection, onSelection }: Omit<Props, "limite">) {
   const carte = useMap();
   const parVoirie = useRef(new Map<string, L.Path[]>());
   const selectionRef = useRef(selection);
@@ -37,13 +43,23 @@ function CoucheVoies({ voies, categoriesVisibles, selection, onSelection }: Omit
   // Rendu canvas avec une marge de clic confortable (doigt sur téléphone).
   const rendu = useMemo(() => L.canvas({ tolerance: 8 }), []);
 
-  // (Re)création de la couche quand les filtres changent.
+  const fichesRef = useRef(fiches);
+  useEffect(() => {
+    fichesRef.current = fiches;
+  }, [fiches]);
+  const styler = (p: SegmentProps, selectionne: boolean) => styleSegment(p, apparenceDe(fichesRef.current[p.rid], p.spw), selectionne);
+
+  // (Re)création de la couche quand les filtres ou les fiches changent
+  // (après un enregistrement, tous les segments de la voirie changent ensemble).
   useEffect(() => {
     const index = new Map<string, L.Path[]>();
     const couche = L.geoJSON(voies, {
       renderer: rendu,
-      filter: (f) => categoriesVisibles[(f.properties as SegmentProps).cat],
-      style: (f) => styleSegment(f!.properties as SegmentProps, (f!.properties as SegmentProps).rid === selectionRef.current),
+      filter: (f) => {
+        const p = f.properties as SegmentProps;
+        return categoriesVisibles[p.cat] && (!gestionnaireVisible || (fiches[p.rid]?.gestionnaire ?? "inconnu") === gestionnaireVisible);
+      },
+      style: (f) => styler(f!.properties as SegmentProps, (f!.properties as SegmentProps).rid === selectionRef.current),
       onEachFeature: (f, layer) => {
         const p = f.properties as SegmentProps;
         const liste = index.get(p.rid);
@@ -60,7 +76,8 @@ function CoucheVoies({ voies, categoriesVisibles, selection, onSelection }: Omit
     return () => {
       couche.remove();
     };
-  }, [carte, voies, categoriesVisibles, rendu]);
+     
+  }, [carte, voies, categoriesVisibles, gestionnaireVisible, fiches, rendu]);
 
   // Mise en évidence : TOUS les segments de la voirie sélectionnée.
   useEffect(() => {
@@ -68,13 +85,13 @@ function CoucheVoies({ voies, categoriesVisibles, selection, onSelection }: Omit
     selectionRef.current = selection;
     if (precedente && precedente !== selection) {
       for (const l of parVoirie.current.get(precedente) ?? []) {
-        l.setStyle(styleSegment((l as L.Polyline & { feature: { properties: SegmentProps } }).feature.properties, false));
+        l.setStyle(styler((l as L.Polyline & { feature: { properties: SegmentProps } }).feature.properties, false));
       }
     }
     if (selection) {
       const couches = parVoirie.current.get(selection) ?? [];
       for (const l of couches) {
-        l.setStyle(styleSegment((l as L.Polyline & { feature: { properties: SegmentProps } }).feature.properties, true));
+        l.setStyle(styler((l as L.Polyline & { feature: { properties: SegmentProps } }).feature.properties, true));
         l.bringToFront();
       }
       if (couches.length) {
@@ -86,6 +103,7 @@ function CoucheVoies({ voies, categoriesVisibles, selection, onSelection }: Omit
         }
       }
     }
+     
   }, [selection, carte]);
 
   return null;
@@ -132,6 +150,8 @@ export default function CarteLeaflet(props: Props) {
       <CoucheVoies
         voies={props.voies}
         categoriesVisibles={props.categoriesVisibles}
+        gestionnaireVisible={props.gestionnaireVisible}
+        fiches={props.fiches}
         selection={props.selection}
         onSelection={props.onSelection}
       />

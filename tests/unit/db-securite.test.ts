@@ -205,6 +205,14 @@ describe("import des vraies données dans le vrai schéma", () => {
     await inserer("match_reviews", d.decisions.map(({ excel_ligne, ...r }) => ({ ...r, import_row_id: idParLigne.get(excel_ligne) })));
     await inserer("road_evaluations", d.evaluations);
     await inserer("priority_settings", [d.parametres]);
+    // Comme le seed : gestionnaire repris de l'Excel, sur les fiches encore « à compléter ».
+    for (const g of d.gestionnaires) {
+      await db.query(
+        `update public.roads set gestionnaire = $1, gestionnaire_detail = $2, gestionnaire_source = 'excel', statut_fiche = 'importe_excel'
+         where id in (select json_array_elements_text($3::json)) and statut_fiche = 'a_completer'`,
+        [g.valeurs.gestionnaire, g.valeurs.gestionnaire_detail, JSON.stringify(g.ids)],
+      );
+    }
 
     const n = async (sql: string) => ((await db.query<{ n: number }>(sql)).rows[0].n);
     expect(await n("select count(*)::int n from public.roads")).toBe(1135);
@@ -248,22 +256,34 @@ describe("lecture de la carte depuis la base", () => {
   }
 
   it("reconstruit la carte et les fiches à partir des tables", async () => {
-    const { lireDonneesCarte } = await import("@/lib/db/carte");
+    const { lireDonneesApp } = await import("@/lib/db/carte");
     await db.exec("reset role;");
-    const d = await lireDonneesCarte(clientSql());
+    const d = await lireDonneesApp(clientSql());
     expect(d.voies.features).toHaveLength(1489);
-    expect(d.voiries.voiries).toHaveLength(1119); // les sections n'ont pas encore de tracé
+    expect(d.voiries.voiries).toHaveLength(1119); // voiries tracées (sans les sections)
+    expect(Object.keys(d.fiches)).toHaveLength(1135); // toutes les fiches, sections comprises
     expect(d.voiries.meta.codeIns).toBe("63058");
     expect(d.limite.features.some((f) => f.properties.type === "commune")).toBe(true);
-    // Une voirie validée garde ses données Excel (ex. Rue du Biez, ligne 15).
-    const biez = d.excel.parVoirie["n:rue du biez"];
-    expect(biez.validees.map((f) => f.ligne)).toEqual([15]);
-    expect(biez.validees[0].etatNoteSuggeree).toBe(4);
-    expect(biez.validees[0].etatNote).toBeNull();
-    // Les parties de rue sont rattachées à leur voirie mère.
-    expect(d.excel.parVoirie["n:bouhaye"].sections.map((s) => s.nom)).toEqual(["Bouhaye inférieure", "Bouhaye supérieure"]);
+    // Une voirie validée : évaluation issue de l'Excel, note seulement suggérée.
+    const biez = d.fiches["n:rue du biez"];
+    expect(biez.origineExcel.map((o) => o.ligne)).toEqual([15]);
+    expect(biez.origineExcel[0].couleurEtat).toBe("#FF0000");
+    expect(biez.evaluation?.etat_note_suggeree).toBe(4);
+    expect(biez.evaluation?.etat_note).toBeNull();
+    expect(biez.evaluation?.particularites).toBe("Ecole, trottois HS");
+    expect(biez.aTrace).toBe(true);
+    expect(biez.statutFiche).toBe("importe_excel");
+    expect(Object.values(d.fiches).filter((f) => f.statutFiche === "importe_excel")).toHaveLength(165); // 149 + 16 sections
+    // Les parties de rue sont des fiches à part, rattachées à leur voirie mère.
+    const bouhaye = d.fiches["n:bouhaye"];
+    expect(bouhaye.sousSections.map((id) => d.fiches[id].nom).sort()).toEqual(["Bouhaye inférieure", "Bouhaye supérieure"]);
+    const section = d.fiches[bouhaye.sousSections[0]];
+    expect(section.categorie).toBe("section");
+    expect(section.aTrace).toBe(false);
+    expect(section.anciennesCommunes).toEqual(bouhaye.anciennesCommunes);
     // Conflit tranché (D17) : seule la ligne 103 reste sur la Rue du Paire.
-    expect(d.excel.parVoirie["n:rue du paire"].validees.map((f) => f.ligne)).toEqual([103]);
-    expect(d.notes["n:rue du biez"].particularites).toBe("Ecole, trottois HS");
+    expect(d.fiches["n:rue du paire"].origineExcel.map((o) => o.ligne)).toEqual([103]);
+    // Une voirie sans ligne Excel reste « à compléter ».
+    expect(Object.values(d.fiches).some((f) => f.statutFiche === "a_completer" && !f.evaluation)).toBe(true);
   }, 60_000);
 });

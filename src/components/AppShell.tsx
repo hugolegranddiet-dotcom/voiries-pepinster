@@ -12,10 +12,10 @@ function BandeauDemo() {
       <strong className="mr-1 rounded bg-demo-ink px-1.5 py-0.5 text-xs font-bold tracking-wide text-demo-bg">
         DÉMO
       </strong>
-      <span className="sm:hidden">Voiries et Priorités : données fictives.</span>
+      <span className="sm:hidden">Priorités : données fictives.</span>
       <span className="hidden sm:inline">
-        La carte montre les voies réelles (OpenStreetMap), sans évaluation. Les écrans
-        Voiries et Priorités utilisent encore des données fictives.
+        La carte et la liste des voiries sont réelles. L&apos;écran Priorités utilise encore
+        des données fictives (score : phase 6).
       </span>
     </div>
   );
@@ -91,7 +91,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                 Se déconnecter
               </button>
             </form>
-            <p className="text-xs leading-relaxed text-white/50">Version de développement — phase 4</p>
+            <p className="text-xs leading-relaxed text-white/50">Version de développement — phase 5</p>
           </div>
         </aside>
 

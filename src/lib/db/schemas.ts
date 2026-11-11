@@ -37,3 +37,24 @@ export const ModificationEvaluation = z
   .refine((o) => Object.keys(o).length > 0, { error: "Aucune modification." });
 
 export type ModificationEvaluation = z.infer<typeof ModificationEvaluation>;
+
+/** Champs de la voirie modifiables par l'utilisateur. */
+export const ModificationVoirie = z
+  .object({
+    gestionnaire: z.enum(["commune", "spw", "autre", "inconnu"]),
+    gestionnaire_detail: texteLibre,
+    statut_fiche: z.enum(["a_completer", "importe_excel", "valide", "n_existe_plus", "hors_commune"]),
+  })
+  .partial()
+  .strict();
+
+export type ModificationVoirie = z.infer<typeof ModificationVoirie>;
+
+/** Une modification de fiche : voirie et/ou évaluation. */
+export const ModificationFiche = z
+  .object({
+    voirie: ModificationVoirie.optional(),
+    evaluation: ModificationEvaluation.optional(),
+  })
+  .strict()
+  .refine((o) => !!o.evaluation || (!!o.voirie && Object.keys(o.voirie).length > 0), { error: "Aucune modification." });

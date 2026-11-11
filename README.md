@@ -2,7 +2,7 @@
 
 Application web privée de suivi de l'état des voiries de la commune de Pepinster.
 
-**État : phase 4 terminée — base de données Supabase (sécurité par ligne, journal des modifications), connexion privée d'un seul administrateur, carte lue depuis la base. Les écrans Voiries et Priorités restent en données « démo » jusqu'aux phases 5 et 6.**
+**État : phase 5 terminée — fiche éditable (panneau latéral), liste des voiries avec recherche, filtres, tri et pagination, sélection partagée entre la carte et la liste, sauvegarde dans Supabase. Le score de priorité (et l'écran Priorités, encore « démo ») arrive en phase 6.**
 
 | Document | Contenu |
 |---|---|

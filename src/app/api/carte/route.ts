@@ -1,7 +1,7 @@
 // Données de la carte, lues dans la base avec la session de l'utilisateur.
 // Sans connexion : 401 (le proxy l'arrête déjà). Connecté mais non autorisé : 403.
 import { connection, NextResponse } from "next/server";
-import { lireDonneesCarte } from "@/lib/db/carte";
+import { lireDonneesApp } from "@/lib/db/carte";
 import { clientServeur, configSupabase, utilisateurConnecte } from "@/lib/supabase/serveur";
 
 export async function GET() {
@@ -16,7 +16,7 @@ export async function GET() {
   if (!admin) return NextResponse.json({ erreur: "non_autorise" }, { status: 403 });
 
   try {
-    const donnees = await lireDonneesCarte(supabase);
+    const donnees = await lireDonneesApp(supabase);
     return NextResponse.json(donnees, { headers: { "Cache-Control": "private, no-store" } });
   } catch (e) {
     const message = (e as Error).message;
