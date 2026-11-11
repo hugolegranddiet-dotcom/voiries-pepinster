@@ -11,8 +11,11 @@ function BandeauDemo() {
       <strong className="mr-1 rounded bg-demo-ink px-1.5 py-0.5 text-xs font-bold tracking-wide text-demo-bg">
         DÉMO
       </strong>
-      Données fictives pour la mise en page. Aucune donnée réelle de Pepinster
-      n&apos;est affichée.
+      <span className="sm:hidden">Voiries et Priorités : données fictives.</span>
+      <span className="hidden sm:inline">
+        La carte montre les voies réelles (OpenStreetMap), sans évaluation. Les écrans
+        Voiries et Priorités utilisent encore des données fictives.
+      </span>
     </div>
   );
 }
@@ -74,7 +77,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             <NavLinks variante="laterale" />
           </nav>
           <p className="mt-auto px-2 text-xs leading-relaxed text-white/50">
-            Version de développement — phase 1
+            Version de développement — phase 2
           </p>
         </aside>
 

@@ -1,0 +1,42 @@
+{
+  "source": "OpenStreetMap via Overpass API",
+  "licence": "ODbL 1.0 — © contributeurs OpenStreetMap",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "extrait_le": "2026-11-11T19:27:26.515Z",
+  "fichiers": {
+    "limite": {
+      "fichier": "limite.json",
+      "requete": "[out:json][timeout:120];\nrel[\"boundary\"=\"administrative\"][\"admin_level\"=\"8\"][\"name\"=\"Pepinster\"]->.commune;\n.commune out body geom;\n.commune map_to_area->.zone;\nrel(area.zone)[\"boundary\"=\"administrative\"][\"admin_level\"=\"9\"];\nout body geom;",
+      "date_donnees_osm": "2026-11-11T19:26:45Z",
+      "elements": 5,
+      "sha256": "b8a85da109dfd75b2fd13fdc50f94253675273c5adfd1145811cd3419f62e77d"
+    },
+    "voies": {
+      "fichier": "voies.json",
+      "requete": "[out:json][timeout:180];\nrel[\"boundary\"=\"administrative\"][\"admin_level\"=\"8\"][\"name\"=\"Pepinster\"];\nmap_to_area->.zone;\nway(area.zone)[\"highway\"~\"^(motorway|trunk|primary|secondary|tertiary|unclassified|residential|living_street|pedestrian|road|service|track|path|footway|bridleway|cycleway|steps)(_link)?$\"];\nout body geom;",
+      "date_donnees_osm": "2026-11-11T19:26:45Z",
+      "elements": 1469,
+      "sha256": "591d3ece42869232ab2921d41b754066e4a969e8ac9c13b1b8cef1335827fbce"
+    }
+  },
+  "commune": {
+    "osm_relation_id": 2436184,
+    "tags": {
+      "admin_level": "8",
+      "boundary": "administrative",
+      "designation": "commune",
+      "name": "Pepinster",
+      "name:fr": "Pepinster",
+      "name:li": "Pepèènster",
+      "name:wa": "Pèpéstêr",
+      "operator": "Commune de Pepinster",
+      "population": "9735",
+      "population:date": "2012",
+      "ref:INS": "63058",
+      "type": "boundary",
+      "website": "https://www.pepinster.be/",
+      "wikidata": "Q710522",
+      "wikipedia": "fr:Pepinster"
+    }
+  }
+}

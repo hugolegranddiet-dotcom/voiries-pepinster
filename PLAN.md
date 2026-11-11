@@ -274,7 +274,7 @@ Chaque phase se termine par : vérifications automatiques, résumé des fichiers
 |---|---|---|---|---|
 | **0** | Analyse et plan | ce document + `DATA_AUDIT.md`, `DATA_MODEL.md`, `CLAUDE.md`, annexe CSV | tu valides le plan | – |
 | **1** | Socle et interface | projet Next.js, design responsive, navigation **Carte / Voiries / Priorités / Paramètres**, données **fictives étiquetées « démo »** | `npm run dev` s'ouvre ; `npm run lint` et `npm run typecheck` sans erreur ; l'affichage tient sur téléphone | – |
-| **2** | Couverture géographique | limite + réseau réel extraits et versionnés, carte cliquable (1 couleur par voirie logique), recoupement SPW, `COVERAGE_REPORT.md` | aucun tracé inventé ; clic sur un segment = toute la voirie surlignée ; rapport de couverture relu | **O3** |
+| **2** | Couverture géographique | limite + réseau réel extraits et versionnés, carte cliquable (1 couleur par voirie logique), recoupement SPW, `COVERAGE_REPORT.md` | aucun tracé inventé ; clic sur un segment = toute la voirie surlignée ; rapport de couverture relu | – (O3 résolu) |
 | **3** | Import de l'Excel | lecture brute `Feuil1` (valeurs + couleurs), normalisations tracées, propositions d'appariement, écran/fichier de validation, `MATCHING_REPORT.md` | 180 lignes lues, légende ignorée ; aucune fusion automatique ; routes OSM hors Excel visibles « à compléter » | O5 (non bloquant) |
 | **4** | Persistance et compte privé | migrations SQL, Auth (compte unique du père), RLS, CRUD, `change_log` | données conservées après rafraîchissement ; accès refusé sans connexion ou avec un autre compte (testé) | – |
 | **5** | Carte ↔ tableau synchronisés | panneau latéral éditable, recherche sans accents/casse, filtres, sélection dans les deux sens | modifier une voirie à plusieurs segments : **tous** changent de couleur ensemble | – |
@@ -324,7 +324,7 @@ Chaque phase se termine par : vérifications automatiques, résumé des fichiers
 
 | N° | Question | Bloque | État |
 |---|---|---|---|
-| **O3** | Accès réseau pour la phase 2 | phase 2 | Géoportail wallon : **accessible** (testé le 11/11). Overpass et Geofabrik : **encore bloqués** (testé le 11/11), à revérifier au début de la phase 2 |
+| ~~O3~~ | Accès réseau pour la phase 2 | – | **Résolu** : extraction OSM lancée sur le Mac de Hugo (`npm run geo:extract`, 11/11/2026, relation 2436184). Réseau régional SPW consulté pour identification seulement : tracés non conservés, seul le résultat du recoupement est gardé |
 | **O5** | `Chemin du Nauzaury` (lignes 29 et 176) : une voirie ou deux parties ? | non bloquant | deux fiches conservées ; décision sur la carte en phase 3 |
 | **O7** | Autoriser Claude à **écrire** sur le dépôt GitHub (installation de l'application GitHub « Claude ») | sauvegarde | le premier enregistrement est prêt et attend cette autorisation |
 

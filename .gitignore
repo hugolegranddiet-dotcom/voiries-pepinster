@@ -46,3 +46,6 @@ next-env.d.ts
 # Tests Playwright
 /test-results/
 /playwright-report/
+
+# Cache local des données SPW (non redistribuées)
+/data/spw/.cache/

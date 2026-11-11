@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import { CarteDemo } from "@/components/carte/CarteDemo";
+import { CarteVoiries } from "@/components/carte/CarteVoiries";
 
 export const metadata: Metadata = { title: "Carte" };
 
 export default function PageCarte() {
   return (
-    <div className="flex h-full flex-col">
-      <h1 className="sr-only">Carte des voiries</h1>
-      <div className="min-h-0 flex-1">
-        <CarteDemo />
-      </div>
+    <div className="h-full">
+      <h1 className="sr-only">Carte des voiries de Pepinster</h1>
+      <CarteVoiries />
     </div>
   );
 }
