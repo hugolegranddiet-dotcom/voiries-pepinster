@@ -1,0 +1,7 @@
+{
+  "_description": "Décisions ligne par ligne (D7, 11/11/2026). Clé = numéro de ligne dans Feuil1.",
+  "44": { "statut": "n_existe_plus", "regle": "D7 : Rue du Duc n'existe plus" },
+  "73": { "etiquette": "chantier_infrabel", "regle": "D7 : chantier Infrabel (Rue Jacques Bouhy)" },
+  "86": { "etiquette": "chantier_infrabel", "regle": "D7 : chantier Infrabel (Lefin)" },
+  "94": { "gestionnaire": "autre", "gestionnaireDetail": "non communale (Excel : « non reprise »)", "regle": "D7 : Rue Marcel Fikenne n'est pas communale" }
+}

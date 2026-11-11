@@ -12,7 +12,7 @@ Ce fichier est lu automatiquement par Claude Code à chaque session. Il prime su
 
 - Le travail avance **phase par phase** (0 à 7, voir `PLAN.md` §7). **Ne jamais commencer la phase suivante sans la demande explicite de Hugo.**
 - Fin de chaque phase : vérifications (`npm run lint`, `npm run typecheck`, tests), liste des fichiers créés ou modifiés, instructions de test sur Mac, captures si possible, limites restantes, commit Git `phase-N`, puis **arrêt**.
-- Décisions prises : `PLAN.md` §9.1 (D1–D13). Points ouverts : §9.2. Ne jamais trancher seul un point ouvert.
+- Décisions prises : `PLAN.md` §9.1 (D1–D15). Points ouverts : §9.2. Ne jamais trancher seul un point ouvert.
 
 ## Règles de données — non négociables
 

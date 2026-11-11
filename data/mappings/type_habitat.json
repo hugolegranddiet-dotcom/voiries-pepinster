@@ -1,0 +1,18 @@
+{
+  "_description": "Type d'habitat (colonne C) : valeur brute (sans espaces de bord, minuscules) → catégorie. Hors score. Proposition DATA_MODEL.md §3.",
+  "campagne": "campagne", "campapagne": "campagne",
+  "campagne-forestier": "campagne_forestier", "chemin forestier": "campagne_forestier",
+  "village": "village", "village  campagne": "village",
+  "4 façades": "quatre_facades", "4 façades (en bas)": "quatre_facades",
+  "3 façades": "trois_facades",
+  "jointives": "jointives", "maisons jointives": "jointives", "jointive 1 côté": "jointives",
+  "maisons jointives 1 côté": "jointives", "maisons jointives/1 coté": "jointives",
+  "jointives / 4 façades": "mixte_jointives_4f", "jointives 3 façades": "mixte_jointives_4f",
+  "lotissement 3 façades": "lotissement_3f", "lotis. 3 façades-jointives": "lotissement_3f",
+  "lotissement 4 façades": "lotissement_4f", "lotissement 3/4 façades": "lotissement_4f",
+  "lotissement": "lotissement",
+  "négligeable": "negligeable", "néant": "negligeable",
+  "variable": "autre", "haut": "autre", "ilot": "autre", "arrière maison": "autre",
+  "hall parking 3 façades": "autre", "maisons jointives et activités industrielles": "autre",
+  "n'existe plus": "autre"
+}

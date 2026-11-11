@@ -21,7 +21,14 @@ import {
   longueurM,
   type Coord,
 } from "@/lib/geo/outils";
-import { categorieVoie, regrouperEnVoiries, type CategorieVoie, type WayOsm } from "@/lib/geo/voiries";
+import {
+  appliquerMemeEndroit,
+  categorieVoie,
+  regrouperEnVoiries,
+  SEUIL_MEME_ENDROIT_M,
+  type CategorieVoie,
+  type WayOsm,
+} from "@/lib/geo/voiries";
 import type { SegmentProps, VoirieLogique, DonneesVoiries } from "@/lib/geo/types";
 
 const SEUIL_SPW_M = 15;
@@ -154,7 +161,8 @@ async function main() {
   }
 
   // 5. Voiries logiques.
-  const groupes = regrouperEnVoiries(ways);
+  // Décision D14 : « même endroit = même rue, sinon homonyme » (seuil 300 m).
+  const { groupes, journal: journalD14 } = appliquerMemeEndroit(regrouperEnVoiries(ways), ways);
   const voiries: VoirieLogique[] = [];
   const features: Array<{ type: "Feature"; properties: SegmentProps; geometry: { type: "LineString"; coordinates: Coord[] } }> = [];
   let horsCommune = 0;
@@ -259,7 +267,7 @@ async function main() {
   await writeFile(join("public", "geo", "voiries.json"), JSON.stringify(donnees));
 
   // 7. Rapport de couverture.
-  await writeFile("COVERAGE_REPORT.md", rapport({ ways, segmentsParWay, voiries, donnees, horsCommune, pointsCalcules, limite, spwDisponible: !!spw }));
+  await writeFile("COVERAGE_REPORT.md", rapport({ ways, segmentsParWay, voiries, donnees, horsCommune, pointsCalcules, limite, spwDisponible: !!spw, journalD14 }));
 
   console.log(`✅ ${voiries.length} voiries logiques, ${features.length} segments.`);
   console.log(`   Fichiers : public/geo/*.json · COVERAGE_REPORT.md`);
@@ -275,6 +283,7 @@ function rapport(c: {
   pointsCalcules: number;
   limite: Awaited<ReturnType<typeof lireLimite>>;
   spwDisponible: boolean;
+  journalD14: ReturnType<typeof appliquerMemeEndroit>["journal"];
 }): string {
   const { voiries, donnees } = c;
   const L: string[] = [];
@@ -325,10 +334,11 @@ function rapport(c: {
   L.push(`| Accès et parkings sans nom | ${cat("acces").length} | – | ${cat("acces").length} | ${kmCat("acces")} | masqués (filtre) |`, "");
 
   const alertes = voiries.filter((v) => v.alerte);
-  L.push("## 5. Même nom, groupes non reliés — à vérifier manuellement", "");
-  L.push("Ces voiries portent le même nom dans OSM mais leurs morceaux ne se touchent pas. Elles sont gardées **séparées** (aucune fusion automatique).", "");
-  L.push("- **trou possible** : moins de 50 m entre les morceaux, probablement une même rue avec un morceau manquant dans OSM ;");
-  L.push("- **même nom, non relié** : morceaux éloignés, homonymes possibles ou rue en plusieurs branches.", "");
+  L.push("## 5. Même nom, morceaux non reliés — décision D14", "");
+  L.push(`Règle validée par Hugo le 11/11/2026 : « si même endroit, même rue ; sinon homonyme ». Traduction : morceaux de même nom à moins de **${SEUIL_MEME_ENDROIT_M} m** → une seule voirie ; au-delà → homonymes séparés.`, "");
+  L.push("| Nom | Morceaux | Écart max. regroupé | Décision appliquée |", "|---|---:|---:|---|");
+  for (const j of c.journalD14) L.push(`| ${j.nom} | ${j.parties} | ${j.decision === "meme_rue" ? `${j.distanceMaxM} m` : "–"} | ${j.decision === "meme_rue" ? "même rue (réunie)" : "homonymes (séparés)"} |`);
+  L.push("", "Homonymes restant séparés :", "");
   if (alertes.length) {
     L.push("| Nom | Partie | Alerte | Distance à l'autre partie | Longueur | Ancienne commune | Remarque |", "|---|---|---|---:|---:|---|---|");
     for (const v of alertes) {

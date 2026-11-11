@@ -1,0 +1,8 @@
+{
+  "_description": "Colonne D « Type de voire » → intensité de circulation. Lotissement = faible (décision D3).",
+  "Passage faible": "faible",
+  "Lotissement": "faible",
+  "Passage moyen": "moyen",
+  "Passage élevé": "eleve",
+  "Transit": "transit"
+}

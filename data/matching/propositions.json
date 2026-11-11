@@ -1,0 +1,3543 @@
+[
+ {
+  "ligne": 2,
+  "nomExcel": "A l'Assise",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:a l'assise",
+    "nom": "A l'Assise",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 230,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:a l'assise",
+  "alertes": []
+ },
+ {
+  "ligne": 3,
+  "nomExcel": "Al Clusâre",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:al clusare",
+    "nom": "Al clusâre",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 172,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:al clusare",
+  "alertes": []
+ },
+ {
+  "ligne": 4,
+  "nomExcel": "Albert 1er Avenue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:avenue albert ier",
+    "nom": "Avenue Albert Ier",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 144,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:avenue albert ier",
+  "alertes": []
+ },
+ {
+  "ligne": 5,
+  "nomExcel": "Alfred Brabant Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue alfred brabant",
+    "nom": "Rue Alfred Brabant",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 373,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue alfred brabant",
+  "alertes": []
+ },
+ {
+  "ligne": 6,
+  "nomExcel": "Anneuses Rue des",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue des anneuses",
+    "nom": "Rue des Anneuses",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 745,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue des anneuses",
+  "alertes": []
+ },
+ {
+  "ligne": 7,
+  "nomExcel": "Antoine Franssen Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue antoine franssen",
+    "nom": "Rue Antoine Franssen",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 84,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue antoine franssen",
+  "alertes": []
+ },
+ {
+  "ligne": 8,
+  "nomExcel": "Armée Secrète Route de l'",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:route de l'armee secrete",
+    "nom": "Route de l'Armée Secrète",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 1131,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:route de l'armee secrete",
+  "alertes": []
+ },
+ {
+  "ligne": 9,
+  "nomExcel": "Au Chêne",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:au chene",
+    "nom": "Au Chêne",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 837,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:au chene",
+  "alertes": []
+ },
+ {
+  "ligne": 10,
+  "nomExcel": "Aux Cours",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:aux cours",
+    "nom": "Aux Cours",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 296,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:aux cours",
+  "alertes": []
+ },
+ {
+  "ligne": 11,
+  "nomExcel": "Aux Poissons Ruelle",
+  "methode": "aucun",
+  "confiance": "aucune",
+  "candidats": [],
+  "propositionId": null,
+  "alertes": []
+ },
+ {
+  "ligne": 12,
+  "nomExcel": "Avallon Rue d'",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue d'avallon",
+    "nom": "Rue d'Avallon",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 472,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue d'avallon",
+  "alertes": []
+ },
+ {
+  "ligne": 13,
+  "nomExcel": "Beau Site",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:beau site",
+    "nom": "Beau Site",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 251,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:beau site",
+  "alertes": []
+ },
+ {
+  "ligne": 14,
+  "nomExcel": "Belle Vue",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:belle vue",
+    "nom": "Belle-Vue",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 2088,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:belle vue",
+  "alertes": []
+ },
+ {
+  "ligne": 15,
+  "nomExcel": "Biez Rue du",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue du biez",
+    "nom": "Rue du Biez",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 111,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue du biez",
+  "alertes": []
+ },
+ {
+  "ligne": 16,
+  "nomExcel": "Bois d'Olne",
+  "methode": "aucun",
+  "confiance": "aucune",
+  "candidats": [],
+  "propositionId": null,
+  "alertes": []
+ },
+ {
+  "ligne": 17,
+  "nomExcel": "Bois d'Oltmont Rue du",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue du bois d'oltmont",
+    "nom": "Rue du Bois d'Oltmont",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 210,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue du bois d'oltmont",
+  "alertes": []
+ },
+ {
+  "ligne": 18,
+  "nomExcel": "Bois Herman",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:bois herman",
+    "nom": "Bois Herman",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 1585,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:bois herman",
+  "alertes": []
+ },
+ {
+  "ligne": 19,
+  "nomExcel": "Bouhais",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:bouhais",
+    "nom": "Bouhais",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 746,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:bouhais",
+  "alertes": []
+ },
+ {
+  "ligne": 20,
+  "nomExcel": "Bouhaye inférieure",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:bouhaye",
+    "nom": "Bouhaye",
+    "score": 0.9,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 834,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:bouhaye",
+  "alertes": []
+ },
+ {
+  "ligne": 21,
+  "nomExcel": "Bouhaye supérieure",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:bouhaye",
+    "nom": "Bouhaye",
+    "score": 0.9,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 834,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:bouhaye",
+  "alertes": []
+ },
+ {
+  "ligne": 22,
+  "nomExcel": "Campagne Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue campagne",
+    "nom": "Rue Campagne",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 1027,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue campagne",
+  "alertes": []
+ },
+ {
+  "ligne": 23,
+  "nomExcel": "Chalsèche",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:chalseche",
+    "nom": "Chalsèche",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 837,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:chalseche",
+  "alertes": []
+ },
+ {
+  "ligne": 24,
+  "nomExcel": "Charles Fraipont Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue charles fraipont",
+    "nom": "Rue Charles Fraipont",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 80,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue charles fraipont",
+  "alertes": []
+ },
+ {
+  "ligne": 25,
+  "nomExcel": "Chemin aux Fraises",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:chemin aux fraises",
+    "nom": "Chemin aux Fraises",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 323,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:chemin aux fraises",
+  "alertes": []
+ },
+ {
+  "ligne": 26,
+  "nomExcel": "Chemin de l'Hermitage",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:chemin de l'hermitage",
+    "nom": "Chemin de l'Hermitage",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 509,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:chemin de l'hermitage",
+  "alertes": []
+ },
+ {
+  "ligne": 27,
+  "nomExcel": "Chemin de Thibaumont",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:chemin de thibaumont",
+    "nom": "Chemin de Thibaumont",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 451,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:chemin de thibaumont",
+  "alertes": []
+ },
+ {
+  "ligne": 28,
+  "nomExcel": "Chemin du Fond de Fiérain",
+  "methode": "aucun",
+  "confiance": "aucune",
+  "candidats": [],
+  "propositionId": null,
+  "alertes": []
+ },
+ {
+  "ligne": 29,
+  "nomExcel": "Chemin du Nauzaury",
+  "methode": "aucun",
+  "confiance": "aucune",
+  "candidats": [],
+  "propositionId": null,
+  "alertes": [
+   "nom en double dans l'Excel (pas de fusion automatique)"
+  ]
+ },
+ {
+  "ligne": 30,
+  "nomExcel": "Cité Mon Logis",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:cite mon logis",
+    "nom": "Cité Mon Logis",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 172,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:cite mon logis",
+  "alertes": []
+ },
+ {
+  "ligne": 31,
+  "nomExcel": "Clos Badon",
+  "methode": "aucun",
+  "confiance": "aucune",
+  "candidats": [],
+  "propositionId": null,
+  "alertes": []
+ },
+ {
+  "ligne": 32,
+  "nomExcel": "Combattants Rue des",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue des combattants",
+    "nom": "Rue des Combattants",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 326,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue des combattants",
+  "alertes": []
+ },
+ {
+  "ligne": 33,
+  "nomExcel": "Cornesse Route de",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:route de cornesse",
+    "nom": "Route de Cornesse",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 359,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:route de cornesse",
+  "alertes": []
+ },
+ {
+  "ligne": 34,
+  "nomExcel": "Coulée",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:coulee",
+    "nom": "Coulée",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 445,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:coulee",
+  "alertes": []
+ },
+ {
+  "ligne": 35,
+  "nomExcel": "Cour Maréchal",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:cour marechal",
+    "nom": "Cour Maréchal",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 147,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:cour marechal",
+  "alertes": []
+ },
+ {
+  "ligne": 36,
+  "nomExcel": "Courte Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue courte",
+    "nom": "Rue Courte",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 69,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue courte",
+  "alertes": []
+ },
+ {
+  "ligne": 37,
+  "nomExcel": "Croix Maga Route de la",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:route de la croix maga",
+    "nom": "Route de la Croix Maga",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 1662,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:route de la croix maga",
+  "alertes": []
+ },
+ {
+  "ligne": 38,
+  "nomExcel": "Cromhaise",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:cromhaise",
+    "nom": "Cromhaise",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 2783,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:cromhaise",
+  "alertes": []
+ },
+ {
+  "ligne": 39,
+  "nomExcel": "Déportés Rue des",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue des deportes",
+    "nom": "Rue des Déportés",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 183,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue des deportes",
+  "alertes": []
+ },
+ {
+  "ligne": 40,
+  "nomExcel": "Doux Fonds Rue des",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue des doux fonds",
+    "nom": "Rue des Doux Fonds",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 442,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue des doux fonds",
+  "alertes": []
+ },
+ {
+  "ligne": 41,
+  "nomExcel": "Douys",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:douys",
+    "nom": "Douys",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 302,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:douys",
+  "alertes": []
+ },
+ {
+  "ligne": 42,
+  "nomExcel": "Drolenval descente Cornesse",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:drolenval",
+    "nom": "Drolenval",
+    "score": 0.9,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 1209,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:drolenval",
+  "alertes": []
+ },
+ {
+  "ligne": 43,
+  "nomExcel": "Drolenval plat",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:drolenval",
+    "nom": "Drolenval",
+    "score": 0.9,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 1209,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:drolenval",
+  "alertes": []
+ },
+ {
+  "ligne": 44,
+  "nomExcel": "Duc Rue du",
+  "methode": "aucun",
+  "confiance": "aucune",
+  "candidats": [],
+  "propositionId": null,
+  "alertes": [
+   "« n'existe plus » selon l'Excel (D7)"
+  ]
+ },
+ {
+  "ligne": 45,
+  "nomExcel": "El Fagne",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:el fagne",
+    "nom": "El Fagne",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 546,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:el fagne",
+  "alertes": []
+ },
+ {
+  "ligne": 46,
+  "nomExcel": "Emile Fairon Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue emile fairon",
+    "nom": "Rue Émile Fairon",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 173,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue emile fairon",
+  "alertes": []
+ },
+ {
+  "ligne": 47,
+  "nomExcel": "Emile Vandervelde Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue emile vandervelde",
+    "nom": "Rue Emile Vandervelde",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 1121,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue emile vandervelde",
+  "alertes": []
+ },
+ {
+  "ligne": 48,
+  "nomExcel": "Eugène Pauquay Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue eugene pauquay",
+    "nom": "Rue Eugène Pauquay",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 82,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue eugene pauquay",
+  "alertes": []
+ },
+ {
+  "ligne": 49,
+  "nomExcel": "Fays",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:fays",
+    "nom": "Fays",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 681,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:fays",
+  "alertes": []
+ },
+ {
+  "ligne": 50,
+  "nomExcel": "Félix Defays Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue felix defays",
+    "nom": "Rue Félix Defays",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 234,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue felix defays",
+  "alertes": []
+ },
+ {
+  "ligne": 51,
+  "nomExcel": "Fiérain Val du",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:val du fierain",
+    "nom": "Val du Fièrain",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 936,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:val du fierain",
+  "alertes": []
+ },
+ {
+  "ligne": 52,
+  "nomExcel": "Fond de Noulé",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:fond de noule",
+    "nom": "Fond de Noulé",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 634,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:fond de noule",
+  "alertes": []
+ },
+ {
+  "ligne": 53,
+  "nomExcel": "Fond de Ville",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:fond de ville",
+    "nom": "Fond de Ville",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 918,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:fond de ville",
+  "alertes": []
+ },
+ {
+  "ligne": 54,
+  "nomExcel": "Fort Rue du",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue du fort",
+    "nom": "Rue du Fort",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 322,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue du fort",
+  "alertes": []
+ },
+ {
+  "ligne": 55,
+  "nomExcel": "François Jacob Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue francois jacob",
+    "nom": "Rue François Jacob",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 173,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue francois jacob",
+  "alertes": []
+ },
+ {
+  "ligne": 56,
+  "nomExcel": "Francval Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue francval",
+    "nom": "Rue Francval",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 51,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue francval",
+  "alertes": []
+ },
+ {
+  "ligne": 57,
+  "nomExcel": "Georges Lemaire Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue georges lemaire",
+    "nom": "Rue Georges Lemaire",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 122,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue georges lemaire",
+  "alertes": []
+ },
+ {
+  "ligne": 58,
+  "nomExcel": "Goffontaine 1",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:goffontaine",
+    "nom": "Goffontaine",
+    "score": 0.9,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 3247,
+    "indiceSpw": "partiel"
+   }
+  ],
+  "propositionId": "n:goffontaine",
+  "alertes": []
+ },
+ {
+  "ligne": 59,
+  "nomExcel": "Goffontaine 2",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:goffontaine",
+    "nom": "Goffontaine",
+    "score": 0.9,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 3247,
+    "indiceSpw": "partiel"
+   }
+  ],
+  "propositionId": "n:goffontaine",
+  "alertes": []
+ },
+ {
+  "ligne": 60,
+  "nomExcel": "Goffontaine Trasenster",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:goffontaine",
+    "nom": "Goffontaine",
+    "score": 0.9,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 3247,
+    "indiceSpw": "partiel"
+   }
+  ],
+  "propositionId": "n:goffontaine",
+  "alertes": []
+ },
+ {
+  "ligne": 61,
+  "nomExcel": "Golettes",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:golettes",
+    "nom": "Golettes",
+    "score": 1,
+    "sections": [
+     "Cornesse",
+     "Wegnez"
+    ],
+    "longueurM": 493,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:golettes",
+  "alertes": []
+ },
+ {
+  "ligne": 62,
+  "nomExcel": "Grande Fontaine",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:grande fontaine",
+    "nom": "Grande Fontaine",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 936,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:grande fontaine",
+  "alertes": []
+ },
+ {
+  "ligne": 63,
+  "nomExcel": "Grand'Ry Cornesse",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:grand'ry cornesse",
+    "nom": "Grand'Ry Cornesse",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 838,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:grand'ry cornesse",
+  "alertes": []
+ },
+ {
+  "ligne": 64,
+  "nomExcel": "Grand'Ry Wegnez",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:grand'ry wegnez",
+    "nom": "Grand'Ry Wegnez",
+    "score": 1,
+    "sections": [
+     "Cornesse",
+     "Wegnez"
+    ],
+    "longueurM": 953,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:grand'ry wegnez",
+  "alertes": []
+ },
+ {
+  "ligne": 65,
+  "nomExcel": "Grands Près Rue des",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue des grands pres",
+    "nom": "Rue des Grands Prés",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 177,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue des grands pres",
+  "alertes": []
+ },
+ {
+  "ligne": 66,
+  "nomExcel": "Grands Trys",
+  "methode": "approchant",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:grand trys",
+    "nom": "Grand Trys",
+    "score": 0.9,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 492,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:grand trys",
+  "alertes": []
+ },
+ {
+  "ligne": 67,
+  "nomExcel": "Grettouheid",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:grettouheid",
+    "nom": "Grettouheid",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 515,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:grettouheid",
+  "alertes": []
+ },
+ {
+  "ligne": 68,
+  "nomExcel": "Henry François Hensay Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue henry francois hensay",
+    "nom": "Rue Henry-François Hensay",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 300,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue henry francois hensay",
+  "alertes": []
+ },
+ {
+  "ligne": 69,
+  "nomExcel": "Hezée",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:hezee",
+    "nom": "Hezée",
+    "score": 1,
+    "sections": [
+     "Cornesse",
+     "Soiron"
+    ],
+    "longueurM": 1029,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:hezee",
+  "alertes": []
+ },
+ {
+  "ligne": 70,
+  "nomExcel": "Hospice Rue de l'",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue de l'hospice",
+    "nom": "Rue de l'Hospice",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 564,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue de l'hospice",
+  "alertes": []
+ },
+ {
+  "ligne": 71,
+  "nomExcel": "Impasse de Prévôchamps",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:impasse de prevochamps",
+    "nom": "Impasse de Prévôchamps",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 173,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:impasse de prevochamps",
+  "alertes": []
+ },
+ {
+  "ligne": 72,
+  "nomExcel": "Impasse Leroy",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:impasse leroy",
+    "nom": "Impasse Leroy",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 19,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:impasse leroy",
+  "alertes": []
+ },
+ {
+  "ligne": 73,
+  "nomExcel": "Jacques Bouhy Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue jacques bouhy",
+    "nom": "Rue Jacques Bouhy",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 115,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue jacques bouhy",
+  "alertes": []
+ },
+ {
+  "ligne": 74,
+  "nomExcel": "Jardins Rue des",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue des jardins",
+    "nom": "Rue des Jardins",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 260,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue des jardins",
+  "alertes": []
+ },
+ {
+  "ligne": 75,
+  "nomExcel": "Jean Grandrath Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue jean grandrath",
+    "nom": "Rue Jean Grandrath",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 362,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue jean grandrath",
+  "alertes": []
+ },
+ {
+  "ligne": 76,
+  "nomExcel": "Jean Simon Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue jean simon",
+    "nom": "Rue Jean Simon",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 252,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue jean simon",
+  "alertes": []
+ },
+ {
+  "ligne": 77,
+  "nomExcel": "Jenny Solheid Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue jenny solheid",
+    "nom": "Rue Jenny Solheid",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 199,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue jenny solheid",
+  "alertes": []
+ },
+ {
+  "ligne": 78,
+  "nomExcel": "Jonckay",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:jonckay",
+    "nom": "Jonckay",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 646,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:jonckay",
+  "alertes": []
+ },
+ {
+  "ligne": 79,
+  "nomExcel": "Joseph Meunier Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue joseph meunier",
+    "nom": "Rue Joseph Meunier",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 653,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue joseph meunier",
+  "alertes": []
+ },
+ {
+  "ligne": 80,
+  "nomExcel": "Joseph Sougnez Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue joseph sougnez",
+    "nom": "Rue Joseph Sougnez",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 399,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue joseph sougnez",
+  "alertes": []
+ },
+ {
+  "ligne": 81,
+  "nomExcel": "Koreux Ruelles du",
+  "methode": "approchant",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:ruelle du koreux",
+    "nom": "Ruelle du Koreux",
+    "score": 0.97,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 294,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:ruelle du koreux",
+  "alertes": []
+ },
+ {
+  "ligne": 82,
+  "nomExcel": "la Nô Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue la no",
+    "nom": "Rue la Nô",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 287,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue la no",
+  "alertes": []
+ },
+ {
+  "ligne": 83,
+  "nomExcel": "La Saute",
+  "methode": "approchant",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:saute",
+    "nom": "Saute",
+    "score": 0.97,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 999,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:saute",
+  "alertes": []
+ },
+ {
+  "ligne": 84,
+  "nomExcel": "Lambermont Rue de",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue de lambermont",
+    "nom": "Rue de Lambermont",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 307,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue de lambermont",
+  "alertes": []
+ },
+ {
+  "ligne": 85,
+  "nomExcel": "Laurent Mairlot Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue laurent mairlot",
+    "nom": "Rue Laurent Mairlot",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 748,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue laurent mairlot",
+  "alertes": []
+ },
+ {
+  "ligne": 86,
+  "nomExcel": "Lefin",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:lefin",
+    "nom": "Lefin",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 1068,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:lefin",
+  "alertes": []
+ },
+ {
+  "ligne": 87,
+  "nomExcel": "Léon Lepas Venelle",
+  "methode": "approchant",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:venelle leon le pas",
+    "nom": "Venelle Léon Le Pas",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 58,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:venelle leon le pas",
+  "alertes": []
+ },
+ {
+  "ligne": 88,
+  "nomExcel": "Les Bagneures",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:les bagneures",
+    "nom": "Les Bagneures",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 94,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:les bagneures",
+  "alertes": []
+ },
+ {
+  "ligne": 89,
+  "nomExcel": "Libération Rue de la",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue de la liberation",
+    "nom": "Rue de la Libération",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 332,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue de la liberation",
+  "alertes": []
+ },
+ {
+  "ligne": 90,
+  "nomExcel": "Lieutenant Albert Dressen Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue lieutenant albert dressen",
+    "nom": "Rue Lieutenant Albert Dressen",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 114,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue lieutenant albert dressen",
+  "alertes": []
+ },
+ {
+  "ligne": 91,
+  "nomExcel": "Lieutenant Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue lieutenant",
+    "nom": "Rue Lieutenant",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 90,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue lieutenant",
+  "alertes": []
+ },
+ {
+  "ligne": 92,
+  "nomExcel": "Louis Formatin Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue louis formatin",
+    "nom": "Rue Louis Formatin",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 77,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue louis formatin",
+  "alertes": []
+ },
+ {
+  "ligne": 93,
+  "nomExcel": "Maison-Bois",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:maison bois",
+    "nom": "Maison-Bois",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 680,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:maison bois",
+  "alertes": []
+ },
+ {
+  "ligne": 94,
+  "nomExcel": "Marcel Fikenne Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue marcel fikenne",
+    "nom": "Rue Marcel Fikenne",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 506,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue marcel fikenne",
+  "alertes": []
+ },
+ {
+  "ligne": 95,
+  "nomExcel": "Mathieu Regnier Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue mathieu regnier",
+    "nom": "Rue Mathieu Regnier",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 257,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue mathieu regnier",
+  "alertes": []
+ },
+ {
+  "ligne": 96,
+  "nomExcel": "Mathieu Closset Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue mathieu closset",
+    "nom": "Rue Mathieu Closset",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 274,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue mathieu closset",
+  "alertes": []
+ },
+ {
+  "ligne": 97,
+  "nomExcel": "Mohonthier",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:mohonthier",
+    "nom": "Mohonthier",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 967,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:mohonthier",
+  "alertes": []
+ },
+ {
+  "ligne": 98,
+  "nomExcel": "Mortbonhomme",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:mortbonhomme",
+    "nom": "Mortbonhomme",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 459,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:mortbonhomme",
+  "alertes": []
+ },
+ {
+  "ligne": 99,
+  "nomExcel": "Mousset",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:mousset",
+    "nom": "Mousset",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 348,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:mousset",
+  "alertes": []
+ },
+ {
+  "ligne": 100,
+  "nomExcel": "Nessonvaux Route de",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:route de nessonvaux",
+    "nom": "Route de Nessonvaux",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 1472,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:route de nessonvaux",
+  "alertes": []
+ },
+ {
+  "ligne": 101,
+  "nomExcel": "Nids d'Aguesses",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:nids d'aguesses",
+    "nom": "Nids d'Aguesses",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 1847,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:nids d'aguesses",
+  "alertes": []
+ },
+ {
+  "ligne": 102,
+  "nomExcel": "Nouvelle Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue nouvelle",
+    "nom": "Rue Nouvelle",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 502,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue nouvelle",
+  "alertes": []
+ },
+ {
+  "ligne": 103,
+  "nomExcel": "Paire Rue du",
+  "methode": "exact_reordonne",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:rue du paire",
+    "nom": "Rue du Paire",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 885,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue du paire",
+  "alertes": [
+   "voirie aussi proposée pour la/les ligne(s) 104"
+  ]
+ },
+ {
+  "ligne": 104,
+  "nomExcel": "Paire Ruelle du",
+  "methode": "approchant",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:rue du paire",
+    "nom": "Rue du Paire",
+    "score": 0.97,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 885,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue du paire",
+  "alertes": [
+   "voirie aussi proposée pour la/les ligne(s) 103"
+  ]
+ },
+ {
+  "ligne": 105,
+  "nomExcel": "Paix Rue de la",
+  "methode": "exact_reordonne",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:rue de la paix#1",
+    "nom": "Rue de la Paix",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 854,
+    "indiceSpw": "non"
+   },
+   {
+    "id": "n:rue de la paix#2",
+    "nom": "Rue de la Paix",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 15,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue de la paix#1",
+  "alertes": [
+   "2 voiries possibles : choisir la bonne"
+  ]
+ },
+ {
+  "ligne": 106,
+  "nomExcel": "Panorama Rue du",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue du panorama",
+    "nom": "Rue du Panorama",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 228,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue du panorama",
+  "alertes": []
+ },
+ {
+  "ligne": 107,
+  "nomExcel": "Peléeheid Route de",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:route de peleeheid",
+    "nom": "Route de Peléeheid",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 549,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:route de peleeheid",
+  "alertes": []
+ },
+ {
+  "ligne": 108,
+  "nomExcel": "Pepin Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue pepin",
+    "nom": "Rue Pépin",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 178,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue pepin",
+  "alertes": []
+ },
+ {
+  "ligne": 109,
+  "nomExcel": "Pierre Hauzeur Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue pierre hauzeur",
+    "nom": "Rue Pierre Hauzeur",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 349,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue pierre hauzeur",
+  "alertes": []
+ },
+ {
+  "ligne": 110,
+  "nomExcel": "Pierre Piqueray Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue pierre piqueray",
+    "nom": "Rue Pierre Piqueray",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 234,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue pierre piqueray",
+  "alertes": []
+ },
+ {
+  "ligne": 111,
+  "nomExcel": "Place Charles Fraipont",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:place charles fraipont",
+    "nom": "Place Charles Fraipont",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 63,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:place charles fraipont",
+  "alertes": []
+ },
+ {
+  "ligne": 112,
+  "nomExcel": "Place Notre-Dame",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:place notre dame",
+    "nom": "Place Notre-Dame",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 78,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:place notre dame",
+  "alertes": []
+ },
+ {
+  "ligne": 113,
+  "nomExcel": "Place Sainte-Hubert",
+  "methode": "approchant",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:place saint hubert",
+    "nom": "Place Saint Hubert",
+    "score": 0.94,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 64,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:place saint hubert",
+  "alertes": [
+   "voirie aussi proposée pour la/les ligne(s) 127"
+  ]
+ },
+ {
+  "ligne": 114,
+  "nomExcel": "Plateau Rue du",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue du plateau",
+    "nom": "Rue du Plateau",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 425,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue du plateau",
+  "alertes": []
+ },
+ {
+  "ligne": 115,
+  "nomExcel": "Pompe Rue de la",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue de la pompe",
+    "nom": "Rue de la Pompe",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 215,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue de la pompe",
+  "alertes": []
+ },
+ {
+  "ligne": 116,
+  "nomExcel": "Pont Walrand Rue",
+  "methode": "approchant",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:pont walrand",
+    "nom": "Pont Walrand",
+    "score": 0.97,
+    "sections": [
+     "Cornesse",
+     "Pepinster"
+    ],
+    "longueurM": 136,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:pont walrand",
+  "alertes": []
+ },
+ {
+  "ligne": 117,
+  "nomExcel": "Progrès Rue du",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue du progres",
+    "nom": "Rue du Progrès",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 105,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue du progres",
+  "alertes": []
+ },
+ {
+  "ligne": 118,
+  "nomExcel": "Puits Ronval",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:puits ronval",
+    "nom": "Puits Ronval",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 196,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:puits ronval",
+  "alertes": []
+ },
+ {
+  "ligne": 119,
+  "nomExcel": "Quai Armand Follet",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:quai armand follet",
+    "nom": "Quai Armand Follet",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 55,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:quai armand follet",
+  "alertes": []
+ },
+ {
+  "ligne": 120,
+  "nomExcel": "Quai de la Hoëgne",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:quai de la hoegne",
+    "nom": "Quai de la Hoëgne",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 206,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:quai de la hoegne",
+  "alertes": []
+ },
+ {
+  "ligne": 121,
+  "nomExcel": "Quai Ferdinand Nicolaï",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:quai ferdinand nicolai",
+    "nom": "Quai Ferdinand Nicolaï",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 286,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:quai ferdinand nicolai",
+  "alertes": []
+ },
+ {
+  "ligne": 122,
+  "nomExcel": "Quai Ferdinand Nicolaï Hoëgne",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:quai ferdinand nicolai",
+    "nom": "Quai Ferdinand Nicolaï",
+    "score": 0.9,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 286,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:quai ferdinand nicolai",
+  "alertes": []
+ },
+ {
+  "ligne": 123,
+  "nomExcel": "Raymond Legentil Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue raymond legentil",
+    "nom": "Rue Raymond Legentil",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 146,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue raymond legentil",
+  "alertes": []
+ },
+ {
+  "ligne": 124,
+  "nomExcel": "Refawtay",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:refawtay",
+    "nom": "Réfawtay",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 927,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:refawtay",
+  "alertes": []
+ },
+ {
+  "ligne": 125,
+  "nomExcel": "Rolais",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rolais",
+    "nom": "Rolais",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 195,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rolais",
+  "alertes": []
+ },
+ {
+  "ligne": 126,
+  "nomExcel": "Saint Germain",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:saint germain",
+    "nom": "Saint Germain",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 1168,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:saint germain",
+  "alertes": []
+ },
+ {
+  "ligne": 127,
+  "nomExcel": "Saint Hubert Rue",
+  "methode": "approchant",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:place saint hubert",
+    "nom": "Place Saint Hubert",
+    "score": 0.97,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 64,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:place saint hubert",
+  "alertes": [
+   "voirie aussi proposée pour la/les ligne(s) 113"
+  ]
+ },
+ {
+  "ligne": 128,
+  "nomExcel": "Saussales Ruelle des",
+  "methode": "aucun",
+  "confiance": "aucune",
+  "candidats": [],
+  "propositionId": null,
+  "alertes": []
+ },
+ {
+  "ligne": 129,
+  "nomExcel": "Sclassin",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:sclassin",
+    "nom": "Sclassin",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 127,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:sclassin",
+  "alertes": []
+ },
+ {
+  "ligne": 130,
+  "nomExcel": "Soiron Route de",
+  "methode": "exact_reordonne",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:route de soiron#1",
+    "nom": "Route de Soiron",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 1143,
+    "indiceSpw": "non"
+   },
+   {
+    "id": "n:route de soiron#2",
+    "nom": "Route de Soiron",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 2,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:route de soiron#1",
+  "alertes": [
+   "2 voiries possibles : choisir la bonne"
+  ]
+ },
+ {
+  "ligne": 131,
+  "nomExcel": "Soiron-Centre cimetière arrière",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:soiron centre",
+    "nom": "Soiron-Centre",
+    "score": 0.9,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 1204,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:soiron centre",
+  "alertes": []
+ },
+ {
+  "ligne": 132,
+  "nomExcel": "Soiron-Centre cimetière centre",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:soiron centre",
+    "nom": "Soiron-Centre",
+    "score": 0.9,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 1204,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:soiron centre",
+  "alertes": []
+ },
+ {
+  "ligne": 133,
+  "nomExcel": "Soiron-Centre Place de l'église",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:soiron centre",
+    "nom": "Soiron-Centre",
+    "score": 0.9,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 1204,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:soiron centre",
+  "alertes": []
+ },
+ {
+  "ligne": 134,
+  "nomExcel": "Soiron-Centre Place du bac",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:soiron centre",
+    "nom": "Soiron-Centre",
+    "score": 0.9,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 1204,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:soiron centre",
+  "alertes": []
+ },
+ {
+  "ligne": 135,
+  "nomExcel": "Soiron-Centre supérieure",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:soiron centre",
+    "nom": "Soiron-Centre",
+    "score": 0.9,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 1204,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:soiron centre",
+  "alertes": []
+ },
+ {
+  "ligne": 136,
+  "nomExcel": "Soiron-Centre Taverne",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:soiron centre",
+    "nom": "Soiron-Centre",
+    "score": 0.9,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 1204,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:soiron centre",
+  "alertes": []
+ },
+ {
+  "ligne": 137,
+  "nomExcel": "Sous le Château Rue",
+  "methode": "approchant",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:sous le chateau",
+    "nom": "Sous le Château",
+    "score": 0.97,
+    "sections": [
+     "Cornesse",
+     "Wegnez"
+    ],
+    "longueurM": 1018,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:sous le chateau",
+  "alertes": []
+ },
+ {
+  "ligne": 138,
+  "nomExcel": "Sylvain Balau Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue sylvain balau",
+    "nom": "Rue Sylvain Balau",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 220,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue sylvain balau",
+  "alertes": []
+ },
+ {
+  "ligne": 139,
+  "nomExcel": "Thier Rue du",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue du thier",
+    "nom": "Rue du Thier",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 307,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue du thier",
+  "alertes": []
+ },
+ {
+  "ligne": 140,
+  "nomExcel": "Tilleul",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:tilleul",
+    "nom": "Tilleul",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 1029,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:tilleul",
+  "alertes": []
+ },
+ {
+  "ligne": 141,
+  "nomExcel": "Tribomont Bertholet-Verviers Rue",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:rue tribomont",
+    "nom": "Rue Tribomont",
+    "score": 0.9,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 2130,
+    "indiceSpw": "non"
+   },
+   {
+    "id": "n:tribomont",
+    "nom": "Tribomont",
+    "score": 0.9,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 23,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue tribomont",
+  "alertes": []
+ },
+ {
+  "ligne": 142,
+  "nomExcel": "Tribomont principale Rue",
+  "methode": "section",
+  "confiance": "faible",
+  "candidats": [
+   {
+    "id": "n:rue tribomont",
+    "nom": "Rue Tribomont",
+    "score": 0.9,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 2130,
+    "indiceSpw": "non"
+   },
+   {
+    "id": "n:tribomont",
+    "nom": "Tribomont",
+    "score": 0.9,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 23,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue tribomont",
+  "alertes": []
+ },
+ {
+  "ligne": 143,
+  "nomExcel": "Turlurette",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:turlurette",
+    "nom": "Turlurette",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 571,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:turlurette",
+  "alertes": []
+ },
+ {
+  "ligne": 144,
+  "nomExcel": "Vieille Eglise",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:vieille eglise",
+    "nom": "Vieille Eglise",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 398,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:vieille eglise",
+  "alertes": []
+ },
+ {
+  "ligne": 145,
+  "nomExcel": "Voie Constant",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:voie constant",
+    "nom": "Voie Constant",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 264,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:voie constant",
+  "alertes": []
+ },
+ {
+  "ligne": 146,
+  "nomExcel": "Voie Creuhy",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:voie creuhy",
+    "nom": "Voie Creuhy",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 863,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:voie creuhy",
+  "alertes": []
+ },
+ {
+  "ligne": 147,
+  "nomExcel": "Voie du Bola",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:voie du bola",
+    "nom": "Voie du Bola",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 198,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:voie du bola",
+  "alertes": []
+ },
+ {
+  "ligne": 148,
+  "nomExcel": "Voie du Moulin",
+  "methode": "exact",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:voie du moulin",
+    "nom": "Voie du Moulin",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 770,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:voie du moulin",
+  "alertes": [
+   "voirie aussi proposée pour la/les ligne(s) 175"
+  ]
+ },
+ {
+  "ligne": 149,
+  "nomExcel": "Xhavée Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue xhavee",
+    "nom": "Rue Xhavée",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 620,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue xhavee",
+  "alertes": []
+ },
+ {
+  "ligne": 150,
+  "nomExcel": "Xhendelesse Rue de",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue de xhendelesse",
+    "nom": "Rue de Xhendelesse",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 739,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue de xhendelesse",
+  "alertes": []
+ },
+ {
+  "ligne": 152,
+  "nomExcel": "Alfred Drèze Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue alfred dreze",
+    "nom": "Rue Alfred Drèze",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 689,
+    "indiceSpw": "oui"
+   }
+  ],
+  "propositionId": "n:rue alfred dreze",
+  "alertes": []
+ },
+ {
+  "ligne": 153,
+  "nomExcel": "Ayrifagne",
+  "methode": "exact",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:ayrifagne",
+    "nom": "Ayrifagne",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 60,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:ayrifagne",
+  "alertes": [
+   "Excel : SPW, mais la carte ne la situe pas sur le réseau régional"
+  ]
+ },
+ {
+  "ligne": 154,
+  "nomExcel": "Chinheid",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:chinheid",
+    "nom": "Chinheid",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 907,
+    "indiceSpw": "partiel"
+   }
+  ],
+  "propositionId": "n:chinheid",
+  "alertes": []
+ },
+ {
+  "ligne": 155,
+  "nomExcel": "Flère",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:flere",
+    "nom": "Flère",
+    "score": 1,
+    "sections": [
+     "Cornesse",
+     "Pepinster"
+    ],
+    "longueurM": 1462,
+    "indiceSpw": "oui"
+   }
+  ],
+  "propositionId": "n:flere",
+  "alertes": []
+ },
+ {
+  "ligne": 156,
+  "nomExcel": "Forges Thiry",
+  "methode": "exact",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:forges thiry",
+    "nom": "Forges Thiry",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 667,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:forges thiry",
+  "alertes": [
+   "Excel : SPW, mais la carte ne la situe pas sur le réseau régional"
+  ]
+ },
+ {
+  "ligne": 157,
+  "nomExcel": "Hauts Sarts",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:hauts sarts",
+    "nom": "Hauts Sarts",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 588,
+    "indiceSpw": "oui"
+   }
+  ],
+  "propositionId": "n:hauts sarts",
+  "alertes": []
+ },
+ {
+  "ligne": 158,
+  "nomExcel": "Hodister Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue hodister",
+    "nom": "Rue Hodister",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 853,
+    "indiceSpw": "oui"
+   }
+  ],
+  "propositionId": "n:rue hodister",
+  "alertes": []
+ },
+ {
+  "ligne": 159,
+  "nomExcel": "Hubert Halet Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue hubert halet",
+    "nom": "Rue Hubert Halet",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 418,
+    "indiceSpw": "oui"
+   }
+  ],
+  "propositionId": "n:rue hubert halet",
+  "alertes": []
+ },
+ {
+  "ligne": 160,
+  "nomExcel": "Louheau",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:louheau",
+    "nom": "Louheau",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 1017,
+    "indiceSpw": "oui"
+   }
+  ],
+  "propositionId": "n:louheau",
+  "alertes": []
+ },
+ {
+  "ligne": 161,
+  "nomExcel": "Louis Biérin Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue louis bierin",
+    "nom": "Rue Louis Biérin",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 475,
+    "indiceSpw": "oui"
+   }
+  ],
+  "propositionId": "n:rue louis bierin",
+  "alertes": []
+ },
+ {
+  "ligne": 162,
+  "nomExcel": "Massau",
+  "methode": "approchant",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:rue massau",
+    "nom": "Rue Massau",
+    "score": 0.97,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 345,
+    "indiceSpw": "oui"
+   }
+  ],
+  "propositionId": "n:rue massau",
+  "alertes": []
+ },
+ {
+  "ligne": 163,
+  "nomExcel": "Neuve Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue neuve",
+    "nom": "Rue Neuve",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 1050,
+    "indiceSpw": "partiel"
+   }
+  ],
+  "propositionId": "n:rue neuve",
+  "alertes": []
+ },
+ {
+  "ligne": 164,
+  "nomExcel": "Prévôchamps",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:prevochamps",
+    "nom": "Prévôchamps",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 854,
+    "indiceSpw": "partiel"
+   }
+  ],
+  "propositionId": "n:prevochamps",
+  "alertes": []
+ },
+ {
+  "ligne": 165,
+  "nomExcel": "Purgatoire Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue purgatoire",
+    "nom": "Rue Purgatoire",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 575,
+    "indiceSpw": "oui"
+   }
+  ],
+  "propositionId": "n:rue purgatoire",
+  "alertes": []
+ },
+ {
+  "ligne": 166,
+  "nomExcel": "Régence Rue de la",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue de la regence",
+    "nom": "Rue de la Régence",
+    "score": 1,
+    "sections": [
+     "Cornesse",
+     "Pepinster"
+    ],
+    "longueurM": 140,
+    "indiceSpw": "oui"
+   }
+  ],
+  "propositionId": "n:rue de la regence",
+  "alertes": []
+ },
+ {
+  "ligne": 167,
+  "nomExcel": "Route de Tancrémont",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:route de tancremont",
+    "nom": "Route de Tancrémont",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 2952,
+    "indiceSpw": "oui"
+   }
+  ],
+  "propositionId": "n:route de tancremont",
+  "alertes": []
+ },
+ {
+  "ligne": 168,
+  "nomExcel": "Vovegnez Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue vovegnez",
+    "nom": "Rue Vovegnez",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 816,
+    "indiceSpw": "oui"
+   }
+  ],
+  "propositionId": "n:rue vovegnez",
+  "alertes": []
+ },
+ {
+  "ligne": 170,
+  "nomExcel": "Bois l'Evêque Rue",
+  "methode": "exact_reordonne",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:rue bois l'eveque",
+    "nom": "Rue Bois l'Évêque",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 787,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:rue bois l'eveque",
+  "alertes": []
+ },
+ {
+  "ligne": 171,
+  "nomExcel": "Chemin de la Baleine",
+  "methode": "aucun",
+  "confiance": "aucune",
+  "candidats": [],
+  "propositionId": null,
+  "alertes": []
+ },
+ {
+  "ligne": 172,
+  "nomExcel": "Chemin de Nôheid",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:chemin de noheid",
+    "nom": "Chemin de Nôheid",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 38,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:chemin de noheid",
+  "alertes": []
+ },
+ {
+  "ligne": 173,
+  "nomExcel": "Chemin du Bois Robert",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:chemin du bois robert",
+    "nom": "Chemin du Bois Robert",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 1200,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:chemin du bois robert",
+  "alertes": []
+ },
+ {
+  "ligne": 174,
+  "nomExcel": "Chemin du Loup",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:chemin du loup",
+    "nom": "Chemin du Loup",
+    "score": 1,
+    "sections": [
+     "Wegnez"
+    ],
+    "longueurM": 574,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:chemin du loup",
+  "alertes": []
+ },
+ {
+  "ligne": 175,
+  "nomExcel": "Chemin du Moulin",
+  "methode": "approchant",
+  "confiance": "moyenne",
+  "candidats": [
+   {
+    "id": "n:voie du moulin",
+    "nom": "Voie du Moulin",
+    "score": 0.97,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 770,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:voie du moulin",
+  "alertes": [
+   "voirie aussi proposée pour la/les ligne(s) 148"
+  ]
+ },
+ {
+  "ligne": 176,
+  "nomExcel": "Chemin du Nauzaury",
+  "methode": "aucun",
+  "confiance": "aucune",
+  "candidats": [],
+  "propositionId": null,
+  "alertes": [
+   "nom en double dans l'Excel (pas de fusion automatique)"
+  ]
+ },
+ {
+  "ligne": 177,
+  "nomExcel": "Fraity",
+  "methode": "aucun",
+  "confiance": "aucune",
+  "candidats": [],
+  "propositionId": null,
+  "alertes": []
+ },
+ {
+  "ligne": 178,
+  "nomExcel": "Hodwinry",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:hodwinry",
+    "nom": "Hodwinry",
+    "score": 1,
+    "sections": [
+     "Cornesse"
+    ],
+    "longueurM": 1023,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:hodwinry",
+  "alertes": []
+ },
+ {
+  "ligne": 179,
+  "nomExcel": "Les Golets",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:les golets",
+    "nom": "Les Golets",
+    "score": 1,
+    "sections": [
+     "Soiron"
+    ],
+    "longueurM": 458,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:les golets",
+  "alertes": []
+ },
+ {
+  "ligne": 180,
+  "nomExcel": "Marly Ruelle",
+  "methode": "aucun",
+  "confiance": "aucune",
+  "candidats": [],
+  "propositionId": null,
+  "alertes": []
+ },
+ {
+  "ligne": 181,
+  "nomExcel": "Mazures",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:mazures",
+    "nom": "Mazures",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 1252,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:mazures",
+  "alertes": []
+ },
+ {
+  "ligne": 182,
+  "nomExcel": "Sohan",
+  "methode": "exact",
+  "confiance": "forte",
+  "candidats": [
+   {
+    "id": "n:sohan",
+    "nom": "Sohan",
+    "score": 1,
+    "sections": [
+     "Pepinster"
+    ],
+    "longueurM": 1132,
+    "indiceSpw": "non"
+   }
+  ],
+  "propositionId": "n:sohan",
+  "alertes": []
+ },
+ {
+  "ligne": 183,
+  "nomExcel": "Try des Hayes",
+  "methode": "aucun",
+  "confiance": "aucune",
+  "candidats": [],
+  "propositionId": null,
+  "alertes": []
+ }
+]

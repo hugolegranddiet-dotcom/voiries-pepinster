@@ -1,0 +1,12 @@
+{
+  "_description": "Colonne E « Ampleur des travaux » → valeur normalisée (fautes corrigées). Hors score initial.",
+  "Raclage/pose complet": { "valeur": "raclage_complet" },
+  "Racalage/pose complet": { "valeur": "raclage_complet", "note": "faute de frappe « Racalage »" },
+  "raclage-pose complet": { "valeur": "raclage_complet" },
+  "Mauvaise poches + raclage/ pose complet": { "valeur": "raclage_complet", "etiquette": "mauvaises_poches" },
+  "Raclage/pose partiel": { "valeur": "raclage_partiel" },
+  "Raclage/pose partiel*": { "valeur": "raclage_partiel", "note": "l'astérisque renvoie à la colonne Particularité" },
+  "Enduisage": { "valeur": "enduisage" },
+  "Schlammage": { "valeur": "schlammage" },
+  "Réparation ponctuelle": { "valeur": "reparation_ponctuelle" }
+}

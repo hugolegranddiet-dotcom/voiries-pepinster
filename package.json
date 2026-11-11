@@ -12,7 +12,10 @@
     "check": "npm run lint && npm run typecheck && npm run test",
     "geo:extract": "node scripts/geo/extract-osm.mjs",
     "geo:spw": "tsx --tsconfig tsconfig.json scripts/geo/fetch-spw.ts",
-    "geo:build": "tsx --tsconfig tsconfig.json scripts/geo/build-roads.ts"
+    "geo:build": "tsx --tsconfig tsconfig.json scripts/geo/build-roads.ts",
+    "excel:read": "tsx --tsconfig tsconfig.json scripts/excel/read-feuil1.ts",
+    "match": "tsx --tsconfig tsconfig.json scripts/match/run.ts",
+    "match:import": "tsx --tsconfig tsconfig.json scripts/match/import-decisions.ts"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
@@ -30,6 +33,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
+    "exceljs": "^4.4.0",
     "tailwindcss": "4.3.3",
     "tsx": "^4.23.15",
     "typescript": "^5",

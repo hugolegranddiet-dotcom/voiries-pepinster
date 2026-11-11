@@ -2,12 +2,14 @@
 
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { COULEUR_BANDE } from "@/components/badges";
 import { IconeFermer } from "@/components/icones";
 import { FicheVoirieOsm } from "@/components/carte/FicheVoirieOsm";
 import type { LimiteGeo, VoiesGeo } from "@/components/carte/CarteLeaflet";
 import type { CategorieVoie } from "@/lib/geo/voiries";
 import type { DonneesVoiries } from "@/lib/geo/types";
+import type { DonneesExcelCarte } from "@/lib/matching/decisions";
 
 // Leaflet a besoin du navigateur : pas de rendu côté serveur.
 const CarteLeaflet = dynamic(() => import("@/components/carte/CarteLeaflet"), {
@@ -54,10 +56,12 @@ function Legende() {
   );
 }
 
-export function CarteVoiries() {
+export function CarteVoiries({ excel }: { excel: DonneesExcelCarte }) {
+  // Ouverture directe d'une voirie : /carte?voirie=<identifiant> (fichier de validation).
+  const voirieDemandee = useSearchParams().get("voirie");
   const [donnees, setDonnees] = useState<{ limite: LimiteGeo; voies: VoiesGeo; voiries: DonneesVoiries } | null>(null);
   const [erreur, setErreur] = useState<string | null>(null);
-  const [selection, setSelection] = useState<string | null>(null);
+  const [selection, setSelection] = useState<string | null>(voirieDemandee);
   const [visibles, setVisibles] = useState<Record<CategorieVoie, boolean>>({
     voirie: true,
     chemin: true,
@@ -172,7 +176,7 @@ export function CarteVoiries() {
         </div>
         <div className="overflow-y-auto p-4">
           {selectionnee ? (
-            <FicheVoirieOsm voirie={selectionnee} />
+            <FicheVoirieOsm voirie={selectionnee} excel={excel.parVoirie[selectionnee.id]} />
           ) : (
             <p className="text-sm text-muted">Clique sur une voie de la carte pour afficher sa fiche.</p>
           )}

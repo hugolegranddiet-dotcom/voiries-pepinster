@@ -159,4 +159,87 @@ export function regrouperEnVoiries(ways: ReadonlyArray<WayOsm>): GroupeVoirie[] 
   return groupes.sort((a, b) => a.roadId.localeCompare(b.roadId));
 }
 
+/** Décision D14 (Hugo, 11/11/2026) : « si même endroit, même rue ; sinon homonyme ». */
+export const SEUIL_MEME_ENDROIT_M = 300;
+
+/**
+ * Applique la décision D14 : les groupes de même nom distants de moins de
+ * `seuilM` sont réunis en une seule voirie (regroupement en chaîne).
+ * Chaque réunion est renvoyée dans `journal` pour être tracée dans le rapport.
+ * `regrouperEnVoiries` ne fusionne jamais rien : cette étape est distincte et
+ * repose sur une décision humaine explicite.
+ */
+export function appliquerMemeEndroit(
+  groupes: ReadonlyArray<GroupeVoirie>,
+  ways: ReadonlyArray<WayOsm>,
+  seuilM = SEUIL_MEME_ENDROIT_M,
+): { groupes: GroupeVoirie[]; journal: Array<{ nom: string; parties: number; distanceMaxM: number; decision: "meme_rue" | "homonymes" }> } {
+  const wayParId = new Map(ways.map((w) => [w.id, w]));
+  const resultat: GroupeVoirie[] = groupes.filter((g) => !g.partie);
+  const journal: Array<{ nom: string; parties: number; distanceMaxM: number; decision: "meme_rue" | "homonymes" }> = [];
+
+  const parNom = new Map<string, GroupeVoirie[]>();
+  for (const g of groupes.filter((x) => x.partie)) {
+    const l = parNom.get(g.nomNormalise!);
+    if (l) l.push(g);
+    else parNom.set(g.nomNormalise!, [g]);
+  }
+
+  for (const [cle, parties] of parNom) {
+    const waysDe = (g: GroupeVoirie) => g.wayIds.map((id) => wayParId.get(id)!);
+    // Regroupement en chaîne : deux parties à moins du seuil sont liées.
+    const uf = new UnionFind();
+    let distanceMax = 0;
+    for (let i = 0; i < parties.length; i++) {
+      uf.trouver(i);
+      for (let j = i + 1; j < parties.length; j++) {
+        const d = distanceEntreGroupes(waysDe(parties[i]), waysDe(parties[j]));
+        if (d < seuilM) {
+          uf.unir(i, j);
+          distanceMax = Math.max(distanceMax, d);
+        }
+      }
+    }
+    const grappes = new Map<number, GroupeVoirie[]>();
+    parties.forEach((g, i) => {
+      const r = uf.trouver(i);
+      const l = grappes.get(r);
+      if (l) l.push(g);
+      else grappes.set(r, [g]);
+    });
+    const liste = [...grappes.values()];
+    liste.forEach((grappe, k) => {
+      const wayIds = grappe.flatMap((g) => g.wayIds).sort((a, b) => a - b);
+      const seul = liste.length === 1;
+      resultat.push({
+        roadId: seul ? `n:${cle}` : `n:${cle}#${k + 1}`,
+        nom: grappe[0].nom,
+        nomNormalise: cle,
+        wayIds,
+        partie: seul ? null : { numero: k + 1, total: liste.length },
+        alerte: seul ? null : "meme_nom_non_relie",
+        distanceAutreGroupeM: seul
+          ? null
+          : Math.round(
+              Math.min(
+                ...liste
+                  .filter((_, j) => j !== k)
+                  .map((autre) => distanceEntreGroupes(grappe.flatMap(waysDe), autre.flatMap(waysDe))),
+              ),
+            ),
+      });
+    });
+    journal.push({
+      nom: parties[0].nom!,
+      parties: parties.length,
+      distanceMaxM: Math.round(distanceMax),
+      decision: liste.length === 1 ? "meme_rue" : "homonymes",
+    });
+  }
+  return {
+    groupes: resultat.sort((a, b) => a.roadId.localeCompare(b.roadId)),
+    journal: journal.sort((a, b) => a.nom.localeCompare(b.nom, "fr")),
+  };
+}
+
 export { longueurM };

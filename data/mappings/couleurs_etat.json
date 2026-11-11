@@ -1,0 +1,9 @@
+{
+  "_description": "Couleur de fond de la case Etat (bloc communal) → note d'état SUGGÉRÉE. Légende de l'Excel (lignes 185-189), décisions D1, D2 et D11 du 11/11/2026.",
+  "#00FF00": { "note": 1, "origine": "légende Excel : 1 = « RAS * » (vert vif)" },
+  "#7CEB99": { "note": 2, "origine": "légende Excel : 2 = « correct » (vert clair)" },
+  "#009900": { "note": 3, "origine": "légende Excel : 3 = « valable » (vert foncé)" },
+  "#FF3300": { "note": 4, "origine": "légende Excel : 4 = « mauvais » (rouge-orangé)" },
+  "#975CCB": { "note": 5, "origine": "légende Excel : 5 = « dégradé » (violet)" },
+  "#FF0000": { "note": 4, "origine": "rouge vif hors légende, corrigé en 4 (décision D2)" }
+}

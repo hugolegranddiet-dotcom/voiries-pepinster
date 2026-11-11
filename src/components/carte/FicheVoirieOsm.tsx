@@ -1,5 +1,7 @@
 import { BadgePriorite } from "@/components/badges";
 import { AvertissementScore } from "@/components/blocs";
+import { BlocExcel } from "@/components/carte/BlocExcel";
+import type { DonneesExcelCarte } from "@/lib/matching/decisions";
 import type { VoirieLogique } from "@/lib/geo/types";
 
 const LIBELLE_CATEGORIE = {
@@ -28,7 +30,14 @@ const km = (m: number) =>
   m >= 1000 ? `${(m / 1000).toLocaleString("fr-BE", { maximumFractionDigits: 2 })} km` : `${m} m`;
 
 /** Fiche d'une voirie réelle (données OSM). Les critères arrivent en phase 3. */
-export function FicheVoirieOsm({ voirie }: { voirie: VoirieLogique }) {
+export function FicheVoirieOsm({
+  voirie,
+  excel,
+}: {
+  voirie: VoirieLogique;
+  excel: DonneesExcelCarte["parVoirie"][string] | undefined;
+}) {
+  const aCompleter = !excel?.validees.length;
   return (
     <div className="flex flex-col gap-4">
       <div>
@@ -36,9 +45,11 @@ export function FicheVoirieOsm({ voirie }: { voirie: VoirieLogique }) {
           <span className="rounded-md bg-canvas px-2 py-0.5 text-xs font-medium text-muted">
             {LIBELLE_CATEGORIE[voirie.categorie]}
           </span>
-          <span className="rounded-md bg-demo-bg px-2 py-0.5 text-xs font-medium text-demo-ink">
-            À compléter
-          </span>
+          {aCompleter && (
+            <span className="rounded-md bg-demo-bg px-2 py-0.5 text-xs font-medium text-demo-ink">
+              À compléter
+            </span>
+          )}
         </div>
         <h2 className="mt-2 text-xl font-semibold text-ink">
           {voirie.nom ?? <span className="italic text-muted">Voie sans nom</span>}
@@ -65,9 +76,13 @@ export function FicheVoirieOsm({ voirie }: { voirie: VoirieLogique }) {
           <BadgePriorite score={null} taille="grande" />
         </div>
         <p className="mt-2 text-xs text-muted">
-          Aucun critère pour l&apos;instant : l&apos;état, la circulation et la densité viendront
-          de l&apos;Excel en phase 3, après validation des correspondances.
+          Le calcul du score arrive en phase 6, après validation des notes d&apos;état.
         </p>
+      </section>
+
+      <section aria-label="Données de l'Excel">
+        <h3 className="mb-2 text-sm font-semibold text-ink">Données de l&apos;Excel</h3>
+        <BlocExcel entree={excel} />
       </section>
 
       <dl className="divide-y divide-line">

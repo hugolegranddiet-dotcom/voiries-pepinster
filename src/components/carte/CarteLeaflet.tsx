@@ -4,7 +4,7 @@
 // (import dynamique avec ssr: false dans CarteVoiries).
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { GeoJSON, MapContainer, ScaleControl, TileLayer, useMap } from "react-leaflet";
 import type { FeatureCollection, LineString, MultiPolygon } from "geojson";
 import type { CategorieVoie } from "@/lib/geo/voiries";
@@ -27,6 +27,8 @@ function CoucheVoies({ voies, categoriesVisibles, selection, onSelection }: Omit
   const carte = useMap();
   const parVoirie = useRef(new Map<string, L.Path[]>());
   const selectionRef = useRef(selection);
+  // La première sélection (venue de l'adresse) recentre toujours la carte.
+  const premiereSelection = useRef(selection !== null);
   const onSelectionRef = useRef(onSelection);
   useEffect(() => {
     onSelectionRef.current = onSelection;
@@ -78,7 +80,8 @@ function CoucheVoies({ voies, categoriesVisibles, selection, onSelection }: Omit
       if (couches.length) {
         const limites = L.latLngBounds([]);
         couches.forEach((l) => limites.extend((l as L.Polyline).getBounds()));
-        if (!carte.getBounds().contains(limites)) {
+        if (premiereSelection.current || !carte.getBounds().contains(limites)) {
+          premiereSelection.current = false;
           carte.fitBounds(limites, { padding: [60, 60], maxZoom: 17 });
         }
       }
@@ -88,16 +91,19 @@ function CoucheVoies({ voies, categoriesVisibles, selection, onSelection }: Omit
   return null;
 }
 
-function Cadrage({ limite }: { limite: LimiteGeo }) {
+function Cadrage({ limite, actif }: { limite: LimiteGeo; actif: boolean }) {
   const carte = useMap();
   useEffect(() => {
+    if (!actif) return;
     const commune = limite.features.find((f) => f.properties.type === "commune");
     if (commune) carte.fitBounds(L.geoJSON(commune).getBounds(), { padding: [16, 16] });
-  }, [carte, limite]);
+  }, [carte, limite, actif]);
   return null;
 }
 
 export default function CarteLeaflet(props: Props) {
+  // Voirie demandée à l'ouverture : on cadre sur elle plutôt que sur la commune.
+  const [selectionInitiale] = useState(props.selection);
   const commune = useMemo(
     () => ({ ...props.limite, features: props.limite.features.filter((f) => f.properties.type === "commune") }),
     [props.limite],
@@ -129,7 +135,7 @@ export default function CarteLeaflet(props: Props) {
         selection={props.selection}
         onSelection={props.onSelection}
       />
-      <Cadrage limite={props.limite} />
+      <Cadrage limite={props.limite} actif={!selectionInitiale} />
       <ScaleControl imperial={false} position="bottomleft" />
     </MapContainer>
   );

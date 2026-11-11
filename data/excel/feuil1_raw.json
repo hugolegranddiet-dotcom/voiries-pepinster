@@ -1,0 +1,7582 @@
+{
+ "source": {
+  "fichier": "source/etat_voiries_pepinster.xlsx",
+  "sha256": "1e406b4a7c4aca3282fff848e46d87048f2d21ffa0e30b2f1b006b403fcedd15",
+  "feuille": "Feuil1",
+  "plage": "A1:I191",
+  "lu_le": "2026-11-11T19:46:20.118Z"
+ },
+ "entetes": [
+  "Voirie",
+  "Etat",
+  "Type d'habitat",
+  "Type de voire",
+  "Ampleur des travaux",
+  "Densité d'habitation",
+  "Année prévue",
+  "Sécurisation/Mobilité",
+  "Particularité"
+ ],
+ "lignes": [
+  {
+   "ligne": 2,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "A l'Assise ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "cul de sac",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 3,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Al Clusâre",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "cul de sac",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 4,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Albert 1er Avenue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointive 1 côté",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 5,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Alfred Brabant Rue",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 6,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Anneuses Rue des ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 7,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Antoine Franssen Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 8,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Armée Secrète Route de l'",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "négligeable",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Enduisage",
+     "fond": "#009900"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 9,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Au Chêne",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": "Racalage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "carrefour St Germain-Croix Maga",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 10,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Aux Cours",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "variable",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 11,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Aux Poissons Ruelle ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 12,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Avallon Rue d'",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 13,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Beau Site",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Racalage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": "5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": "quelques linéaires",
+     "fond": null
+    },
+    "I": {
+     "valeur": "cul de sac",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 14,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Belle Vue",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "campapagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Golf du Haras Réparations ",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 15,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Biez Rue du ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "arrière maison",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": "Racalage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Ecole, trottois HS",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 16,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Bois d'Olne",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "campapagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "tronço très court",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 17,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Bois d'Oltmont Rue du ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2023,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 18,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Bois Herman",
+     "fond": "#FFFF00"
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FFFF00"
+    },
+    "C": {
+     "valeur": "campapagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 19,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Bouhais",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 20,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Bouhaye inférieure",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "variable",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": "Racalage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 21,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Bouhaye supérieure",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "variable",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": "Enduisage",
+     "fond": "#009900"
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": "3 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": "coussins dans le bas",
+     "fond": null
+    },
+    "I": {
+     "valeur": "filet d'eau épingle",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 22,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Campagne Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2024,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "enduisage Proximus",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 23,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Chalsèche",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Schlammage",
+     "fond": "#7CEB99"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": "5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "circulation locale",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 24,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Charles Fraipont Rue ",
+     "fond": "#92D050"
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2026,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 25,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Chemin aux Fraises",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Racalage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": "5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "I": {
+     "valeur": "circulation locale",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 26,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Chemin de l'Hermitage",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "cul de sac, accès bois",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 27,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Chemin de Thibaumont",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "campapagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Racalage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 28,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Chemin du Fond de Fiérain",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 29,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Chemin du Nauzaury",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Partie tarmac OK",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 30,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Cité Mon Logis",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Boucle",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 31,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Clos Badon",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotis. 3 façades-jointives",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2020,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 32,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Combattants Rue des ",
+     "fond": "#92D050"
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "village",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": "2025-2026",
+     "fond": null
+    },
+    "H": {
+     "valeur": "OK",
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 33,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Cornesse Route de ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": "Raclage/pose partiel",
+     "fond": "#FF3300"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": "5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "tronçon salle",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 34,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Coulée",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose partiel*",
+     "fond": "#FF3300"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": "5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "* partie cimetière",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 35,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Cour Maréchal",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose partiel*",
+     "fond": "#FF3300"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "*entrée + côté gauche (cul de sac)",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 36,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Courte Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointives",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 37,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Croix Maga Route de la ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Enduisage",
+     "fond": "#009900"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": "+ de 5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "! Faïençage, affaissement d'un côté",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 38,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Cromhaise",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "partie accès Bruno",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 39,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Déportés Rue des ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "4 façades ",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "limitation tonage",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 40,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Doux Fonds Rue des ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Cul de sac",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 41,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Douys",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Lafarque",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 42,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Drolenval descente Cornesse",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 43,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Drolenval plat",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "maisons jointives",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 44,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Duc Rue du ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": null
+    },
+    "C": {
+     "valeur": "n'existe plus",
+     "fond": null
+    },
+    "D": {
+     "valeur": null,
+     "fond": null
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "N'existe plus",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 45,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "El Fagne",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "maisons jointives",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 46,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Emile Fairon Rue",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 47,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Emile Vandervelde Rue ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#975CCB"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "à revoir",
+     "fond": null
+    },
+    "I": {
+     "valeur": "! Fond de coffre",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 48,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Eugène Pauquay Rue ",
+     "fond": "#92D050"
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "village",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": "2025-2026",
+     "fond": null
+    },
+    "H": {
+     "valeur": "OK",
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 49,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Fays",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose partiel*",
+     "fond": "#FF3300"
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": "+ de 5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "et enduisage",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 50,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Félix Defays Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 51,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Fiérain Val du ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "C": {
+     "valeur": "négligeable",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Enduisage",
+     "fond": "#009900"
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": "8 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 52,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Fond de Noulé",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": "Enduisage",
+     "fond": "#009900"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": "5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "mauvaises poches",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 53,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Fond de Ville",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "raclage laissé sur place profilé + tapis",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 54,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Fort Rue du ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#975CCB"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": "urgent",
+     "fond": null
+    },
+    "H": {
+     "valeur": "quelques linéaires",
+     "fond": null
+    },
+    "I": {
+     "valeur": "cul de sac",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 55,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "François Jacob Rue ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "maisons jointives/1 coté",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": "Enduisage",
+     "fond": "#009900"
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": "5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "raclage",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 56,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Francval Rue ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "négligeable",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 57,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Georges Lemaire Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2024,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 58,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Goffontaine 1",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "village",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "néant",
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 59,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Goffontaine 2",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "haut",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose partiel*",
+     "fond": "#FF3300"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "néant",
+     "fond": null
+    },
+    "I": {
+     "valeur": "* raclage 200 m accès cimetière",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 60,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Goffontaine Trasenster",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "néant",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "accès Transenster et Step",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 61,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Golettes",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "maisons jointives",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "existante / marquage cyclable",
+     "fond": null
+    },
+    "I": {
+     "valeur": "Rouge rond-point HS",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 62,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Grande Fontaine",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "néant",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": "prioritaire",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "+ raclage pose  mauvaises poches",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 63,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Grand'Ry Cornesse",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": "5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 64,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Grand'Ry Wegnez",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "maisons jointives",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "existante / marquage cyclable",
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 65,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Grands Près Rue des",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 66,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Grands Trys",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": null,
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "accès ferme",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 67,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Grettouheid",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 68,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Henry François Hensay Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "raclage-pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 69,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Hezée",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2024,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 70,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Hospice Rue de l'",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": "5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "partie vers bois OK",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 71,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Impasse de Prévôchamps",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#975CCB"
+    },
+    "C": {
+     "valeur": "jointives",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Mauvaise poches + raclage/ pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "cul de sac",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 72,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Impasse Leroy",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": null,
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "cour",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 73,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Jacques Bouhy Rue ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "maisons jointives/1 coté",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Infrabel ?",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 74,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Jardins Rue des",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 75,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Jean Grandrath Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 76,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Jean Simon Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2026,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 77,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Jenny Solheid Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2024,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 78,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Jonckay",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "existante",
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 79,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Joseph Meunier Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "village  campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "raclage laissé sur place profilé + tapis campagne terrain d'aviation",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 80,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Joseph Sougnez Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "village  campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 81,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Koreux Ruelles du ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 82,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "la Nô Rue ",
+     "fond": "#92D050"
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2026,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 83,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "La Saute",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "raclage laissé sur place profilé + tapis",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 84,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Lambermont Rue de",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "4 façades (en bas)",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Zoning",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 85,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Laurent Mairlot Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "Bandes cyclable",
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 86,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Lefin",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointives",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "1 tronçon en 2024 + Infrabel",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 87,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Léon Lepas Venelle ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "cul de sac",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 88,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Les Bagneures",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": null
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2024,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 89,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Libération Rue de la ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "maisons jointives",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "néant",
+     "fond": null
+    },
+    "I": {
+     "valeur": "accès circ. Loc.",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 90,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Lieutenant Albert Dressen Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "néant",
+     "fond": null
+    },
+    "I": {
+     "valeur": "cul de sac",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 91,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Lieutenant Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Jointives ",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 92,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Louis Formatin Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointives 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 93,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Maison-Bois",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "campapagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": "Raclage/pose partiel",
+     "fond": "#FF3300"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Golf du Haras",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 94,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Marcel Fikenne Rue ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "néant",
+     "fond": null
+    },
+    "I": {
+     "valeur": "non reprise ",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 95,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Mathieu Regnier Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "maisons jointives",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 96,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Mathieu Closset Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": null,
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 97,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Mohonthier",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Enduisage",
+     "fond": "#009900"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": "+ de 5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 98,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Mortbonhomme",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Caniveau traversée à améliorer ",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 99,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Mousset",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#975CCB"
+    },
+    "C": {
+     "valeur": "maisons jointives et activités industrielles",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": "3 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "attente F de C et démolitions Spaque",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 100,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Nessonvaux Route de ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2023,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 101,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Nids d'Aguesses",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3/4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2023,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "trapillons partie pavée Haras HS",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 102,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Nouvelle Rue ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": "maisons jointives",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose partiel",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "côté garage, RAS rue",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 103,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Paire Rue du ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 104,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Paire Ruelle du ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Hall parking 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "hall du Paire",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 105,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Paix Rue de la ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "cimetière",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 106,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Panorama Rue du ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2026,
+     "fond": null
+    },
+    "H": {
+     "valeur": "néant",
+     "fond": null
+    },
+    "I": {
+     "valeur": "accès cimetière",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 107,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Peléeheid Route de ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": "Enduisage",
+     "fond": "#009900"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": "2 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": "fait",
+     "fond": null
+    },
+    "I": {
+     "valeur": "accès village",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 108,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Pepin Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "village",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 109,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Pierre Hauzeur Rue ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 110,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Pierre Piqueray Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "négligeable",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2020,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 111,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Place Charles Fraipont",
+     "fond": "#92D050"
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2026,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 112,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Place Notre-Dame",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "5m filets d'eau",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 113,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Place Sainte-Hubert",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 114,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Plateau Rue du ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": "5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 115,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Pompe Rue de la ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "maisons jointives",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 116,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Pont Walrand Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "maisons jointives 1 côté",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2020,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 117,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Progrès Rue du ",
+     "fond": "#92D050"
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2026,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 118,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Puits Ronval",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": "3 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 119,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Quai Armand Follet",
+     "fond": "#92D050"
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2026,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 120,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Quai de la Hoëgne",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 121,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Quai Ferdinand Nicolaï",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "maisons jointives/1 coté",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2025,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 122,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Quai Ferdinand Nicolaï Hoëgne",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": "maisons jointives/1 coté",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": "3 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 123,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Raymond Legentil Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 124,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Refawtay",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "soulèvement + 150m raclage pose n°25-35",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 125,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Rolais",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2023,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 126,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Saint Germain",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "ilots de sécurité avec coussin",
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 127,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Saint Hubert Rue ",
+     "fond": "#92D050"
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": "2026-2027",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 128,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Saussales Ruelle des",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 129,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Sclassin",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 130,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Soiron Route de ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": "Raclage/pose partiel",
+     "fond": "#FF3300"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": "5 ans",
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "tronçon salle",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 131,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Soiron-Centre cimetière arrière",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": "Village",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 132,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Soiron-Centre cimetière centre",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": "Village",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 133,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Soiron-Centre Place de l'église",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": "Village",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 134,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Soiron-Centre Place du bac",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF3300"
+    },
+    "C": {
+     "valeur": "Village",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "joints pavés ",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 135,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Soiron-Centre supérieure",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF3300"
+    },
+    "C": {
+     "valeur": "Village",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "joints pavés ",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 136,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Soiron-Centre Taverne",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF3300"
+    },
+    "C": {
+     "valeur": "Village",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Elevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "joints pavés ",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 137,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Sous le Château Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 138,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Sylvain Balau Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Lotissement 3 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Lotissement",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 139,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Thier Rue du ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "jointives / 4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 140,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Tilleul",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": "Enduisage",
+     "fond": "#009900"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "à réparer",
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 141,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Tribomont Bertholet-Verviers Rue ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": "Raclage/pose partiel",
+     "fond": "#FF0000"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Section \"Bertholet-Verviers\"",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 142,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Tribomont principale Rue ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#009900"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": "Enduisage",
+     "fond": "#009900"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "bas vers Ferme du Hara",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 143,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Turlurette",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "négligeable",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Côté Lonneux raclage",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 144,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Vieille Eglise",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#FF0000"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": "Raclage/pose complet",
+     "fond": "#975CCB"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "faïençage le long du filet d'eau",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 145,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Voie Constant",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage moyen",
+     "fond": "#009900"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen bas",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 146,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Voie Creuhy",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": "négligeable",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage élevé",
+     "fond": "#FF3300"
+    },
+    "E": {
+     "valeur": "Enduisage",
+     "fond": "#009900"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "mauvaise poche (400 mètres)",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 147,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Voie du Bola",
+     "fond": "#FFFF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": null,
+     "fond": null
+    },
+    "D": {
+     "valeur": null,
+     "fond": null
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 148,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Voie du Moulin",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 149,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Xhavée Rue ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "4 façades",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Moyen élevé",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2025,
+     "fond": null
+    },
+    "H": {
+     "valeur": "Ilots, bande cyclable",
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 150,
+   "bloc": "A_communal",
+   "cellules": {
+    "A": {
+     "valeur": "Xhendelesse Rue de ",
+     "fond": "#00FF00"
+    },
+    "B": {
+     "valeur": "RAS",
+     "fond": "#00FF00"
+    },
+    "C": {
+     "valeur": "Campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Transit",
+     "fond": "#975CCB"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "#00FF00"
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": 2023,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 152,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Alfred Drèze Rue",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#29B95C"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "G": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    }
+   }
+  },
+  {
+   "ligne": 153,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Ayrifagne",
+     "fond": "theme2-0.10"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "G": {
+     "valeur": 2025,
+     "fond": "theme2-0.10"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    }
+   }
+  },
+  {
+   "ligne": 154,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Chinheid",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "G": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    }
+   }
+  },
+  {
+   "ligne": 155,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Flère",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "G": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    }
+   }
+  },
+  {
+   "ligne": 156,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Forges Thiry",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "G": {
+     "valeur": 2022,
+     "fond": "theme2-0.10"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "I": {
+     "valeur": "Sauf ilot 2023",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 157,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Hauts Sarts",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "G": {
+     "valeur": 2025,
+     "fond": "theme2-0.10"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    }
+   }
+  },
+  {
+   "ligne": 158,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Hodister Rue ",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "G": {
+     "valeur": 2019,
+     "fond": "theme0-0.15"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    }
+   }
+  },
+  {
+   "ligne": 159,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Hubert Halet Rue ",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "G": {
+     "valeur": 2019,
+     "fond": "theme0-0.15"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    }
+   }
+  },
+  {
+   "ligne": 160,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Louheau",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "G": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme2-0.10"
+    }
+   }
+  },
+  {
+   "ligne": 161,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Louis Biérin Rue ",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "G": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    }
+   }
+  },
+  {
+   "ligne": 162,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Massau",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "G": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    }
+   }
+  },
+  {
+   "ligne": 163,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Neuve Rue ",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "G": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    }
+   }
+  },
+  {
+   "ligne": 164,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Prévôchamps",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "G": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    }
+   }
+  },
+  {
+   "ligne": 165,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Purgatoire Rue ",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "G": {
+     "valeur": "2019-2027",
+     "fond": "theme0-0.15"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    }
+   }
+  },
+  {
+   "ligne": 166,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Régence Rue de la ",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "G": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    }
+   }
+  },
+  {
+   "ligne": 167,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Route de Tancrémont",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#29B95C"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "G": {
+     "valeur": 2025,
+     "fond": "theme0-0.15"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.15"
+    }
+   }
+  },
+  {
+   "ligne": 168,
+   "bloc": "B_spw",
+   "cellules": {
+    "A": {
+     "valeur": "Vovegnez Rue ",
+     "fond": "theme0-0.15"
+    },
+    "B": {
+     "valeur": "SPW",
+     "fond": "#00B050"
+    },
+    "C": {
+     "valeur": null,
+     "fond": "theme0-0.25"
+    },
+    "D": {
+     "valeur": null,
+     "fond": "theme0-0.25"
+    },
+    "E": {
+     "valeur": null,
+     "fond": "theme0-0.25"
+    },
+    "F": {
+     "valeur": null,
+     "fond": "theme0-0.25"
+    },
+    "G": {
+     "valeur": 2019,
+     "fond": "theme0-0.25"
+    },
+    "H": {
+     "valeur": null,
+     "fond": "theme0-0.25"
+    },
+    "I": {
+     "valeur": null,
+     "fond": "theme0-0.25"
+    }
+   }
+  },
+  {
+   "ligne": 170,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Bois l'Evêque Rue ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "campapagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": "néant",
+     "fond": null
+    },
+    "I": {
+     "valeur": "accès bois",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 171,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Chemin de la Baleine",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "campapagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Route de Soiron-Fond de Ville",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 172,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Chemin de Nôheid",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "ilot",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Drolenval chemin",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 173,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Chemin du Bois Robert",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "Chemin forestier",
+     "fond": null
+    },
+    "D": {
+     "valeur": null,
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 174,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Chemin du Loup",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 175,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Chemin du Moulin",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Voie Creuhy vers Nausaury",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 176,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Chemin du Nauzaury",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Partie tarmac OK",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 177,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Fraity",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "campagne-forestier",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Fond des 3 bois -chapelle tancrémont",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 178,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Hodwinry",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "campagne-forestier",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "1 habitation Vieille voie de Liège-Goffontaine",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 179,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Les Golets",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Avec racalge",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 180,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Marly Ruelle ",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Joseph Sougnez campage arrière place",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 181,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Mazures",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "Campagne-forestier",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Avec racalge",
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 182,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Sohan",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": "Faible",
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": null,
+     "fond": null
+    }
+   }
+  },
+  {
+   "ligne": 183,
+   "bloc": "C_chemins",
+   "cellules": {
+    "A": {
+     "valeur": "Try des Hayes",
+     "fond": null
+    },
+    "B": {
+     "valeur": null,
+     "fond": "theme7"
+    },
+    "C": {
+     "valeur": "campagne",
+     "fond": null
+    },
+    "D": {
+     "valeur": "Passage faible",
+     "fond": "#7CEB99"
+    },
+    "E": {
+     "valeur": null,
+     "fond": null
+    },
+    "F": {
+     "valeur": null,
+     "fond": null
+    },
+    "G": {
+     "valeur": null,
+     "fond": null
+    },
+    "H": {
+     "valeur": null,
+     "fond": null
+    },
+    "I": {
+     "valeur": "Aéromodélisme campagne Wegnez",
+     "fond": null
+    }
+   }
+  }
+ ]
+}

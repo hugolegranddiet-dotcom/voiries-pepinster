@@ -11,7 +11,7 @@ import {
   type Polygone,
 } from "@/lib/geo/outils";
 import { normaliserNom } from "@/lib/geo/noms";
-import { categorieVoie, regrouperEnVoiries, type WayOsm } from "@/lib/geo/voiries";
+import { appliquerMemeEndroit, categorieVoie, regrouperEnVoiries, type WayOsm } from "@/lib/geo/voiries";
 
 const carre: Polygone = [[[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]];
 const index = new IndexAretes(carre);
@@ -126,5 +126,28 @@ describe("noms et catégories", () => {
     expect(categorieVoie("track", null)).toBe("chemin");
     expect(categorieVoie("service", null)).toBe("acces");
     expect(categorieVoie("service", "Parc Y")).toBe("voirie");
+  });
+});
+
+describe("décision D14 : même endroit = même rue", () => {
+  const proches = [
+    way(1, [10, 11], [[0, 0], [0.001, 0]], "Rue du Test"),
+    way(2, [20, 21], [[0.003, 0], [0.004, 0]], "Rue du Test"), // ~ 220 m
+  ];
+  const loin = [...proches, way(3, [30, 31], [[0.05, 0], [0.051, 0]], "Rue du Test")]; // ~ 5 km
+
+  it("réunit deux morceaux à moins de 300 m", () => {
+    const { groupes, journal } = appliquerMemeEndroit(regrouperEnVoiries(proches), proches);
+    expect(groupes).toHaveLength(1);
+    expect(groupes[0].wayIds).toEqual([1, 2]);
+    expect(groupes[0].partie).toBeNull();
+    expect(journal[0].decision).toBe("meme_rue");
+  });
+
+  it("garde séparé un homonyme éloigné", () => {
+    const { groupes, journal } = appliquerMemeEndroit(regrouperEnVoiries(loin), loin);
+    expect(groupes).toHaveLength(2);
+    expect(groupes.map((g) => g.wayIds)).toEqual([[1, 2], [3]]);
+    expect(journal[0].decision).toBe("homonymes");
   });
 });

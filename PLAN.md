@@ -275,7 +275,7 @@ Chaque phase se termine par : vérifications automatiques, résumé des fichiers
 | **0** | Analyse et plan | ce document + `DATA_AUDIT.md`, `DATA_MODEL.md`, `CLAUDE.md`, annexe CSV | tu valides le plan | – |
 | **1** | Socle et interface | projet Next.js, design responsive, navigation **Carte / Voiries / Priorités / Paramètres**, données **fictives étiquetées « démo »** | `npm run dev` s'ouvre ; `npm run lint` et `npm run typecheck` sans erreur ; l'affichage tient sur téléphone | – |
 | **2** | Couverture géographique | limite + réseau réel extraits et versionnés, carte cliquable (1 couleur par voirie logique), recoupement SPW, `COVERAGE_REPORT.md` | aucun tracé inventé ; clic sur un segment = toute la voirie surlignée ; rapport de couverture relu | – (O3 résolu) |
-| **3** | Import de l'Excel | lecture brute `Feuil1` (valeurs + couleurs), normalisations tracées, propositions d'appariement, écran/fichier de validation, `MATCHING_REPORT.md` | 180 lignes lues, légende ignorée ; aucune fusion automatique ; routes OSM hors Excel visibles « à compléter » | O5 (non bloquant) |
+| **3** | Import de l'Excel | lecture brute `Feuil1` (valeurs + couleurs), normalisations tracées, propositions d'appariement, écran/fichier de validation, `MATCHING_REPORT.md` | 180 lignes lues, légende ignorée ; aucune fusion automatique ; routes OSM hors Excel visibles « à compléter » | O8 (validation, après la phase) |
 | **4** | Persistance et compte privé | migrations SQL, Auth (compte unique du père), RLS, CRUD, `change_log` | données conservées après rafraîchissement ; accès refusé sans connexion ou avec un autre compte (testé) | – |
 | **5** | Carte ↔ tableau synchronisés | panneau latéral éditable, recherche sans accents/casse, filtres, sélection dans les deux sens | modifier une voirie à plusieurs segments : **tous** changent de couleur ensemble | – |
 | **6** | Priorités | moteur de score, couverture, couleurs, SPW, classement, paramètres versionnés **modifiables par le père**, écran de validation des notes suggérées | tests unitaires des cas A–G et des cas limites (0 %, 70 % pile, tout vide, valeurs hors bornes) ; **test « liste témoin »** : les voiries de la feuille `Récap 102026` sortent en tête du classement communal (D8) | – |
@@ -319,13 +319,17 @@ Chaque phase se termine par : vérifications automatiques, résumé des fichiers
 | **D11** | Couleurs inconnues (vert `#00B050`, jaune, astérisque de « RAS * ») | **pas de couleur** | aucune note suggérée pour ces routes : elles restent **grises** jusqu'à ce que le père saisisse une note |
 | **D12** | Comptes techniques (GitHub, Supabase, Vercel) | au **nom de Hugo** | Hugo crée les comptes ; le père n'a que son compte dans l'application |
 | **D13** | Développement | **ici, avec Claude**, sauvegarde sur GitHub | Hugo teste sur son Mac quand il le souhaite (§10.2) |
+| **D14** | Noms en double sur la carte (COVERAGE §5) | « si même endroit, même rue ; sinon homonyme » | morceaux de même nom à moins de **300 m** réunis en une voirie ; au-delà, homonymes séparés (Route de Soiron, Rue de la Paix) ; journal dans `COVERAGE_REPORT.md` |
+| **D15** | Relecture de la liste des rues OSM (COVERAGE §8) | « fais au mieux » | pas de relecture ligne à ligne par le père ; les écarts apparaissent dans `MATCHING_REPORT.md` (lignes Excel introuvables, voiries sans ligne Excel) |
 
 ### 9.2 Points encore ouverts
 
 | N° | Question | Bloque | État |
 |---|---|---|---|
 | ~~O3~~ | Accès réseau pour la phase 2 | – | **Résolu** : extraction OSM lancée sur le Mac de Hugo (`npm run geo:extract`, 11/11/2026, relation 2436184). Réseau régional SPW consulté pour identification seulement : tracés non conservés, seul le résultat du recoupement est gardé |
-| **O5** | `Chemin du Nauzaury` (lignes 29 et 176) : une voirie ou deux parties ? | non bloquant | deux fiches conservées ; décision sur la carte en phase 3 |
+| **O5** | `Chemin du Nauzaury` (lignes 29 et 176) : une voirie ou deux parties ? | non bloquant | aucune voirie de ce nom dans OSM : les deux lignes sont « aucune voirie trouvée » ; décision dans le fichier de validation |
+| **O8** | **Valider les correspondances** (`validation_correspondances.xlsx`) | données Excel sur la carte | 135 propositions « forte », 17 « moyenne », 16 sections, 12 sans voirie ; rien n'est appliqué sans décision |
+| **O9** | Tracé des **sections** (Bouhaye inf./sup., Soiron-Centre…) | couleur des sections | à définir sur la carte lors de la phase d'édition (5) ; d'ici là, rattachées à leur voirie mère |
 | **O7** | Autoriser Claude à **écrire** sur le dépôt GitHub (installation de l'application GitHub « Claude ») | sauvegarde | le premier enregistrement est prêt et attend cette autorisation |
 
 ---

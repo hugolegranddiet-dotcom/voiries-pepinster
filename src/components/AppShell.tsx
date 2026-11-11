@@ -77,7 +77,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             <NavLinks variante="laterale" />
           </nav>
           <p className="mt-auto px-2 text-xs leading-relaxed text-white/50">
-            Version de développement — phase 2
+            Version de développement — phase 3
           </p>
         </aside>
 
