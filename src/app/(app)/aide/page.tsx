@@ -21,6 +21,11 @@ const SECTIONS: Array<{ id: string; titre: string; contenu: ReactNode }> = [
             <strong>Parties de rue</strong> (Soiron-Centre, Bouhaye…) : ouvre la fiche de la partie, clique « Choisir les morceaux sur la carte », clique
             les morceaux de la rue qui en font partie, puis « Enregistrer le tracé ». Ils prennent alors la couleur de cette partie.
           </li>
+          <li>
+            <strong>Plus de place pour la carte</strong> (ordinateur) : « Masquer les filtres » replie le panneau des filtres ; la flèche › en haut de
+            la fiche la réduit en une fine bande (clique-la pour la rouvrir) ; tire le bord gauche de la fiche pour l&apos;élargir ou la rétrécir
+            (double-clic : taille normale). Ces choix sont retenus sur l&apos;ordinateur.
+          </li>
           <li><strong>Pointillés :</strong> route du SPW ou d&apos;un autre gestionnaire. Elle reste sur la carte, mais hors du classement communal.</li>
         </ul>
       </>

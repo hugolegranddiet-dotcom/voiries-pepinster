@@ -3,7 +3,9 @@
 import dynamic from "next/dynamic";
 import { useCallback, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { IconeFermer } from "@/components/icones";
+import { IconeChevron, IconeFermer, IconeFiltres } from "@/components/icones";
+import { nomAffiche } from "@/lib/donnees/libelles";
+import { usePreference } from "@/lib/preferences";
 import { useDonnees } from "@/components/donnees/FournisseurDonnees";
 import { ErreurDonnees } from "@/components/donnees/ErreurDonnees";
 import { PanneauFiche } from "@/components/fiche/PanneauFiche";
@@ -73,6 +75,16 @@ function Legende({ parametres, mode }: { parametres: ParametresScore; mode: Mode
   );
 }
 
+const LARGEUR_FICHE_DEFAUT = 416;
+const LARGEUR_FICHE_MIN = 288;
+const LARGEUR_FICHE_MAX = 900;
+
+/** Largeur de la fiche, bornée pour toujours laisser au moins 360 px à la carte. */
+function bornerLargeur(px: number): number {
+  const maxEcran = typeof window === "undefined" ? LARGEUR_FICHE_MAX : Math.min(LARGEUR_FICHE_MAX, window.innerWidth - 360);
+  return Math.round(Math.max(LARGEUR_FICHE_MIN, Math.min(maxEcran, px)));
+}
+
 export function CarteVoiries() {
   const { etat } = useDonnees();
   const donnees = etat.statut === "pret" ? etat.donnees : null;
@@ -84,7 +96,13 @@ export function CarteVoiries() {
   const [gestionnaire, setGestionnaire] = useState<Gestionnaire | null>(null);
   const [modeCouleur, setModeCouleur] = useState<ModeCouleur>("priorite");
   const [etats, setEtats] = useState<ReadonlySet<FiltreEtat>>(() => new Set(FILTRES_ETAT));
-  const [panneauOuvert, setPanneauOuvert] = useState(false);
+  // Préférences d'affichage retenues par le navigateur (null = jamais choisi).
+  const [prefFiltres, setPrefFiltres] = usePreference("carte.filtres"); // "ouvert" | "ferme"
+  const [prefFiche, setPrefFiche] = usePreference("carte.fiche"); // "reduite"
+  const [prefLargeur, setPrefLargeur] = usePreference("carte.fiche.largeur"); // en pixels
+  const [largeurGlissee, setLargeurGlissee] = useState<number | null>(null);
+  const largeurFiche = largeurGlissee ?? bornerLargeur(Number(prefLargeur) || LARGEUR_FICHE_DEFAUT);
+  const ficheReduite = prefFiche === "reduite";
   // Choix des morceaux d'une partie de rue (null = carte normale).
   const [enTrace, setEnTrace] = useState<{ sectionId: string; choisis: Set<string> } | null>(null);
 
@@ -173,13 +191,30 @@ export function CarteVoiries() {
         <div className={`${enTrace ? "hidden" : ""} absolute right-3 top-16 z-[1000] w-64 max-w-[calc(100%-1.5rem)] md:top-3`}>
           <button
             type="button"
-            onClick={() => setPanneauOuvert((o) => !o)}
-            aria-expanded={panneauOuvert}
-            className="ml-auto block rounded-lg border border-line bg-surface px-3 py-2 text-sm font-medium text-ink shadow-sm md:hidden"
+            onClick={() => {
+              // Sans choix enregistré : ouvert sur ordinateur, fermé sur téléphone.
+              const ouvertMaintenant = prefFiltres === "ouvert" || (prefFiltres === null && window.matchMedia("(min-width: 768px)").matches);
+              setPrefFiltres(ouvertMaintenant ? "ferme" : "ouvert");
+            }}
+            aria-controls="panneau-filtres"
+            className="ml-auto flex items-center gap-1.5 rounded-lg border border-line bg-surface px-3 py-2 text-sm font-medium text-ink shadow-sm hover:bg-canvas"
           >
-            {panneauOuvert ? "Masquer filtres et légende" : "Filtres et légende"}
+            <IconeFiltres width={16} height={16} aria-hidden="true" />
+            {prefFiltres === "ouvert" ? (
+              "Masquer les filtres"
+            ) : prefFiltres === "ferme" ? (
+              "Filtres et légende"
+            ) : (
+              <>
+                <span className="md:hidden">Filtres et légende</span>
+                <span className="hidden md:inline">Masquer les filtres</span>
+              </>
+            )}
           </button>
-          <div className={`${panneauOuvert ? "block" : "hidden"} mt-2 max-h-[70vh] overflow-y-auto rounded-xl border border-line bg-surface/95 p-3 shadow-sm backdrop-blur md:mt-0 md:block`}>
+          <div
+            id="panneau-filtres"
+            className={`${prefFiltres === "ouvert" ? "block" : prefFiltres === "ferme" ? "hidden" : "hidden md:block"} mt-2 max-h-[calc(100vh-9rem)] overflow-y-auto rounded-xl border border-line bg-surface/95 p-3 shadow-sm backdrop-blur md:max-h-[calc(100vh-6rem)]`}
+          >
             <fieldset>
               <legend className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted">Types de voies</legend>
               {FILTRES.map((f) => (
@@ -268,17 +303,79 @@ export function CarteVoiries() {
       </section>
 
       {/* Fiche : panneau latéral (ordinateur) / feuille du bas (téléphone) */}
+      {/* Fiche réduite (ordinateur) : une fine bande pour la rouvrir */}
+      {ficheReduite && !enTrace && (
+        <div className="hidden shrink-0 border-l border-line bg-surface md:flex">
+          <button
+            type="button"
+            onClick={() => setPrefFiche(null)}
+            className="flex w-11 flex-col items-center gap-2 py-3 text-sm font-medium text-ink hover:bg-canvas"
+            aria-label="Afficher la fiche"
+            title="Afficher la fiche"
+          >
+            <IconeChevron width={18} height={18} className="rotate-180" aria-hidden="true" />
+            <span className="[writing-mode:vertical-rl]">Fiche{fiche ? ` · ${nomAffiche(fiche)}` : ""}</span>
+          </button>
+        </div>
+      )}
       <aside
         aria-label="Fiche de la voirie"
-        className={`${fiche || enTrace ? "flex" : "hidden"} absolute inset-x-0 bottom-0 z-[1100] max-h-[60%] flex-col rounded-t-2xl border-t border-line bg-surface shadow-2xl md:static md:flex md:max-h-none md:w-[26rem] md:shrink-0 md:rounded-none md:border-l md:border-t-0 md:shadow-none`}
+        style={{ "--largeur-fiche": `${largeurFiche}px` } as React.CSSProperties}
+        className={`${fiche || enTrace ? "flex" : "hidden"} ${ficheReduite && !enTrace ? "md:hidden" : "md:flex"} absolute inset-x-0 bottom-0 z-[1100] max-h-[60%] flex-col rounded-t-2xl border-t border-line bg-surface shadow-2xl md:relative md:max-h-none md:w-[var(--largeur-fiche)] md:shrink-0 md:rounded-none md:border-l md:border-t-0 md:shadow-none`}
       >
+        {/* Poignée pour élargir ou rétrécir la fiche (souris, doigt ou flèches du clavier) */}
+        <div
+          role="separator"
+          aria-orientation="vertical"
+          aria-label="Largeur de la fiche (flèches gauche et droite)"
+          aria-valuemin={LARGEUR_FICHE_MIN}
+          aria-valuemax={LARGEUR_FICHE_MAX}
+          aria-valuenow={largeurFiche}
+          tabIndex={0}
+          title="Glisser pour élargir ou rétrécir la fiche (double-clic : taille normale)"
+          className="absolute inset-y-0 -left-1.5 z-10 hidden w-3 cursor-col-resize touch-none md:block [&:hover>span]:bg-brand focus-visible:[&>span]:bg-brand"
+          onDoubleClick={() => setPrefLargeur(null)}
+          onKeyDown={(e) => {
+            if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+            e.preventDefault();
+            setPrefLargeur(String(bornerLargeur(largeurFiche + (e.key === "ArrowLeft" ? 32 : -32))));
+          }}
+          onPointerDown={(e) => {
+            e.preventDefault();
+            e.currentTarget.setPointerCapture(e.pointerId);
+            setLargeurGlissee(largeurFiche);
+          }}
+          onPointerMove={(e) => {
+            if (largeurGlissee === null) return;
+            setLargeurGlissee(bornerLargeur(window.innerWidth - e.clientX));
+          }}
+          onPointerUp={() => {
+            if (largeurGlissee !== null) setPrefLargeur(String(largeurGlissee));
+            setLargeurGlissee(null);
+          }}
+        >
+          <span className="mx-auto block h-full w-0.5 bg-transparent transition-colors" />
+        </div>
         <div className="flex items-center justify-between border-b border-line px-4 py-2.5">
           <p className="text-sm font-semibold text-ink">Fiche</p>
-          {fiche && !enTrace && (
-            <button type="button" onClick={() => choisir(null)} className="rounded-md p-1.5 text-muted hover:bg-canvas hover:text-ink" aria-label="Fermer la fiche">
-              <IconeFermer width={18} height={18} />
-            </button>
-          )}
+          <span className="flex items-center gap-1">
+            {!enTrace && (
+              <button
+                type="button"
+                onClick={() => setPrefFiche("reduite")}
+                className="hidden rounded-md p-1.5 text-muted hover:bg-canvas hover:text-ink md:block"
+                aria-label="Réduire la fiche (agrandir la carte)"
+                title="Réduire la fiche"
+              >
+                <IconeChevron width={18} height={18} aria-hidden="true" />
+              </button>
+            )}
+            {fiche && !enTrace && (
+              <button type="button" onClick={() => choisir(null)} className="rounded-md p-1.5 text-muted hover:bg-canvas hover:text-ink" aria-label="Fermer la fiche">
+                <IconeFermer width={18} height={18} />
+              </button>
+            )}
+          </span>
         </div>
         <div className="overflow-y-auto p-4">
           {enTrace ? (

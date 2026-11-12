@@ -172,6 +172,17 @@ function CoucheVoies({ voies, categoriesVisibles, gestionnaireVisible, fiches, p
   return null;
 }
 
+/** La carte se redessine quand sa taille change (fiche élargie, réduite, filtres…). */
+function SuiviTaille() {
+  const carte = useMap();
+  useEffect(() => {
+    const observateur = new ResizeObserver(() => carte.invalidateSize({ pan: false }));
+    observateur.observe(carte.getContainer());
+    return () => observateur.disconnect();
+  }, [carte]);
+  return null;
+}
+
 function Cadrage({ limite, actif }: { limite: LimiteGeo; actif: boolean }) {
   const carte = useMap();
   useEffect(() => {
@@ -223,6 +234,7 @@ export default function CarteLeaflet(props: Props) {
         trace={props.trace}
       />
       <Cadrage limite={props.limite} actif={!selectionInitiale} />
+      <SuiviTaille />
       <ScaleControl imperial={false} position="bottomleft" />
     </MapContainer>
   );
