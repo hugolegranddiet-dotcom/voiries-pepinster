@@ -27,6 +27,13 @@ test.describe("visiteur non connecté", () => {
     expect(await r.json()).toEqual({ erreur: "non_connecte" });
   });
 
+  test("l'appel de maintien refuse tout appel sans le secret de Vercel", async ({ request }) => {
+    const r = await request.get("/api/maintien", { maxRedirects: 0 });
+    expect(r.status()).toBe(401);
+    expect(await r.json()).toEqual({ erreur: "non_autorise" });
+    expect((await request.get("/api/maintien", { headers: { authorization: "Bearer devine" } })).status()).toBe(401);
+  });
+
   test("un faux jeton de session ne donne aucun accès", async ({ context, request }) => {
     const faux = "base64-" + Buffer.from(JSON.stringify({ access_token: "aaa.bbb.ccc", refresh_token: "x", user: { id: "11111111-1111-4111-8111-111111111111" } })).toString("base64");
     await context.addCookies([{ name: "sb-127-auth-token", value: faux, url: "http://localhost:3105" }]);

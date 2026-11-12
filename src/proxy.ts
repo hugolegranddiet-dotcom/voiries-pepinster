@@ -12,6 +12,9 @@ export async function proxy(requete: NextRequest) {
   const chemin = requete.nextUrl.pathname;
   const estConnexion = chemin === PAGE_CONNEXION;
 
+  // Appel quotidien de maintien (Vercel) : protégé par son propre secret, pas par la session.
+  if (chemin === "/api/maintien") return NextResponse.next();
+
   // Sans configuration, seule la page de connexion (qui l'explique) est accessible.
   if (!url || !cle) {
     return estConnexion ? NextResponse.next() : NextResponse.redirect(new URL(PAGE_CONNEXION, requete.url));

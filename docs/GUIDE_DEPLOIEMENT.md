@@ -80,6 +80,15 @@ Dans Supabase : **Authentication** → **URL Configuration** → **Site URL** : 
 
 ## Après la mise en ligne
 
+### Éviter la mise en veille de la base (D22)
+
+Un appel automatique, une fois par jour (`vercel.json`), fait une petite requête à la base pour qu'elle ne se mette pas en pause. Il faut lui donner un secret :
+
+1. Sur le Mac : `openssl rand -hex 24` → copie la suite de chiffres et de lettres affichée.
+2. Vercel → le projet → **Settings** → **Environment Variables** → ajoute `CRON_SECRET` avec cette valeur (environnement **Production**), **Save**.
+3. **Deployments** → le dernier déploiement → **⋯** → **Redeploy** (le secret n'est pris en compte qu'au déploiement suivant).
+4. Le lendemain : **Settings** → **Cron Jobs** (ou *Schedules*) → **View Logs** : l'appel `/api/maintien` doit avoir répondu **200**.
+
 - **Chaque `git push` sur `main` republie automatiquement le site.** Si une mise à jour contient une migration (`supabase/migrations/`), lance `npx supabase@3.1.0 db push --remote` **avant** le push.
 - **Sauvegarde mensuelle :** `npm run db:sauvegarde` sur le Mac (fichier dans `sauvegardes/`, à copier dans iCloud ou sur une clé USB). Ton père peut aussi télécharger un CSV depuis **Paramètres**.
 - **Restaurer** (en cas d'erreur grave) : `npm run db:restaurer -- sauvegardes/le-fichier.json` montre d'abord ce qui changerait ; ajoute `--confirmer` pour appliquer. Rien n'est jamais supprimé.

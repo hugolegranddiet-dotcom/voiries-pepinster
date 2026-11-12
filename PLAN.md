@@ -335,6 +335,7 @@ Chaque phase se termine par : vérifications automatiques, résumé des fichiers
 | **D19** | Critères du score (12/11/2026) | « ajouter des critères » | **ampleur des travaux** et **échéance** (année prévue, sinon échéance estimée ; jamais le texte libre) deviennent des critères réglables, **à 0 % par défaut** : aucun score ne change tant que le père ne les active pas. Les versions de paramètres déjà enregistrées sont complétées à 0 % |
 | **D20** | Priorité forcée (12/11/2026) | « forcer le score, avec motif » | le père peut fixer une priorité de 0 à 100 avec une **raison obligatoire** (contrôlée en base) ; elle remplace le score à l'affichage et dans le classement, marquée « manuel », le score calculé reste visible ; journalisée |
 | **D21** | Tracé des parties de rue (12/11/2026, résout O9) | « choisir les morceaux sur la carte » | dans la fiche d'une partie de rue, le père choisit les **morceaux OSM réels** de la rue mère qui la composent ; un morceau n'appartient qu'à une partie (contrôlé en base) ; aucun tracé dessiné ni coupé |
+| **D22** | Mise en veille de Supabase (12/11/2026) | « le site ne doit pas se mettre en veille » | l'offre gratuite ne permet pas de désactiver la pause (seule l'offre payante le fait, ~25 $/mois : refusé, D10). À la place, un **appel quotidien automatique** (cron Vercel, `/api/maintien`, protégé par `CRON_SECRET`) fait une petite requête à la base. Méthode courante mais **non garantie officiellement** par Supabase |
 | **D15** | Relecture de la liste des rues OSM (COVERAGE §8) | « fais au mieux » | pas de relecture ligne à ligne par le père ; les écarts apparaissent dans `MATCHING_REPORT.md` (lignes Excel introuvables, voiries sans ligne Excel) |
 
 ### 9.2 Points encore ouverts
@@ -346,7 +347,7 @@ Chaque phase se termine par : vérifications automatiques, résumé des fichiers
 | ~~O8~~ | Valider les correspondances | – | **Résolu** (D16) |
 | ~~O10~~ | Deux lignes Excel sur la même voirie | – | **Résolu** (D17) |
 | **O9** | Tracé des **sections** (Bouhaye inf./sup., Soiron-Centre…) | couleur des sections | **résolu (D21)** : le père choisit les morceaux de la rue mère sur la carte |
-| **O11** | **Publication en ligne** (Vercel Hobby, 0 €) | mise en ligne | **en attente de ta décision.** Tout est prêt : [`docs/GUIDE_DEPLOIEMENT.md`](docs/GUIDE_DEPLOIEMENT.md). Point à vérifier avant : Vercel Hobby est réservé à un usage **non commercial** (personne n'est payé pour l'outil) |
+| **O11** | **Publication en ligne** (Vercel Hobby, 0 €) | mise en ligne | **fait le 12/11/2026** : https://voiries-pepinster-zw2n.vercel.app — reste à tester sur le PC du travail. Ancienne note : Tout est prêt : [`docs/GUIDE_DEPLOIEMENT.md`](docs/GUIDE_DEPLOIEMENT.md). Point à vérifier avant : Vercel Hobby est réservé à un usage **non commercial** (personne n'est payé pour l'outil) |
 | **O7** | Autoriser Claude à **écrire** sur le dépôt GitHub (installation de l'application GitHub « Claude ») | sauvegarde | le premier enregistrement est prêt et attend cette autorisation |
 
 ---
