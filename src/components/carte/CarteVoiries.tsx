@@ -8,6 +8,8 @@ import { useDonnees } from "@/components/donnees/FournisseurDonnees";
 import { ErreurDonnees } from "@/components/donnees/ErreurDonnees";
 import { PanneauFiche } from "@/components/fiche/PanneauFiche";
 import { RechercheVoirie } from "@/components/carte/RechercheVoirie";
+import { PanneauTrace } from "@/components/carte/PanneauTrace";
+import { segmentsPrisParAutres } from "@/lib/geo/sections";
 import { COULEURS_BANDE, type ModeCouleur } from "@/components/carte/styles-carte";
 import { cleEtat, COULEURS_ETAT, FILTRES_ETAT, LIBELLES_FILTRE_ETAT, type FiltreEtat } from "@/lib/donnees/etat";
 import { LIBELLES_BANDES, type ParametresScore } from "@/lib/priority/defaults";
@@ -83,6 +85,8 @@ export function CarteVoiries() {
   const [modeCouleur, setModeCouleur] = useState<ModeCouleur>("priorite");
   const [etats, setEtats] = useState<ReadonlySet<FiltreEtat>>(() => new Set(FILTRES_ETAT));
   const [panneauOuvert, setPanneauOuvert] = useState(false);
+  // Choix des morceaux d'une partie de rue (null = carte normale).
+  const [enTrace, setEnTrace] = useState<{ sectionId: string; choisis: Set<string> } | null>(null);
 
   const choisir = useCallback(
     (id: string | null) => {
@@ -92,8 +96,33 @@ export function CarteVoiries() {
   );
 
   const fiche = selection && donnees ? donnees.fiches[selection] ?? null : null;
-  // Une partie de rue (section) n'a pas encore de tracé : on montre sa voirie mère.
-  const selectionGeo = fiche?.parentId ?? (fiche ? selection : null);
+  // Une partie de rue sans morceaux choisis : on montre toute sa voirie mère.
+  const selectionGeo = fiche?.parentId && fiche.segmentsSection.length === 0 ? fiche.parentId : fiche ? selection : null;
+
+  const sectionTrace = enTrace && donnees ? donnees.fiches[enTrace.sectionId] : undefined;
+  const pris = useMemo(
+    () => (enTrace && donnees ? segmentsPrisParAutres(enTrace.sectionId, donnees.fiches) : new Set<string>()),
+    [enTrace, donnees],
+  );
+  const totalMorceaux = useMemo(
+    () => (sectionTrace?.parentId && donnees ? donnees.voies.features.filter((f) => f.properties.rid === sectionTrace.parentId).length : 0),
+    [sectionTrace, donnees],
+  );
+  const basculer = useCallback(
+    (sid: string) =>
+      setEnTrace((t) => {
+        if (!t) return t;
+        const choisis = new Set(t.choisis);
+        if (choisis.has(sid)) choisis.delete(sid);
+        else choisis.add(sid);
+        return { ...t, choisis };
+      }),
+    [],
+  );
+  const trace = useMemo(
+    () => (enTrace && sectionTrace?.parentId ? { parentId: sectionTrace.parentId, choisis: enTrace.choisis, pris, onBasculer: basculer } : null),
+    [enTrace, sectionTrace, pris, basculer],
+  );
 
   // Nombre de voiries tracées par note d'état (pour les cases du filtre).
   const comptesEtat = useMemo(() => {
@@ -129,18 +158,19 @@ export function CarteVoiries() {
             etatsVisibles={etats}
             selection={selectionGeo}
             onSelection={choisir}
+            trace={trace}
           />
         )}
 
         {/* Recherche */}
-        {donnees && (
+        {donnees && !enTrace && (
           <div className="absolute left-14 right-3 top-3 z-[1000] max-w-sm md:right-auto md:w-80">
             <RechercheVoirie fiches={donnees.fiches} onChoisir={choisir} />
           </div>
         )}
 
         {/* Filtres + légende */}
-        <div className="absolute right-3 top-16 z-[1000] w-64 max-w-[calc(100%-1.5rem)] md:top-3">
+        <div className={`${enTrace ? "hidden" : ""} absolute right-3 top-16 z-[1000] w-64 max-w-[calc(100%-1.5rem)] md:top-3`}>
           <button
             type="button"
             onClick={() => setPanneauOuvert((o) => !o)}
@@ -240,19 +270,38 @@ export function CarteVoiries() {
       {/* Fiche : panneau latéral (ordinateur) / feuille du bas (téléphone) */}
       <aside
         aria-label="Fiche de la voirie"
-        className={`${fiche ? "flex" : "hidden"} absolute inset-x-0 bottom-0 z-[1100] max-h-[60%] flex-col rounded-t-2xl border-t border-line bg-surface shadow-2xl md:static md:flex md:max-h-none md:w-[26rem] md:shrink-0 md:rounded-none md:border-l md:border-t-0 md:shadow-none`}
+        className={`${fiche || enTrace ? "flex" : "hidden"} absolute inset-x-0 bottom-0 z-[1100] max-h-[60%] flex-col rounded-t-2xl border-t border-line bg-surface shadow-2xl md:static md:flex md:max-h-none md:w-[26rem] md:shrink-0 md:rounded-none md:border-l md:border-t-0 md:shadow-none`}
       >
         <div className="flex items-center justify-between border-b border-line px-4 py-2.5">
           <p className="text-sm font-semibold text-ink">Fiche</p>
-          {fiche && (
+          {fiche && !enTrace && (
             <button type="button" onClick={() => choisir(null)} className="rounded-md p-1.5 text-muted hover:bg-canvas hover:text-ink" aria-label="Fermer la fiche">
               <IconeFermer width={18} height={18} />
             </button>
           )}
         </div>
         <div className="overflow-y-auto p-4">
-          {fiche ? (
-            <PanneauFiche key={fiche.id} roadId={fiche.id} contexte="carte" onChoisir={choisir} />
+          {enTrace ? (
+            <PanneauTrace
+              sectionId={enTrace.sectionId}
+              choisis={enTrace.choisis}
+              total={totalMorceaux}
+              pris={pris.size}
+              onVider={() => setEnTrace((t) => (t ? { ...t, choisis: new Set() } : t))}
+              onTerminer={() => {
+                const id = enTrace.sectionId;
+                setEnTrace(null);
+                choisir(id);
+              }}
+            />
+          ) : fiche ? (
+            <PanneauFiche
+              key={fiche.id}
+              roadId={fiche.id}
+              contexte="carte"
+              onChoisir={choisir}
+              onTracer={(id) => setEnTrace({ sectionId: id, choisis: new Set(donnees?.fiches[id]?.segmentsSection ?? []) })}
+            />
           ) : (
             <p className="text-sm text-muted">Clique sur une voie de la carte, ou cherche-la par son nom.</p>
           )}

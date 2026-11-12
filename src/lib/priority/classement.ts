@@ -1,9 +1,9 @@
-// Classement des voiries par score (écran Priorités), à partir de calculerScore.
+// Classement des voiries par score (écran Priorités), à partir de prioriteEffective (priorité forcée, sinon calculée).
 import type { Gestionnaire } from "@/lib/domaine";
 import { nomAffiche } from "@/lib/donnees/libelles";
 import type { FicheVoirie } from "@/lib/donnees/types";
 import type { ParametresScore } from "@/lib/priority/defaults";
-import { calculerScore, type ResultatScore } from "@/lib/priority/score";
+import { prioriteEffective, type ResultatScore } from "@/lib/priority/score";
 
 export interface LigneClassement {
   id: string;
@@ -40,7 +40,7 @@ export function classer(
   for (const f of fiches) {
     // Les voiries disparues ou hors commune ne sont jamais classées.
     if (f.statutFiche === "n_existe_plus" || f.statutFiche === "hors_commune") continue;
-    const ligne: LigneClassement = { id: f.id, nom: nomAffiche(f), gestionnaire: f.gestionnaire, resultat: calculerScore(f.evaluation, p) };
+    const ligne: LigneClassement = { id: f.id, nom: nomAffiche(f), gestionnaire: f.gestionnaire, resultat: prioriteEffective(f.evaluation, p) };
     if (options.exclureHorsCommune && !dansClassementCommunal(f.gestionnaire, p)) {
       if (f.evaluation) horsClassement.push(ligne);
     } else if (ligne.resultat.score !== null) classees.push(ligne);

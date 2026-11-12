@@ -5,9 +5,9 @@ import { z } from "zod";
 import {
   BANDES,
   CRITERES,
+  ECHELLES_PAR_DEFAUT,
   VALEURS_CRITERE,
   type CritereScore,
-  type Echelles,
   type ParametresScore,
   type SeuilCouleur,
 } from "@/lib/priority/defaults";
@@ -18,7 +18,14 @@ const echelleDe = <C extends CritereScore>(c: C) =>
   z.object(Object.fromEntries(VALEURS_CRITERE[c].map((v) => [v, Points])) as Record<string, typeof Points>).strict();
 
 const SchemaEchelles = z
-  .object({ etat: echelleDe("etat"), intensite: echelleDe("intensite"), densite: echelleDe("densite"), risque: echelleDe("risque") })
+  .object({
+    etat: echelleDe("etat"),
+    intensite: echelleDe("intensite"),
+    densite: echelleDe("densite"),
+    risque: echelleDe("risque"),
+    travaux: echelleDe("travaux"),
+    echeance: echelleDe("echeance"),
+  })
   .strict();
 
 const SchemaSeuils = z
@@ -52,10 +59,10 @@ export const SchemaParametres = z
 export type SaisieParametres = z.infer<typeof SchemaParametres>;
 
 /** Ancien format (version 1) : pour chaque critère, une liste dans l'ordre des valeurs. */
-function convertirEchellesV1(brut: unknown): Echelles | null {
+function convertirEchellesV1(brut: unknown): Record<string, Record<string, number>> | null {
   if (!brut || typeof brut !== "object") return null;
   const sortie: Record<string, Record<string, number>> = {};
-  for (const c of CRITERES) {
+  for (const c of CRITERES_V1) {
     const liste = (brut as Record<string, unknown>)[c];
     if (!Array.isArray(liste) || liste.length !== VALEURS_CRITERE[c].length) return null;
     sortie[c] = {};
@@ -63,8 +70,26 @@ function convertirEchellesV1(brut: unknown): Echelles | null {
       sortie[c][v] = (liste[i] as { points?: unknown })?.points as number;
     });
   }
-  const r = SchemaEchelles.safeParse(sortie);
-  return r.success ? (r.data as Echelles) : null;
+  return sortie;
+}
+
+/** Critères présents dès la version 1 ; les suivants sont complétés par leurs valeurs par défaut. */
+const CRITERES_V1: readonly CritereScore[] = ["etat", "intensite", "densite", "risque"];
+
+/**
+ * Complète une version enregistrée AVANT l'ajout d'un critère : le nouveau critère
+ * reçoit un poids de 0 (il ne change donc rien au score) et ses points par défaut.
+ */
+function completer(poids: unknown, echelles: unknown): { poids: unknown; echelles: unknown } {
+  const p = poids && typeof poids === "object" ? (poids as Record<string, unknown>) : {};
+  const e = echelles && typeof echelles === "object" ? (echelles as Record<string, unknown>) : {};
+  const poidsComplets: Record<string, unknown> = { ...p };
+  const echellesCompletes: Record<string, unknown> = { ...e };
+  for (const c of CRITERES) {
+    if (!(c in poidsComplets) && !CRITERES_V1.includes(c)) poidsComplets[c] = 0;
+    if (!(c in echellesCompletes) && !CRITERES_V1.includes(c)) echellesCompletes[c] = ECHELLES_PAR_DEFAUT[c];
+  }
+  return { poids: poidsComplets, echelles: echellesCompletes };
 }
 
 /**
@@ -79,10 +104,11 @@ export function lireParametres(ligne: {
   couverture_min: unknown;
   gestionnaires_classement: unknown;
 }): ParametresScore | null {
-  const echelles = SchemaEchelles.safeParse(ligne.echelles).success ? ligne.echelles : convertirEchellesV1(ligne.echelles);
+  const ancien = ligne.echelles && typeof ligne.echelles === "object" && Array.isArray((ligne.echelles as Record<string, unknown>).etat);
+  const complet = completer(ligne.poids, ancien ? convertirEchellesV1(ligne.echelles) : ligne.echelles);
   const r = SchemaParametres.safeParse({
-    poids: ligne.poids,
-    echelles,
+    poids: complet.poids,
+    echelles: complet.echelles,
     seuils: ligne.seuils,
     couverture_min: Number(ligne.couverture_min),
     gestionnaires_classement: ligne.gestionnaires_classement,

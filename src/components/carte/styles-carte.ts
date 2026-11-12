@@ -1,13 +1,13 @@
 // Styles des tracés sur la carte.
 // Règle : UNE apparence par voirie logique, calculée à partir de sa fiche et du
-// score (calculerScore) ; tous les segments d'une même voirie reçoivent donc
+// score (prioriteEffective : priorité forcée, sinon calculée) ; tous les segments d'une même voirie reçoivent donc
 // toujours la même couleur.
 import type { PathOptions } from "leaflet";
 import type { FicheVoirie } from "@/lib/donnees/types";
 import type { CategorieVoie } from "@/lib/geo/voiries";
 import type { SegmentProps } from "@/lib/geo/types";
 import type { BandePriorite, ParametresScore } from "@/lib/priority/defaults";
-import { calculerScore } from "@/lib/priority/score";
+import { prioriteEffective } from "@/lib/priority/score";
 import { cleEtat, COULEURS_ETAT } from "@/lib/donnees/etat";
 
 export const COULEUR_LIMITE = "#12262f";
@@ -51,7 +51,7 @@ export function apparenceDe(
 ): ApparenceVoirie {
   const gestion = fiche?.gestionnaire ?? "inconnu";
   const etat = cleEtat(fiche?.evaluation?.etat_note);
-  const bande = mode === "priorite" ? calculerScore(fiche?.evaluation, p).bande : null;
+  const bande = mode === "priorite" ? prioriteEffective(fiche?.evaluation, p).bande : null;
   return {
     couleur: bande ? COULEURS_BANDE[bande] : COULEURS_ETAT[etat],
     evaluee: bande ? bande !== "gris" : etat !== "non_note",
@@ -99,4 +99,11 @@ export const STYLE_SECTION: PathOptions = {
   dashArray: "2 5",
   fill: false,
   interactive: false,
+};
+
+/** Mode « choisir les morceaux d'une partie de rue » (le trait plein/pointillé porte l'information, pas seulement la couleur). */
+export const STYLES_TRACE: Record<"choisi" | "libre" | "pris", PathOptions> = {
+  choisi: { color: "#0d6b69", weight: 9, opacity: 1, lineCap: "round" },
+  libre: { color: "#12262f", weight: 6, opacity: 0.85, dashArray: "7 7" },
+  pris: { color: "#8a9499", weight: 4, opacity: 0.7, dashArray: "2 7", interactive: false },
 };

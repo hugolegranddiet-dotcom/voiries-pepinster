@@ -17,7 +17,8 @@ function evaluation(e: Partial<Evaluation> = {}): Evaluation {
     type_habitat_brut: null, type_habitat: null, type_voirie_source: null, intensite_circulation: null, densite_habitation: null,
     ampleur_travaux_brut: null, ampleur_travaux: null, echeance_brute: null, annee_prevue: null, annee_realisation: null,
     echeance_estimee: null, echeance_estimee_regle: null, mobilite_note: null, risque_securite: null, particularites: null,
-    etiquettes: [], statut_validation: "non_valide", source_excel_ligne: null, updated_at: "2026-11-11T00:00:00Z", ...e,
+    etiquettes: [], statut_validation: "non_valide", source_excel_ligne: null, updated_at: "2026-11-11T00:00:00Z",
+    priorite_manuelle: null, priorite_manuelle_motif: null, ...e,
   };
 }
 
@@ -25,7 +26,7 @@ function fiche(f: Partial<FicheVoirie> = {}): FicheVoirie {
   return {
     id: "n:rue du biez", nom: "Rue du Biez", categorie: "voirie", parentId: null, gestionnaire: "commune",
     gestionnaireDetail: null, statutFiche: "importe_excel", anciennesCommunes: ["Pepinster"], longueurM: 300,
-    aTrace: true, evaluation: null, origineExcel: [], sousSections: [], ...f,
+    aTrace: true, evaluation: null, origineExcel: [], sousSections: [], segmentsSection: [], ...f,
   };
 }
 

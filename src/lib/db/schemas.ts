@@ -31,10 +31,16 @@ export const ModificationEvaluation = z
     mobilite_note: texteLibre,
     particularites: texteLibre,
     statut_validation: z.enum(["non_valide", "partiellement_valide", "valide"]),
+    /** Priorité forcée à la main (0 à 100) ; null = revenir au score calculé. */
+    priorite_manuelle: z.number().int().min(0).max(100).nullable(),
+    priorite_manuelle_motif: z.string().trim().max(500).transform((t) => (t === "" ? null : t)).nullable(),
   })
   .partial()
   .strict()
-  .refine((o) => Object.keys(o).length > 0, { error: "Aucune modification." });
+  .refine((o) => Object.keys(o).length > 0, { error: "Aucune modification." })
+  .refine((o) => o.priorite_manuelle == null || (o.priorite_manuelle_motif ?? "") !== "", {
+    error: "Indique la raison de la priorité forcée.",
+  });
 
 export type ModificationEvaluation = z.infer<typeof ModificationEvaluation>;
 

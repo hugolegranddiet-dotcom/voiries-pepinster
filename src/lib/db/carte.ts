@@ -35,6 +35,8 @@ interface LigneRoad {
   statut_geo: "trace_osm" | "sans_trace";
   traverse_limite: boolean;
   sections: string[];
+  /** Absent tant que la migration du 12/11/2026 n'est pas appliquée. */
+  segments_section?: string[] | null;
   longueur_m: number | null;
   types_osm: string[];
   ways_osm: number[];
@@ -90,7 +92,8 @@ export async function lireDonneesApp(supabase: SupabaseClient): Promise<DonneesA
     toutLire<LigneRoad>((a, b) =>
       supabase
         .from("roads")
-        .select("id, nom, nom_normalise, categorie, parent_road_id, gestionnaire, gestionnaire_detail, statut_fiche, statut_geo, traverse_limite, sections, longueur_m, types_osm, ways_osm, indice_spw, refs_spw, partie, alerte, distance_autre_groupe_m")
+        // « * » : la base peut avoir des colonnes plus récentes que ce code (et inversement).
+        .select("*")
         .order("id")
         .range(a, b),
     ),
@@ -139,6 +142,10 @@ export async function lireDonneesApp(supabase: SupabaseClient): Promise<DonneesA
 
   const fiches: Record<string, FicheVoirie> = {};
   for (const r of roads) {
+    // Morceaux d'une partie de rue : seulement ceux qui appartiennent encore à la rue mère
+    // (après une resynchronisation OSM, un morceau disparu est simplement ignoré).
+    const possibles = new Set(r.parent_road_id ? (segmentsParRoad.get(r.parent_road_id) ?? []) : []);
+    const segmentsSection = (r.segments_section ?? []).filter((id) => possibles.has(id));
     fiches[r.id] = {
       id: r.id,
       nom: r.nom,
@@ -149,10 +156,11 @@ export async function lireDonneesApp(supabase: SupabaseClient): Promise<DonneesA
       statutFiche: r.statut_fiche,
       anciennesCommunes: r.sections,
       longueurM: r.longueur_m,
-      aTrace: r.statut_geo === "trace_osm" && (segmentsParRoad.get(r.id)?.length ?? 0) > 0,
+      aTrace: r.categorie === "section" ? segmentsSection.length > 0 : r.statut_geo === "trace_osm" && (segmentsParRoad.get(r.id)?.length ?? 0) > 0,
       evaluation: evaluationParRoad.get(r.id) ?? null,
       origineExcel: originesParRoad.get(r.id) ?? [],
       sousSections: enfants.get(r.id) ?? [],
+      segmentsSection,
     };
   }
   // Une section hérite des anciennes communes de sa voirie mère (pour le tableau).

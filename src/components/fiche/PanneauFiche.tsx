@@ -8,7 +8,7 @@ import { BadgeGestionnaire, BadgePriorite } from "@/components/badges";
 import { DetailScore } from "@/components/priorite/DetailScore";
 import { dansClassementCommunal } from "@/lib/priority/classement";
 import type { ParametresScore } from "@/lib/priority/defaults";
-import { calculerScore } from "@/lib/priority/score";
+import { prioriteEffective } from "@/lib/priority/score";
 import { AvertissementScore } from "@/components/blocs";
 import { useDonnees } from "@/components/donnees/FournisseurDonnees";
 import {
@@ -25,17 +25,22 @@ import { differences, versFormulaire, type Formulaire } from "@/lib/donnees/form
 import type { Evaluation } from "@/lib/donnees/types";
 
 /** Score qu'aurait la voirie avec les valeurs du formulaire (aperçu, rien n'est enregistré). */
-function apercu(f: Formulaire, p: ParametresScore) {
-  const r = calculerScore(
+function apercu(f: Formulaire, p: ParametresScore, echeanceEstimee: number | null) {
+  const r = prioriteEffective(
     {
       etat_note: f.etat_note ? Number(f.etat_note) : null,
       intensite_circulation: f.intensite_circulation || null,
       densite_habitation: f.densite_habitation || null,
       risque_securite: f.risque_securite ? Number(f.risque_securite) : null,
+      ampleur_travaux: f.ampleur_travaux || null,
+      annee_prevue: f.annee_prevue ? Number(f.annee_prevue) : null,
+      echeance_estimee: echeanceEstimee,
+      priorite_manuelle: f.priorite_manuelle ? Number(f.priorite_manuelle) : null,
+      priorite_manuelle_motif: f.priorite_manuelle_motif || null,
     },
     p,
   );
-  return { score: r.score, bande: r.bande, provisoire: r.provisoire };
+  return { score: r.score, bande: r.bande, provisoire: r.provisoire, manuel: r.manuel };
 }
 
 // ---------------------------------------------------------------------------
@@ -95,11 +100,14 @@ export function PanneauFiche({
   roadId,
   contexte,
   onChoisir,
+  onTracer,
 }: {
   roadId: string;
   contexte: "carte" | "liste";
   /** Ouvre une autre fiche (ex. une section). */
   onChoisir?: (id: string) => void;
+  /** Carte : lance le choix des morceaux d'une partie de rue. */
+  onTracer?: (sectionId: string) => void;
 }) {
   const { etat, majFiche } = useDonnees();
   const donnees = etat.statut === "pret" ? etat.donnees : null;
@@ -116,6 +124,8 @@ export function PanneauFiche({
   const courant = form ?? initial;
   const modif = differences(initial, courant);
   const modifie = Object.keys(modif).length > 0;
+  const force = courant.priorite_manuelle !== "";
+  const motifManquant = force && courant.priorite_manuelle_motif.trim() === "";
   const e = fiche.evaluation;
   const conflit = e?.statut_validation === "conflit_a_resoudre";
   const set = (cle: keyof Formulaire) => (v: string) => setForm({ ...courant, [cle]: v });
@@ -190,7 +200,22 @@ export function PanneauFiche({
             {lienAutreVue.texte}
           </Link>
         )}
-        {fiche.parentId && <p className="mt-1 text-xs text-muted">Tracé de cette partie de rue à définir : la carte montre la rue entière.</p>}
+        {fiche.categorie === "section" && (
+          <div className="mt-2 rounded-lg border border-line p-2.5 text-sm">
+            <p className="text-ink">
+              {fiche.segmentsSection.length
+                ? `Tracé : ${fiche.segmentsSection.length} morceau${fiche.segmentsSection.length > 1 ? "x" : ""} de la rue choisi${fiche.segmentsSection.length > 1 ? "s" : ""}.`
+                : "Tracé pas encore choisi : la carte montre la rue entière."}
+            </p>
+            {contexte === "carte" && onTracer ? (
+              <button type="button" onClick={() => onTracer(fiche.id)} className="mt-1.5 rounded-lg border border-line px-3 py-1.5 text-sm font-medium text-brand hover:bg-brand-soft">
+                {fiche.segmentsSection.length ? "Modifier les morceaux sur la carte" : "Choisir les morceaux sur la carte"}
+              </button>
+            ) : (
+              <p className="mt-1 text-xs text-muted">Le tracé se choisit depuis la carte (« Voir sur la carte »).</p>
+            )}
+          </div>
+        )}
       </div>
 
       {message && (
@@ -206,7 +231,7 @@ export function PanneauFiche({
 
       {donnees && (
         <DetailScore
-          resultat={calculerScore(e, donnees.parametres)}
+          resultat={prioriteEffective(e, donnees.parametres)}
           parametres={donnees.parametres}
           horsClassement={!dansClassementCommunal(fiche.gestionnaire, donnees.parametres)}
         />
@@ -214,7 +239,7 @@ export function PanneauFiche({
       {edition && donnees && modifie && (
         <p role="status" className="-mt-2 rounded-lg border border-dashed border-line px-3 py-2 text-sm text-ink">
           Avec ces valeurs (pas encore enregistrées) :{" "}
-          <BadgePriorite {...apercu(courant, donnees.parametres)} />
+          <BadgePriorite {...apercu(courant, donnees.parametres, e?.echeance_estimee ?? null)} />
         </p>
       )}
 
@@ -308,8 +333,58 @@ export function PanneauFiche({
           <Champ id="f-part" libelle="Particularités">
             <textarea id="f-part" rows={3} value={courant.particularites} onChange={(ev) => set("particularites")(ev.target.value)} className={classeChamp} maxLength={2000} />
           </Champ>
+          <fieldset className="rounded-lg border border-line p-3">
+            <legend className="px-1 text-sm font-semibold text-ink">Priorité forcée (facultatif)</legend>
+            <label className="flex cursor-pointer items-start gap-2 text-sm text-ink">
+              <input
+                type="checkbox"
+                className="mt-0.5 size-4 accent-[var(--brand)]"
+                checked={force}
+                onChange={(ev) =>
+                  setForm({
+                    ...courant,
+                    priorite_manuelle: ev.target.checked ? String(donnees ? (prioriteEffective(e, donnees.parametres).scoreCalcule ?? 50) : 50) : "",
+                    priorite_manuelle_motif: ev.target.checked ? courant.priorite_manuelle_motif : "",
+                  })
+                }
+              />
+              <span>
+                Fixer moi-même la priorité de cette voirie
+                <span className="block text-xs text-muted">Elle remplace le score calculé sur la carte, la liste et le classement. Le score calculé reste affiché à côté.</span>
+              </span>
+            </label>
+            {force && (
+              <div className="mt-3 flex flex-col gap-3">
+                <Champ id="f-prio" libelle="Priorité (0 = faible, 100 = très élevée)">
+                  <input
+                    id="f-prio"
+                    type="number"
+                    inputMode="numeric"
+                    min={0}
+                    max={100}
+                    value={courant.priorite_manuelle}
+                    onChange={(ev) => set("priorite_manuelle")(ev.target.value)}
+                    className={classeChamp}
+                  />
+                </Champ>
+                <Champ id="f-motif" libelle="Raison (obligatoire)">
+                  <textarea
+                    id="f-motif"
+                    rows={2}
+                    value={courant.priorite_manuelle_motif}
+                    onChange={(ev) => set("priorite_manuelle_motif")(ev.target.value)}
+                    className={classeChamp}
+                    maxLength={500}
+                    placeholder="ex. demande du collège, école, chantier voisin…"
+                    aria-invalid={motifManquant}
+                  />
+                </Champ>
+                {motifManquant && <p className="text-xs text-prio-rouge">Indique la raison pour pouvoir enregistrer.</p>}
+              </div>
+            )}
+          </fieldset>
           <div className="sticky bottom-0 flex items-center gap-3 border-t border-line bg-surface py-3">
-            <button type="submit" disabled={!modifie || enCours} className="rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-strong disabled:cursor-not-allowed disabled:opacity-50">
+            <button type="submit" disabled={!modifie || enCours || motifManquant} className="rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-strong disabled:cursor-not-allowed disabled:opacity-50">
               {enCours ? "Enregistrement…" : "Enregistrer"}
             </button>
             <button type="button" onClick={annuler} disabled={enCours} className="rounded-lg border border-line px-4 py-2 text-sm font-medium text-ink hover:bg-canvas">

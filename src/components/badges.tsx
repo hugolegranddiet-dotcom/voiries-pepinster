@@ -19,10 +19,13 @@ export function BadgePriorite({
   score,
   bande: bandeDonnee,
   provisoire = false,
+  manuel = false,
   taille = "normale",
 }: {
   score: number | null;
-  /** Bande calculée par calculerScore (sinon : seuils par défaut). */
+  /** Priorité fixée à la main par le père. */
+  manuel?: boolean;
+  /** Bande calculée par prioriteEffective (sinon : seuils par défaut). */
   bande?: BandePriorite;
   provisoire?: boolean;
   taille?: "normale" | "grande";
@@ -43,7 +46,12 @@ export function BadgePriorite({
       {score !== null && (
         <span className="sr-only">sur 100, {LIBELLES_BANDES[bande]}</span>
       )}
-      {provisoire && score !== null && (
+      {manuel && score !== null && (
+        <span className="rounded border border-ink/40 bg-canvas px-1.5 text-[0.7rem] font-semibold uppercase tracking-wide text-ink" title="Priorité fixée à la main">
+          manuel
+        </span>
+      )}
+      {provisoire && !manuel && score !== null && (
         <span className="rounded border border-line px-1.5 text-[0.7rem] font-medium uppercase tracking-wide text-muted">
           provisoire
         </span>

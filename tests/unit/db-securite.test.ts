@@ -221,6 +221,57 @@ describe("phase 6 : paramètres versionnés et validation des notes suggérées"
   });
 });
 
+describe("D20–D21 : priorité forcée et morceaux des parties de rue", () => {
+  afterAll(async () => {
+    await commeService(() =>
+      db.exec(`
+        delete from public.road_segments where id in ('m1', 'm2', 'x1');
+        delete from public.roads where id in ('s:1', 's:2', 'n:mere', 'n:autre', 'n:p');
+        delete from public.geo_snapshots where id = '00000000-0000-4000-8000-0000000000aa';
+      `),
+    );
+  });
+
+  it("exige une raison pour toute priorité forcée", async () => {
+    await commeService(() => db.exec(`insert into public.roads (id, nom, categorie) values ('n:p', 'P', 'voirie'); insert into public.road_evaluations (road_id) values ('n:p');`));
+    await comme("authenticated", ADMIN);
+    expect(await erreur("update public.road_evaluations set priorite_manuelle = 80 where road_id = 'n:p'")).toMatch(/priorite_manuelle_avec_motif/);
+    expect(await erreur("update public.road_evaluations set priorite_manuelle = 120, priorite_manuelle_motif = 'x' where road_id = 'n:p'")).toMatch(/check/);
+    await db.exec("update public.road_evaluations set priorite_manuelle = 80, priorite_manuelle_motif = 'École' where road_id = 'n:p'");
+    const j = await db.query("select champ, apres from public.change_log where record_id = 'n:p' and operation = 'UPDATE' order by champ");
+    expect(j.rows).toEqual([{ champ: "priorite_manuelle", apres: 80 }, { champ: "priorite_manuelle_motif", apres: "École" }]);
+  });
+
+  it("n'accepte que des morceaux de la rue mère, chacun dans une seule partie", async () => {
+    await commeService(() =>
+      db.exec(`
+        insert into public.geo_snapshots (id, source, extrait_le, date_donnees, licence, relation_commune, code_ins, sha256, limite)
+          values ('00000000-0000-4000-8000-0000000000aa', 'test', now(), now(), 'ODbL', 1, '63058', 'x', '{"type":"FeatureCollection","features":[]}');
+        insert into public.roads (id, nom, categorie) values ('n:mere', 'Mère', 'voirie'), ('n:autre', 'Autre', 'voirie');
+        insert into public.roads (id, nom, categorie, parent_road_id) values ('s:1', 'Haut', 'section', 'n:mere'), ('s:2', 'Bas', 'section', 'n:mere');
+        insert into public.road_segments (id, road_id, snapshot_id, osm_way_id, highway, categorie, geometry) values
+          ('m1', 'n:mere', '00000000-0000-4000-8000-0000000000aa', 1, 'residential', 'voirie', '{"type":"LineString","coordinates":[[5.8,50.5],[5.81,50.5]]}'),
+          ('m2', 'n:mere', '00000000-0000-4000-8000-0000000000aa', 2, 'residential', 'voirie', '{"type":"LineString","coordinates":[[5.81,50.5],[5.82,50.5]]}'),
+          ('x1', 'n:autre', '00000000-0000-4000-8000-0000000000aa', 3, 'residential', 'voirie', '{"type":"LineString","coordinates":[[5.9,50.5],[5.91,50.5]]}');
+      `),
+    );
+    await comme("authenticated", ADMIN);
+    await db.exec("update public.roads set segments_section = '{m1}' where id = 's:1'");
+    expect(await erreur("update public.roads set segments_section = '{x1}' where id = 's:2'")).toMatch(/segment_hors_rue_mere/);
+    expect(await erreur("update public.roads set segments_section = '{inexistant}' where id = 's:2'")).toMatch(/segment_hors_rue_mere/);
+    expect(await erreur("update public.roads set segments_section = '{m1}' where id = 's:2'")).toMatch(/segment_deja_attribue/);
+    expect(await erreur("update public.roads set segments_section = '{m2}' where id = 'n:autre'")).toMatch(/segments_reserves_aux_sections/);
+    await db.exec("update public.roads set segments_section = '{m2}' where id = 's:2'");
+    const r = await db.query("select id, segments_section from public.roads where id in ('s:1', 's:2') order by id");
+    expect(r.rows).toEqual([{ id: "s:1", segments_section: ["m1"] }, { id: "s:2", segments_section: ["m2"] }]);
+    // Un intrus ne peut rien changer (sécurité par ligne).
+    await comme("authenticated", INTRUS);
+    await db.exec("update public.roads set segments_section = '{}' where id = 's:1'");
+    await comme("authenticated", ADMIN);
+    expect((await db.query<{ n: number }>("select cardinality(segments_section) n from public.roads where id = 's:1'")).rows[0].n).toBe(1);
+  });
+});
+
 describe("import des vraies données dans le vrai schéma", () => {
   it("respecte toutes les contraintes (clés, valeurs, champs obligatoires)", async () => {
     const { construireDonnees } = await import("../../scripts/db/construire");

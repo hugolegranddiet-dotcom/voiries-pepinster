@@ -3,9 +3,13 @@
 // l'écran Paramètres : chaque modification crée une nouvelle version en base.
 import type { Gestionnaire } from "@/lib/domaine";
 
-export type CritereScore = "etat" | "intensite" | "densite" | "risque";
+export type CritereScore = "etat" | "intensite" | "densite" | "risque" | "travaux" | "echeance";
 
-export const CRITERES: readonly CritereScore[] = ["etat", "intensite", "densite", "risque"];
+/**
+ * Critères du score. « travaux » et « echeance » ont été ajoutés le 11/11/2026
+ * (décision D19) avec un poids de 0 : ils ne comptent que si le père les active.
+ */
+export const CRITERES: readonly CritereScore[] = ["etat", "intensite", "densite", "risque", "travaux", "echeance"];
 
 export type BandePriorite = "vert" | "jaune" | "orange" | "rouge" | "gris";
 export type BandeScore = Exclude<BandePriorite, "gris">;
@@ -23,6 +27,9 @@ export const VALEURS_CRITERE = {
   intensite: ["faible", "moyen", "eleve", "transit"],
   densite: ["nul", "faible", "moyen_bas", "moyen_eleve", "eleve"],
   risque: ["1", "2", "3", "4", "5"],
+  travaux: ["reparation_ponctuelle", "schlammage", "enduisage", "raclage_partiel", "raclage_complet", "autre"],
+  /** Délai avant l'échéance (année prévue, sinon échéance estimée), compté depuis l'année en cours. */
+  echeance: ["cette_annee", "1_an", "2_3_ans", "4_5_ans", "plus_5_ans"],
 } as const satisfies Record<CritereScore, readonly string[]>;
 
 /** Points (0 à 100) donnés à chaque valeur d'un critère. */
@@ -40,13 +47,17 @@ export interface ParametresScore {
   gestionnaires_classement: Gestionnaire[];
 }
 
-export const POIDS_PAR_DEFAUT: Record<CritereScore, number> = { etat: 55, intensite: 20, densite: 15, risque: 10 };
+export const POIDS_PAR_DEFAUT: Record<CritereScore, number> = { etat: 55, intensite: 20, densite: 15, risque: 10, travaux: 0, echeance: 0 };
 
 export const ECHELLES_PAR_DEFAUT: Echelles = {
   etat: { 1: 0, 2: 25, 3: 50, 4: 75, 5: 100 },
   intensite: { faible: 0, moyen: 33, eleve: 67, transit: 100 },
   densite: { nul: 0, faible: 25, moyen_bas: 50, moyen_eleve: 75, eleve: 100 },
   risque: { 1: 0, 2: 25, 3: 50, 4: 75, 5: 100 },
+  // Plus les travaux à prévoir sont lourds, plus la route est prioritaire (proposition, modifiable).
+  travaux: { reparation_ponctuelle: 20, schlammage: 40, enduisage: 50, raclage_partiel: 75, raclage_complet: 100, autre: 50 },
+  // Plus l'échéance est proche, plus la route est prioritaire (proposition, modifiable).
+  echeance: { cette_annee: 100, "1_an": 75, "2_3_ans": 50, "4_5_ans": 25, plus_5_ans: 0 },
 };
 
 export const SEUILS_PAR_DEFAUT: SeuilCouleur[] = [
@@ -76,6 +87,8 @@ export const LIBELLES_CRITERES: Record<CritereScore, string> = {
   intensite: "Intensité de circulation",
   densite: "Densité d'habitation",
   risque: "Risque sécurité / mobilité",
+  travaux: "Ampleur des travaux",
+  echeance: "Échéance",
 };
 
 /** Libellé affiché d'une valeur de critère. */
@@ -89,6 +102,21 @@ export const LIBELLES_VALEURS: { [C in CritereScore]: Record<(typeof VALEURS_CRI
     3: "3 — risque modéré",
     4: "4 — risque important",
     5: "5 — risque grave",
+  },
+  travaux: {
+    reparation_ponctuelle: "Réparation ponctuelle",
+    schlammage: "Schlammage",
+    enduisage: "Enduisage",
+    raclage_partiel: "Raclage/pose partiel",
+    raclage_complet: "Raclage/pose complet",
+    autre: "Autre",
+  },
+  echeance: {
+    cette_annee: "Cette année (ou dépassée)",
+    "1_an": "Dans 1 an",
+    "2_3_ans": "Dans 2 à 3 ans",
+    "4_5_ans": "Dans 4 à 5 ans",
+    plus_5_ans: "Dans plus de 5 ans",
   },
 };
 

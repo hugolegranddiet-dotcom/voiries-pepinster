@@ -24,10 +24,21 @@ export function DetailScore({
     <section aria-label="Priorité" className="rounded-lg border border-line bg-canvas p-3">
       <p className="text-xs font-medium uppercase tracking-wide text-muted">Priorité (score sur 100)</p>
       <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
-        <BadgePriorite score={r.score} bande={r.bande} provisoire={r.provisoire} taille="grande" />
+        <BadgePriorite score={r.score} bande={r.bande} provisoire={r.provisoire} manuel={r.manuel} taille="grande" />
         {r.score !== null && <span className="text-sm text-muted">{LIBELLES_BANDES[r.bande]}</span>}
       </div>
-      {r.raison && (
+      {r.manuel && (
+        <div className="mt-2 rounded-md border border-line bg-surface px-2.5 py-2 text-sm text-ink">
+          <p>
+            <strong>Priorité fixée à la main</strong>
+            {r.motif ? <> : « {r.motif} »</> : null}
+          </p>
+          <p className="mt-0.5 text-xs text-muted">
+            Score calculé : {r.scoreCalcule === null ? "non évalué" : `${r.scoreCalcule} (${LIBELLES_BANDES[r.bandeCalculee].toLowerCase()})`}
+          </p>
+        </div>
+      )}
+      {!r.manuel && r.raison && (
         <p className="mt-1 text-sm text-ink">
           Pas de score : <strong>{LIBELLES_RAISON[r.raison]}</strong>
           {r.raison === "couverture_insuffisante" && ` (${pourcent(r.couverture)} des poids, il en faut ${pourcent(parametres.couverture_min)})`}.
@@ -52,11 +63,12 @@ export function DetailScore({
               </tr>
             </thead>
             <tbody className="divide-y divide-line">
-              {r.details.map((d) => (
+              {r.details.filter((d) => d.poids > 0).map((d) => (
                 <tr key={d.critere}>
                   <th scope="row" className="py-1 pr-2 font-normal text-ink">{LIBELLES_CRITERES[d.critere]}</th>
                   <td className={`py-1 pr-2 ${d.points === null ? "italic text-muted" : "text-ink"}`}>
                     {d.valeur === null ? "non renseigné" : d.invalide ? `« ${d.valeur} » : valeur inconnue, ignorée` : libelleValeur(d.critere, d.valeur)}
+                    {d.precision && <span className="block text-muted">{d.precision}</span>}
                   </td>
                   <td className="py-1 pr-2 text-right tabular-nums">{d.points ?? "—"}</td>
                   <td className="py-1 pr-2 text-right tabular-nums">{pourcent(d.poids / poidsTotal)}</td>
@@ -70,15 +82,16 @@ export function DetailScore({
           <li>
             Critères renseignés : <strong className="text-ink">{pourcent(r.couverture)}</strong> des poids (minimum {pourcent(parametres.couverture_min)}).
           </li>
-          {r.score !== null && (
+          {r.scoreCalcule !== null && (
             <li>
-              Score = somme des apports = {unChiffre(r.details.reduce((s, d) => s + (d.contribution ?? 0), 0))}, arrondi à {r.score}.
+              Score = somme des apports = {unChiffre(r.details.reduce((s, d) => s + (d.contribution ?? 0), 0))}, arrondi à {r.scoreCalcule}.
             </li>
           )}
           {r.manquants.length > 0 && <li>Manquant : {r.manquants.map((c) => LIBELLES_CRITERES[c].toLowerCase()).join(", ")}.</li>}
           <li>
-            Paramètres : {r.version === null ? "valeurs par défaut" : `version ${r.version}`}. Les travaux, l&apos;échéance et les textes libres
-            n&apos;entrent pas dans le score.
+            Paramètres : {r.version === null ? "valeurs par défaut" : `version ${r.version}`}. {r.details.some((d) => d.poids === 0) &&
+              ` Non utilisés (0 %) : ${r.details.filter((d) => d.poids === 0).map((d) => LIBELLES_CRITERES[d.critere].toLowerCase()).join(", ")}.`}{" "}
+            Les textes libres n&apos;entrent jamais dans le score.
           </li>
         </ul>
       </details>

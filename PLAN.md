@@ -332,6 +332,9 @@ Chaque phase se termine par : vérifications automatiques, résumé des fichiers
 | **D16** | Validation des correspondances (11/11/2026) | fichier rempli par Hugo : OK sur les 168 propositions ; « laisse tomber les introuvées » | 152 lignes validées ; 16 parties de rue enregistrées comme SECTION (OK sur une section = SECTION, D4) ; 12 lignes sans voirie écartées ; fichier reçu archivé dans `data/matching/recus/` |
 | **D17** | Conflits O10 (11/11/2026) | Rue du Paire = ligne 103 ; Place et Rue Saint-Hubert sont distinctes ; Voie du Moulin = ligne 148 | lignes 103, 113, 148 gardées ; lignes 104 (Ruelle du Paire), 127 (Rue Saint-Hubert), 175 (Chemin du Moulin) écartées car absentes de la carte (comme D16) |
 | **D18** | Notes suggérées et interface Excel (11/11/2026) | « tout valider d'un coup » ; les corrections seront faites par le père dans les fiches ; l'interface Excel n'a plus lieu d'être | bouton « Tout valider » (avec confirmation) sur l'écran de validation ; retrait des mentions « suggérée », du bouton « Utiliser cette note » et du bloc « Valeurs d'origine (Excel) ». Les valeurs brutes restent conservées en base (`import_rows`, colonnes `*_brut`) |
+| **D19** | Critères du score (12/11/2026) | « ajouter des critères » | **ampleur des travaux** et **échéance** (année prévue, sinon échéance estimée ; jamais le texte libre) deviennent des critères réglables, **à 0 % par défaut** : aucun score ne change tant que le père ne les active pas. Les versions de paramètres déjà enregistrées sont complétées à 0 % |
+| **D20** | Priorité forcée (12/11/2026) | « forcer le score, avec motif » | le père peut fixer une priorité de 0 à 100 avec une **raison obligatoire** (contrôlée en base) ; elle remplace le score à l'affichage et dans le classement, marquée « manuel », le score calculé reste visible ; journalisée |
+| **D21** | Tracé des parties de rue (12/11/2026, résout O9) | « choisir les morceaux sur la carte » | dans la fiche d'une partie de rue, le père choisit les **morceaux OSM réels** de la rue mère qui la composent ; un morceau n'appartient qu'à une partie (contrôlé en base) ; aucun tracé dessiné ni coupé |
 | **D15** | Relecture de la liste des rues OSM (COVERAGE §8) | « fais au mieux » | pas de relecture ligne à ligne par le père ; les écarts apparaissent dans `MATCHING_REPORT.md` (lignes Excel introuvables, voiries sans ligne Excel) |
 
 ### 9.2 Points encore ouverts
@@ -342,7 +345,7 @@ Chaque phase se termine par : vérifications automatiques, résumé des fichiers
 | **O5** | `Chemin du Nauzaury` (lignes 29 et 176) : une voirie ou deux parties ? | non bloquant | aucune voirie de ce nom dans OSM : les deux lignes sont « aucune voirie trouvée » ; décision dans le fichier de validation |
 | ~~O8~~ | Valider les correspondances | – | **Résolu** (D16) |
 | ~~O10~~ | Deux lignes Excel sur la même voirie | – | **Résolu** (D17) |
-| **O9** | Tracé des **sections** (Bouhaye inf./sup., Soiron-Centre…) | couleur des sections | à définir sur la carte lors de la phase d'édition (5) ; d'ici là, rattachées à leur voirie mère |
+| **O9** | Tracé des **sections** (Bouhaye inf./sup., Soiron-Centre…) | couleur des sections | **résolu (D21)** : le père choisit les morceaux de la rue mère sur la carte |
 | **O11** | **Publication en ligne** (Vercel Hobby, 0 €) | mise en ligne | **en attente de ta décision.** Tout est prêt : [`docs/GUIDE_DEPLOIEMENT.md`](docs/GUIDE_DEPLOIEMENT.md). Point à vérifier avant : Vercel Hobby est réservé à un usage **non commercial** (personne n'est payé pour l'outil) |
 | **O7** | Autoriser Claude à **écrire** sur le dépôt GitHub (installation de l'application GitHub « Claude ») | sauvegarde | le premier enregistrement est prêt et attend cette autorisation |
 

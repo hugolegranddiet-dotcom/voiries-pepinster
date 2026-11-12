@@ -17,6 +17,10 @@ const SECTIONS: Array<{ id: string; titre: string; contenu: ReactNode }> = [
           <li><strong>Ouvrir une fiche :</strong> clique (ou touche, sur téléphone) une route. Toute la route est entourée d&apos;un contour foncé et sa fiche s&apos;ouvre.</li>
           <li><strong>Filtres :</strong> types de voies, gestionnaire (commune, SPW…), et notes d&apos;état à afficher. Sur téléphone, touche « Filtres et légende ».</li>
           <li><strong>Couleur des routes :</strong> « Priorité (score) » ou « État de la chaussée » (vert = bon, rouge foncé = dégradé). Gris = pas encore évalué.</li>
+          <li>
+            <strong>Parties de rue</strong> (Soiron-Centre, Bouhaye…) : ouvre la fiche de la partie, clique « Choisir les morceaux sur la carte », clique
+            les morceaux de la rue qui en font partie, puis « Enregistrer le tracé ». Ils prennent alors la couleur de cette partie.
+          </li>
           <li><strong>Pointillés :</strong> route du SPW ou d&apos;un autre gestionnaire. Elle reste sur la carte, mais hors du classement communal.</li>
         </ul>
       </>
@@ -33,6 +37,11 @@ const SECTIONS: Array<{ id: string; titre: string; contenu: ReactNode }> = [
           <li>Pendant que tu modifies, un cadre montre <strong>le score qu&apos;aurait la route</strong> avec ces valeurs.</li>
           <li>Clique <strong>Enregistrer</strong>. Le message « Modifications enregistrées à … » confirme. <strong>Annuler</strong> abandonne sans rien changer.</li>
         </ol>
+        <p>
+          <strong>Priorité forcée :</strong> en bas du formulaire, coche « Fixer moi-même la priorité », choisis un nombre de 0 à 100 et écris la
+          raison (obligatoire). Partout, la route porte alors la mention <strong>MANUEL</strong> ; le score calculé reste visible dans sa fiche.
+          Décoche la case pour revenir au calcul.
+        </p>
         <p>Choisir « — non renseigné — » vide un champ : la donnée devient inconnue (ce n&apos;est jamais un zéro). Toutes les modifications sont gardées dans un journal, avec la date.</p>
       </>
     ),
@@ -58,6 +67,7 @@ const SECTIONS: Array<{ id: string; titre: string; contenu: ReactNode }> = [
         <p>Chaque route reçoit un score de 0 à 100 : plus il est haut, plus des travaux sont prioritaires. Il combine :</p>
         <ul>
           <li>l&apos;état de la chaussée (55 %), la circulation (20 %), la densité d&apos;habitation (15 %), le risque sécurité (10 %) — réglables dans Paramètres ;</li>
+          <li>l&apos;ampleur des travaux et l&apos;échéance (année prévue, sinon estimée) peuvent aussi compter : ils sont à 0 % au départ, à activer dans Paramètres ;</li>
           <li>couleurs : vert 0–24, jaune 25–49, orange 50–74, rouge 75–100 ;</li>
           <li><strong>pas de score</strong> (gris) tant que l&apos;état n&apos;est pas noté, ou si trop peu de critères sont remplis (moins de 70 %) ;</li>
           <li><strong>« provisoire »</strong> : un critère manque encore. Le compléter peut changer le score (souvent à la baisse ou à la hausse de plusieurs points).</li>

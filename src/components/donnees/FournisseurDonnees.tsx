@@ -14,7 +14,7 @@ type Etat =
 interface Contexte {
   etat: Etat;
   /** Applique localement le résultat d'un enregistrement réussi. */
-  majFiche: (roadId: string, maj: { voirie?: Partial<Pick<FicheVoirie, "gestionnaire" | "gestionnaireDetail" | "statutFiche">>; evaluation?: Evaluation | null }) => void;
+  majFiche: (roadId: string, maj: { voirie?: Partial<Pick<FicheVoirie, "gestionnaire" | "gestionnaireDetail" | "statutFiche" | "segmentsSection" | "aTrace">>; evaluation?: Evaluation | null }) => void;
   /** Après une validation par lot : la note suggérée devient la note d'état, localement. */
   validerSuggestionsLocalement: (ids: string[]) => void;
   /** Relit tout depuis la base (après un changement de paramètres). */

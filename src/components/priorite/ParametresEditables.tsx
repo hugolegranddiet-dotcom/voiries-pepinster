@@ -227,7 +227,7 @@ export function ParametresEditables() {
             {apercu.apres.map((l) => (
               <li key={l.id} className="flex items-center justify-between gap-2">
                 <span className="truncate text-ink">{l.rang}. {l.nom}</span>
-                <BadgePriorite score={l.resultat.score} bande={l.resultat.bande} provisoire={l.resultat.provisoire} />
+                <BadgePriorite score={l.resultat.score} bande={l.resultat.bande} provisoire={l.resultat.provisoire} manuel={l.resultat.manuel} />
               </li>
             ))}
           </ol>

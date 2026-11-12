@@ -44,6 +44,10 @@ export interface Evaluation {
   mobilite_note: string | null;
   risque_securite: Note1a5 | null;
   particularites: string | null;
+  /** Priorité forcée à la main par le père (0 à 100), sinon null. */
+  priorite_manuelle: number | null;
+  /** Raison de la priorité forcée (obligatoire si elle est fixée). */
+  priorite_manuelle_motif: string | null;
   etiquettes: string[];
   statut_validation: "non_valide" | "partiellement_valide" | "valide" | "conflit_a_resoudre";
   source_excel_ligne: number | null;
@@ -85,6 +89,8 @@ export interface FicheVoirie {
   origineExcel: OrigineExcel[];
   /** Identifiants des sections rattachées à cette voirie. */
   sousSections: string[];
+  /** Pour une partie de rue : morceaux (segments OSM) de la rue mère choisis par le père. */
+  segmentsSection: string[];
 }
 
 export interface DonneesApp {

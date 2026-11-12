@@ -16,10 +16,12 @@ export interface Formulaire {
   annee_prevue: string;
   mobilite_note: string;
   particularites: string;
+  priorite_manuelle: string;
+  priorite_manuelle_motif: string;
 }
 
 const CHAMPS_VOIRIE = ["gestionnaire", "gestionnaire_detail", "statut_fiche"] as const;
-const CHAMPS_NUMERIQUES = new Set(["etat_note", "risque_securite", "annee_prevue"]);
+const CHAMPS_NUMERIQUES = new Set(["etat_note", "risque_securite", "annee_prevue", "priorite_manuelle"]);
 
 export function versFormulaire(f: FicheVoirie): Formulaire {
   const e = f.evaluation;
@@ -37,6 +39,8 @@ export function versFormulaire(f: FicheVoirie): Formulaire {
     annee_prevue: s(e?.annee_prevue),
     mobilite_note: s(e?.mobilite_note),
     particularites: s(e?.particularites),
+    priorite_manuelle: s(e?.priorite_manuelle),
+    priorite_manuelle_motif: s(e?.priorite_manuelle_motif),
   };
 }
 
@@ -50,6 +54,13 @@ export function differences(avant: Formulaire, apres: Formulaire) {
     const valeur = brut === "" ? null : CHAMPS_NUMERIQUES.has(cle) ? Number(brut) : brut;
     if ((CHAMPS_VOIRIE as readonly string[]).includes(cle)) voirie[cle] = valeur;
     else evaluation[cle] = valeur;
+  }
+  // Priorité forcée et motif voyagent toujours ensemble : la base exige un motif
+  // dès qu'une priorité est forcée, et les efface ensemble quand on revient au calcul.
+  if ("priorite_manuelle" in evaluation || "priorite_manuelle_motif" in evaluation) {
+    const force = apres.priorite_manuelle.trim();
+    evaluation.priorite_manuelle = force === "" ? null : Number(force);
+    evaluation.priorite_manuelle_motif = force === "" ? null : apres.priorite_manuelle_motif.trim() || null;
   }
   return {
     ...(Object.keys(voirie).length ? { voirie } : {}),

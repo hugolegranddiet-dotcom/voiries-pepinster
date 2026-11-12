@@ -111,7 +111,7 @@ export function ClassementPriorites() {
                     {l.gestionnaire !== "commune" && <BadgeGestionnaire gestionnaire={l.gestionnaire} />}
                   </p>
                 </div>
-                <BadgePriorite score={l.resultat.score} bande={l.resultat.bande} provisoire={l.resultat.provisoire} />
+                <BadgePriorite score={l.resultat.score} bande={l.resultat.bande} provisoire={l.resultat.provisoire} manuel={l.resultat.manuel} />
                 <LiensVoirie l={l} aCarte={aCarte(l.id)} />
               </li>
             ))}
@@ -151,7 +151,7 @@ export function ClassementPriorites() {
                 <span className="min-w-0 truncate text-ink">{l.nom}</span>
                 <span className="flex items-center gap-2">
                   <BadgeGestionnaire gestionnaire={l.gestionnaire} />
-                  <BadgePriorite score={l.resultat.score} bande={l.resultat.bande} provisoire={l.resultat.provisoire} />
+                  <BadgePriorite score={l.resultat.score} bande={l.resultat.bande} provisoire={l.resultat.provisoire} manuel={l.resultat.manuel} />
                 </span>
               </li>
             ))}

@@ -5,7 +5,7 @@ import { LIBELLES_DENSITE, LIBELLES_ETAT, LIBELLES_GESTIONNAIRE, LIBELLES_INTENS
 import { LIBELLES_CATEGORIE, LIBELLES_RISQUE, LIBELLES_TRAVAUX, nomAffiche } from "@/lib/donnees/libelles";
 import type { FicheVoirie } from "@/lib/donnees/types";
 import { LIBELLES_BANDES, type ParametresScore } from "@/lib/priority/defaults";
-import { calculerScore, LIBELLES_RAISON } from "@/lib/priority/score";
+import { LIBELLES_RAISON, prioriteEffective } from "@/lib/priority/score";
 
 const SEPARATEUR = ";";
 const FIN_DE_LIGNE = "\r\n";
@@ -58,6 +58,9 @@ const ENTETES = [
   "Particularités",
   "Score",
   "Priorité",
+  "Priorité forcée à la main",
+  "Raison de la priorité forcée",
+  "Score calculé",
   "Provisoire",
   "Critères renseignés (%)",
   "Pourquoi pas de score",
@@ -71,7 +74,7 @@ export function versCsv(fiches: readonly FicheVoirie[], o: OptionsExport): strin
   const lignes = [(avecRang ? ["Rang", ...ENTETES] : ENTETES).map(cellule).join(SEPARATEUR)];
   for (const f of fiches) {
     const e = f.evaluation;
-    const r = calculerScore(e, o.parametres);
+    const r = prioriteEffective(e, o.parametres);
     const valeurs: Array<string | number | boolean | null | undefined> = [
       f.id,
       nomAffiche(f),
@@ -95,6 +98,9 @@ export function versCsv(fiches: readonly FicheVoirie[], o: OptionsExport): strin
       e?.particularites,
       r.score,
       r.score === null ? LIBELLES_BANDES.gris : LIBELLES_BANDES[r.bande],
+      r.manuel,
+      r.motif,
+      r.scoreCalcule,
       r.score === null ? null : r.provisoire,
       Math.round(r.couverture * 100),
       r.raison ? LIBELLES_RAISON[r.raison] : null,

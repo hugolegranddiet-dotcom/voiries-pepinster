@@ -6,7 +6,7 @@ import { nomAffiche } from "@/lib/donnees/libelles";
 import type { CategorieFiche, FicheVoirie } from "@/lib/donnees/types";
 import { cleEtat, type FiltreEtat } from "@/lib/donnees/etat";
 import { PARAMETRES_PAR_DEFAUT, type BandePriorite, type ParametresScore } from "@/lib/priority/defaults";
-import { calculerScore } from "@/lib/priority/score";
+import { prioriteEffective } from "@/lib/priority/score";
 
 /** Types de voies proposés dans les filtres. */
 export type TypeListe = "voiries" | "sections" | "chemins" | "sans_nom" | "acces";
@@ -27,7 +27,8 @@ export interface LigneListe {
   echeance: string | null;
   risque: number | null;
   manquants: string[];
-  /** Score calculé par calculerScore (null = Non évalué). */
+  /** Priorité utilisée : forcée par le père, sinon calculée (null = Non évalué). */
+  manuel: boolean;
   score: number | null;
   bande: BandePriorite;
   provisoire: boolean;
@@ -46,7 +47,7 @@ export function typeDeFiche(f: FicheVoirie): TypeListe {
 
 export function versLigne(f: FicheVoirie, parametres: ParametresScore = PARAMETRES_PAR_DEFAUT): LigneListe {
   const e = f.evaluation;
-  const r = calculerScore(e, parametres);
+  const r = prioriteEffective(e, parametres);
   const manquants: string[] = [];
   if (!e?.etat_note) manquants.push("état");
   if (!e?.intensite_circulation) manquants.push("circulation");
@@ -70,6 +71,7 @@ export function versLigne(f: FicheVoirie, parametres: ParametresScore = PARAMETR
     risque: e?.risque_securite ?? null,
     manquants,
     score: r.score,
+    manuel: r.manuel,
     bande: r.bande,
     provisoire: r.provisoire,
     aTrace: f.aTrace,
